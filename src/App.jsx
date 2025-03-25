@@ -1,9 +1,30 @@
-
+import react from 'react';
+import { Route ,createBrowserRouter,createRoutesFromElements,RouterProvider} from 'react-router'
+import Layout from './components/layout';
+import Home from './pages/home';
+import Product from './pages/product'
+// import Cart from './pages/cart'
+import Shop from './pages/shop'
+import Blog from './pages/blog'
+import Contact from './pages/contact'
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout/>} >
+      <Route path='/home' element={<Home />} />
+      <Route path='/product' element={<Product />} />
+      {/* <Route path='/cart' element={<Cart />} /> */}
+      <Route path='/shop' element={<Shop />} />
+      <Route path='/blog' element={<Blog />} />
+      <Route path='/contact' element={<Contact />} />
+      </Route>
+  )
+);
 function App() {
+
   return (
     <>
-
-    </>
+    <RouterProvider router = {router} />
+</>
   )
 }
 
