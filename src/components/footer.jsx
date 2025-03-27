@@ -9,8 +9,8 @@ function Footer() {
   return (
     <>
       <div className="container">
-        <footer className="flex sm:flex-wrap flex-wrap mx-auto md:w-screen sm:w-screen md:justify-center bg-getmoreBtnColor p-5">
-        <div className="step1 md:w-[35%] sm:h-68 p-5 text-white">
+        <footer className="flex sm:flex-wrap flex-wrap bg-gray-200 mx-auto md:w-screen sm:w-screen md:justify-center p-5">
+        <div className="step1 md:w-[35%] sm:h-68 p-5 text-black">
           <div className="resturant-title pr-16">
             <h1 className="text-4xl md:text-2xl pb-3" >Food Delivery</h1>
             <p className="pt-5 text-1xl md:text-md" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea veniam recusandae nulla nulla nulla nulla nulla nulla nulla </p>
@@ -30,7 +30,7 @@ function Footer() {
             </Link>
           </div>
         </div>
-        <div className="step2 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-white">
+        <div className="step2 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-black">
           <h2 className="text-2xl" >Our Menus</h2>
           <ul className="pt-5 text-1xl">
             <li className="pb-2 hover:translate-x-4 duration-500">
@@ -71,7 +71,7 @@ function Footer() {
             </li>
           </ul>
           </div>
-        <div className="step3 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-white">
+        <div className="step3 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-black">
         <h2 className="text-2xl" >Useful Links</h2>
 
         <ul className="pt-5 text-1xl">
@@ -108,7 +108,7 @@ function Footer() {
            
           </ul>
           </div>
-        <div className="step4 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-white">
+        <div className="step4 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-black">
         <h2 className="text-2xl" >Contact us</h2>
         <ul className="pt-5 text-1xl">
             <li className="pb-2">
