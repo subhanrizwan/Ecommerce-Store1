@@ -41,88 +41,14 @@ export default function Header() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-          {/* <ul className="hidden md:flex lg:space-x-16 md:space-x-8 text-black">
-              <li>
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    `menu relative hover:text-yellow-500 ${
-                      isActive ? "text-yellow-500" : "text-black"
-                    } duration-500 md:py-2 cursor-pointer `
-                  }
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    `menu relative hover:text-yellow-500 ${
-                      isActive ? "text-yellow-500" : "text-black"
-                    } duration-500 md:py-2 cursor-pointer `
-                  }
-                >
-                  About us
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/product"
-                  className={({ isActive }) =>
-                    `menu relative hover:text-yellow-500 ${
-                      isActive ? "text-yellow-500" : "text-black"
-                    } duration-500 md:py-2 cursor-pointer `
-                  }
-                >
-                  Products
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/shop"
-                  className={({ isActive }) =>
-                    `menu relative hover:text-yellow-500 ${
-                      isActive ? "text-yellow-500" : "text-black"
-                    } duration-500 md:py-2 cursor-pointer `
-                  }
-                >
-                  Shop
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/blog"
-                  className={({ isActive }) =>
-                    `menu relative hover:text-yellow-500 ${
-                      isActive ? "text-yellow-500" : "text-black"
-                    } duration-500 md:py-2 cursor-pointer `
-                  }
-                >
-                  Blog
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    `menu relative hover:text-yellow-500 ${
-                      isActive ? "text-yellow-500" : "text-black"
-                    } duration-500 md:py-2 cursor-pointer `
-                  }
-                >
-                  Contacts
-                </NavLink>
-              </li>
-            </ul> */}
             {navigation.map((item) => (
               <NavLink
                key={item.name}
                to ={item.path} 
                className={({ isActive }) =>
-                `menu relative hover:text-yellow-500 ${
-                  isActive ? "text-yellow-500" : "text-black"
-                } duration-500 md:py-2 cursor-pointer `
+                `menu relative hover:text-color1 ${
+                  isActive ? "text-color1 font-medium" : "text-black"
+                } duration-250 md:py-2 cursor-pointer `
               }>
                 {item.name}
               </NavLink>
@@ -163,8 +89,8 @@ export default function Header() {
                         key={item.name}
                         to={item.path}
                         className={({isActive})=> 
-                          `-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibol hover:text-gray-500 
-                        ${isActive ? "text-yellow-500 fw-bold" : "text-gray-900"}`
+                          `-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibol hover:text-color1 
+                        ${isActive ? "text-color1 font-medium" : "text-gray-900"}`
                         }>
                         {item.name}
                       </NavLink>
