@@ -73,7 +73,6 @@ function Footer() {
           </div>
         <div className="step3 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-black">
         <h2 className="text-2xl" >Useful Links</h2>
-
         <ul className="pt-5 text-1xl">
             <li className="pb-2 hover:translate-x-4 duration-500">
               <Link>
@@ -109,13 +108,9 @@ function Footer() {
           </ul>
           </div>
         <div className="step4 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-black">
-        <h2 className="text-2xl" >Contact us</h2>
+        <h2 className="text-2xl" >Get in touch</h2>
         <ul className="pt-5 text-1xl">
-            <li className="pb-2">
-              <Link>
-              Home
-              </Link>
-            </li>
+            
             <li className="pb-2">
               <Link>
               About Us
@@ -129,16 +124,6 @@ function Footer() {
             <li className="pb-2">
             <Link>
               Contact Us
-              </Link>
-            </li>
-            <li className="pb-2">
-            <Link>
-              Privacy Policy
-              </Link>
-            </li>
-            <li className="pb-2">
-            <Link>
-              Faq Queries
               </Link>
             </li>
            

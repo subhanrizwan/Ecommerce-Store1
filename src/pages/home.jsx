@@ -1,11 +1,13 @@
 import React from "react";
-
+import Herosection from "../components/Herosection";
 const Home = () => {
+  // const data  = {
+  //   name : 'Welcome to Home Hero Section',
+  //  };
   return (
-    <>
-      <h1 className="text-4xl text-center fw-bold">home</h1>
-    </>
+    <Herosection Home={{name : 'Welcome to Home Hero Section'}} />
   );
 };
+
 
 export default Home;

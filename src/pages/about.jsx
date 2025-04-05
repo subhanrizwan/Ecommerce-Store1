@@ -1,11 +1,10 @@
 import React from 'react'
-
+import Herosection from '../components/Herosection';
 function About() {
   return (
-    <div>
-              <h1 className="text-4xl text-center fw-bold">About</h1>
-
-    </div>
+    <>
+     <Herosection About={{name : 'Welcome to About Hero Section'}} />
+    </>
   )
 }
 

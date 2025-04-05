@@ -12,6 +12,7 @@ import About from "./pages/about";
 import Shop from "./pages/shop";
 import Blog from "./pages/blog";
 import Contact from "./pages/contact";
+import ErrorPage from "./components/ErrorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="/shop" element={<Shop />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<ErrorPage />} />
     </Route>
   )
 );
