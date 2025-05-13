@@ -11,9 +11,11 @@ const contact = () => {
 
           <div className="form-wrap">
             <div className="form md:w-3/4 bg-gray-300">
-              <div className="form-desc md:w-2/5 text-center">
+              <div className="form-desc md:w-2/5">
+              <p className="">
               We're happy to answer questions or help you with returns.
-              Please fill out the form below if you need assistance.
+              Please fill out the form below if you need assistance
+              </p>
               </div>
             </div>
           </div>
