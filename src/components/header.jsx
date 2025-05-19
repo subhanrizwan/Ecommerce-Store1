@@ -1,7 +1,7 @@
 'use client'
 import { NavLink , Link } from 'react-router';
 import { useState } from 'react'
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
+import { Dialog, DialogContent } from "@mui/material";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 
 const navigation = [
@@ -22,10 +22,9 @@ export default function Header() {
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <NavLink className="-m-1.5 p-1.5">
-              {/* <span className="sr-only">Your Company</span> */}
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                src="/assets/Chigai_kuginuki.png"
                 className="h-8 w-auto"
               />  
             </NavLink>
@@ -109,8 +108,6 @@ export default function Header() {
           </DialogContent>
         </Dialog>
       </header>
-
-      
     </div>
   )
 }
