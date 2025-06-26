@@ -1,8 +1,13 @@
-import React from "react";
+import { useState } from "react";
 import { TextField, Button } from "@mui/material";
 const contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
   const Submit = () => {
-    console.log("hellow");
+    console.log("name : " , name , "email: " ,email,"phone :",phone,"message :",message);
   };
   return (
     <>
@@ -18,20 +23,23 @@ const contact = () => {
             </p>
           </div>
           <div className="w-ful flex justify-center">
-            <form className="w-8/12 md:w-2/3 shadow rounded pt-6 pb-8 mb-4 p-5">
-              <div className="cont-row flex justify-between flex-wrap mb-0">
+            {/* w-8/12 md:w-2/3 */}
+            <form className="shadow rounded pt-6 pb-8 mb-4 p-5 ">
+              <div className="cont-row flex justify-between md:flex-wrap sm:flex-wrap flex-wrap mb-0">
                 <TextField
                   id="outlined-basic"
                   label="Your Name*"
                   variant="outlined"
-                  className="w-80 bg-slate-100 rounded"
-                  style={{ marginBottom: "1rem" }}
+                  value={name}
+                  onChange={(e)=> {setName(e.target.value); console.clear(); console.log(e.target.value)}}
+                  className="bg-slate-100 rounded"
+                  style={{ marginBottom: "1rem" , marginRight:"0.7rem"}}
                   fullWidth 
                   sx={{
                     width: {
                       xs: "100%",
                       sm: '100%',
-                      md: 300 ,
+                      md: 300,
                     },
                   }}
                 />
@@ -39,8 +47,10 @@ const contact = () => {
                   id="outlined-basic"
                   label="Email*"
                   variant="outlined"
-                  className="w-80 bg-slate-100 rounded"
-                  style={{ marginBottom: "1rem" }}
+                  value={email}
+                  onChange={(e)=> {setEmail(e.target.value); console.clear(); console.log(e.target.value)}}
+                  className="bg-slate-100 rounded"
+                  style={{ marginBottom: "1rem" , marginRight:"0.7rem"}}
                    fullWidth 
                   sx={{
                     width: {
@@ -54,7 +64,9 @@ const contact = () => {
                   id="outlined-basic"
                   label="Phone*"
                   variant="outlined"
-                  className="w-80 bg-slate-100 rounded"
+                  value={phone}
+                  onChange={(e)=> {setPhone(e.target.value); console.clear(); console.log(e.target.value)}}
+                  className="bg-slate-100 rounded"
                   style={{ marginBottom: "1rem" }}
                    fullWidth 
                   sx={{
@@ -70,6 +82,8 @@ const contact = () => {
                 <TextField
                   id="outlined-multiline-static"
                   label="Message"
+                  value={message}
+                  onChange={(e)=> {setMessage(e.target.value); console.clear(); console.log(e.target.value)}}
                   multiline
                   rows={12}
                   className="w-full bg-slate-100 rounded"
