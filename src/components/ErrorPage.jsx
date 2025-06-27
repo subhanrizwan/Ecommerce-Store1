@@ -38,7 +38,7 @@ function ErrorPage() {
     </div>
     <div className='text-center flex flex-col items-center'>
           {/* <h1 className="md:text-7xl text-3xl fw-bold p-5 mb-7">404 Not Found</h1> */}
-          <img src={ErrorImage} className='p-0 m-0' style={{ width: '80%', maxWidth: '400px', alignContent:'center'}} alt="" />
+          <img src={ErrorImage} className='p-0 m-0' style={{ width: '95%', maxWidth: '550px', alignContent:'center'}} alt="" />
           {/* <p className='mb-7'>Your visited page not found. You may go home page.</p> */}
            <Button
                   className="w-40 h-12"
