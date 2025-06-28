@@ -4,12 +4,13 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
-
+import CtaFooter from "./ctaSection";
 function Footer() {
   return (
     <>
+    <CtaFooter />
       <div className="container">
-        <footer className="flex sm:flex-wrap flex-wrap bg-gray-100 mx-auto md:w-screen sm:w-screen md:justify-center p-5">
+        <footer className="flex sm:flex-wrap flex-wrap bg-gray-100 mx-auto md:w-screen sm:w-screen md:justify-center p-5 mt-5">
         <div className="step1 md:w-[35%] sm:h-68 p-5 text-black">
           <div className="resturant-title pr-16">
             <h1 className="text-4xl md:text-2xl pb-3" >Food Delivery</h1>

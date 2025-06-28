@@ -11,7 +11,7 @@ import About from "./pages/about";
 import Shop from "./pages/shop";
 import Blog from "./pages/blog";
 import Contact from "./pages/contact";
-import ErrorPage from "./components/ErrorPage";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
