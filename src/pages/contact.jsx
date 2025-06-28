@@ -1,9 +1,11 @@
 import { useState,useRef } from "react";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Alert} from "@mui/material";
 import emailjs from '@emailjs/browser';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
+import swal from 'sweetalert';
+
 
 const contact = () => {
   function handleClick(event) {
@@ -27,9 +29,18 @@ const contact = () => {
       .then(
         () => {
           console.log('SUCCESS!');
+          swal("Email Sent!", "You clicked the button!", "success");
+          setName('');
+          setEmail('');
+          setPhone('');
+          setMessage('');
         },
         (error) => {
           console.log('FAILED...', error.text);
+          setName('');
+          setEmail('');
+          setPhone('');
+          setMessage('');
         },
       );
   };
@@ -68,8 +79,10 @@ const contact = () => {
                 <TextField
                 name="user_name"
                   id="outlined-basic"
-                  label="Your Name*"
+                  label="Your Name"
                   variant="outlined"
+                  required
+                  autoComplete="off"
                   value={name}
                   onChange={(e)=> {setName(e.target.value); console.clear(); console.log(e.target.value)}}
                   className="bg-slate-100 rounded"
@@ -87,8 +100,10 @@ const contact = () => {
                 <TextField
                   name="user_email"
                   id="outlined-basic"
-                  label="Email*"
+                  label="Email"
                   variant="outlined"
+                  required
+                  autoComplete="off"
                   value={email}
                   onChange={(e)=> {setEmail(e.target.value); console.clear(); console.log(e.target.value)}}
                   className=" bg-slate-100 rounded"
@@ -106,8 +121,10 @@ const contact = () => {
                 <TextField
                   name="user_phone"
                   id="outlined-basic"
-                  label="Phone*"
+                  label="Phone"
                   variant="outlined"
+                  required
+                  autoComplete="off"
                   value={phone}
                   onChange={(e)=> {setPhone(e.target.value); console.clear(); console.log(e.target.value)}}
                   className="bg-slate-100 rounded"
@@ -128,6 +145,8 @@ const contact = () => {
                   name="user_message"
                   id="outlined-multiline-static"
                   label="Message"
+                  required
+                  autoComplete="off"
                   value={message}
                   onChange={(e)=> {setMessage(e.target.value); console.clear(); console.log(e.target.value)}}
                   multiline
@@ -147,8 +166,20 @@ const contact = () => {
             </form>
           </div>
         </div>
-        {/* </div> */}
-        {/* </div> */}
+        {/* map */}
+        <div className="map mt-8 mb-8 pb-5">
+          <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14162599.94279923!2d58.357870060541636!3d29.931516261132906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1751119262182!5m2!1sen!2s"
+  width={'100%'}
+  height={450}
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
+        </div>
+        {/* map */}
       </section>
       <section className="map-section w-full"></section>
     </>
