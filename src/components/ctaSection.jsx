@@ -15,7 +15,6 @@ const CtaFooter = () => {
           <Button 
            className="h-9 w-32 md:text-xs md:w-40 md:h-12 " variant="contained">
               <span className="text-xs md:text-base">Get Started</span>
-
           </Button>
         </div>
       </div>

@@ -63,7 +63,7 @@ const contact = () => {
         <Typography sx={{ color: 'text.primary' }}>Contact</Typography>
       </Breadcrumbs>
     </div>
-          <h1 className="text-4xl">Contact Us</h1>
+          <h1 className="text-4xl font-bold">Contact Us</h1>
         </div>
         <div className="form-wrap">
           <div className="form-tagline bg-gray">
