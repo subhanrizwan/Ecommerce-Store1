@@ -5,7 +5,7 @@ const Home = () => {
   //   name : 'Welcome to Home Hero Section',
   //  };
   return (
-    <Herosection Home={{name : 'Welcome to Home Hero Section'}} />
+    <Herosection Home={{name : 'Welcome to our Eccommerce Store 1'}} />
   );
 };
 
