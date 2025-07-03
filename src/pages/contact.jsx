@@ -73,7 +73,7 @@ const contact = () => {
             </p>
           </div>
           <div className="w-ful flex justify-center">
-            {/* w-8/12 md:w-2/3 */}
+            
             <form ref={form} className="md:w-3/4 sm:w-full rounded pt-6 pb-8 mb-4 p-5">
               <div className="cont-row flex justify-between md:flex-wrap sm:flex-wrap flex-wrap mb-0">
                 <TextField
