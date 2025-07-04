@@ -1,16 +1,11 @@
 import { useState, useRef } from "react";
 import { TextField, Button, Alert } from "@mui/material";
 import emailjs from "@emailjs/browser";
-import Typography from "@mui/material/Typography";
-import Breadcrumbs from "@mui/material/Breadcrumbs";
-import Link from "@mui/material/Link";
+import BreadcrumbComponent from "../components/breadcrumbs";
 import swal from "sweetalert";
 
 const Contact = () => {
-  function handleClick(event) {
-    event.preventDefault();
-    console.info("You clicked a breadcrumb.");
-  }
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -47,18 +42,7 @@ const Contact = () => {
     <>
       <section className="w-full mb-5">
         <div className="title-contact text-center p-5 mb-0">
-          <div
-            className="mb-5 md:mb-9 p-5"
-            role="presentation"
-            onClick={handleClick}
-          >
-            <Breadcrumbs aria-label="breadcrumb">
-              <Link underline="hover" color="inherit" href="#">
-                Home
-              </Link>
-              <Typography sx={{ color: "text.primary" }}>Contact</Typography>
-            </Breadcrumbs>
-          </div>
+         <BreadcrumbComponent ContactPage = "Contact" />
           <h1 className="text-4xl font-900">Contact Us</h1>
         </div>
         <div className="form-wrap">

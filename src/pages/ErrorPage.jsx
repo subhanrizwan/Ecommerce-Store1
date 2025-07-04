@@ -4,38 +4,18 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import ErrorImage from '../../assets/images/error-page/404error.png';
-function handleClick(event) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
-}
-
-
+import BreadcrumbComponent from '../components/breadcrumbs';
 function ErrorPage() {
   const navigate = useNavigate();
 
   const Navigateion = ()=>{
     navigate('/')
   }
-
-
   return (
     <>
     <section className='p-5 w-full'>
-       <div className='mb-9 md:mb-9 p-5' role="presentation" onClick={handleClick}>
-      <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="#">
-          Home
-        </Link>
-        {/* <Link
-          underline="hover"
-          color="inherit"
-          href="/material-ui/getting-started/installation/"
-        >
-          Core
-        </Link> */}
-        <Typography sx={{ color: 'text.primary' }}>404 Error</Typography>
-      </Breadcrumbs>
-    </div>
+               <BreadcrumbComponent ErrorPage = "404 Error" />
+
     <div className='text-center flex flex-col items-center'>
           {/* <h1 className="md:text-7xl text-3xl fw-bold p-5 mb-7">404 Not Found</h1> */}
           <img src={ErrorImage} className='p-0 m-0' style={{ width: '85%', maxWidth: '400px', alignContent:'center'}} alt="" />
