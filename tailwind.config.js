@@ -7,7 +7,10 @@ export default {
   theme: {
     extend: {
       colors:{
-        color1:'#183B4E',
+        primary:'rgba(3, 4, 6, 1)',
+        secondary:'#DB4444',
+        textFooter:'#fff',
+        Fieldbg:'#F5F5F5'
       }
     },
   },

@@ -4,14 +4,15 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
-import CtaFooter from "./ctaSection";
+import CtaFooter from "../ctaSection";
+import FooterBottom from "./footerBottom";
 function Footer() {
   return (
     <>
       <CtaFooter />
       <div className="container">
-        <footer className="flex sm:flex-wrap flex-wrap bg-gray-100 mx-auto md:w-screen sm:w-screen md:justify-center p-5 pb-3 mt-5">
-          <div className="step1 md:w-[35%] sm:h-68 p-5 text-black">
+        <footer className="flex sm:flex-wrap flex-wrap bg-primary mx-auto md:w-screen sm:w-screen md:justify-center border-b border-gray-700 p-5 pb-3 mt-5">
+          <div className="step1 md:w-[35%] sm:h-68 p-5 text-textFooter">
             <div className="resturant-title pr-16">
               <h1 className="text-4xl md:text-2xl pb-3">Logo</h1>
               <p className="pt-5 text-1xl md:text-md">
@@ -34,8 +35,8 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div className="step3 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-black">
-            <h2 className="text-2xl">Accunt</h2>
+          <div className="step3 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-textFooter">
+            <h2 className="text-2xl">Account</h2>
             <ul className="pt-5 text-1xl">
               <li className="pb-2 hover:translate-x-4 duration-500">
                 <Link>My Account</Link>
@@ -54,7 +55,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="step4 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-black">
+          <div className="step4 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-textFooter">
             <h2 className="text-2xl">Quick Links</h2>
             <ul className="pt-5 text-1xl">
               <li className="pb-2">
@@ -71,7 +72,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="step2 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-black">
+          <div className="step2 menus md:w-[20%] sm:w-[40%] w-[80%] md:h-92 p-5 text-textFooter">
             <h2 className="text-2xl">Support</h2>
             <ul className="pt-5 text-1xl">
               <li className="pb-2 hover:translate-x-4 duration-500">
@@ -86,11 +87,7 @@ function Footer() {
             </ul>
           </div>
         </footer>
-        <div className="footer-bottom text-xs w-screen text-center border-t border border-gray-150 bg-gray-100 p-5">
-          <p className="mt-1">
-            Copyright © 2025 All rights reserved by Subhan Ahmed
-          </p>
-        </div>
+        <FooterBottom />
       </div>
     </>
   );

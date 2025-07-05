@@ -40,7 +40,7 @@ const Contact = () => {
   };
   return (
     <>
-      <section className="w-full mb-5">
+      <section className="w-full mb-5 ">
         <div className="title-contact text-center p-5 mb-0">
          <BreadcrumbComponent ContactPage = "Contact" />
           <h1 className="text-4xl font-900">Contact Us</h1>
@@ -71,10 +71,13 @@ const Contact = () => {
                     console.clear();
                     console.log(e.target.value);
                   }}
-                  className="bg-slate-100 rounded"
+                  className="bg-Fieldbg rounded"
                   style={{ marginBottom: "1rem" }}
                   fullWidth
                   sx={{
+                      '& .MuiFormLabel-asterisk':{
+                  color: '#DB4444',
+                },
                     width: {
                       xs: "100%",
                       sm: "100%",
@@ -96,10 +99,13 @@ const Contact = () => {
                     console.clear();
                     console.log(e.target.value);
                   }}
-                  className=" bg-slate-100 rounded"
+                  className=" bg-Fieldbg rounded"
                   style={{ marginBottom: "1rem" }}
                   fullWidth
                   sx={{
+                      '& .MuiFormLabel-asterisk':{
+                  color: '#DB4444',
+                },
                     width: {
                       xs: "100%",
                       sm: "100%",
@@ -121,10 +127,13 @@ const Contact = () => {
                     console.clear();
                     console.log(e.target.value);
                   }}
-                  className="bg-slate-100 rounded"
+                  className="bg-Fieldbg rounded"
                   style={{ marginBottom: "1rem" }}
                   fullWidth
                   sx={{
+                    '& .MuiFormLabel-asterisk':{
+                  color: '#DB4444',
+                },
                     width: {
                       xs: "100%",
                       sm: "100%",
@@ -140,6 +149,11 @@ const Contact = () => {
                   id="outlined-multiline-static"
                   label="Message"
                   required
+               sx={{
+                '& .MuiFormLabel-asterisk':{
+                  color: '#DB4444',
+                },
+               }}
                   autoComplete="off"
                   value={message}
                   onChange={(e) => {
@@ -149,13 +163,13 @@ const Contact = () => {
                   }}
                   multiline
                   rows={12}
-                  className="w-full bg-slate-100 rounded"
+                  className="w-full bg-Fieldbg rounded"
                 />{" "}
               </div>
-              <div className="submit-btn mt-2 flex justify-end">
+              <div className="submit-btn mt-2 flex justify-end ">
                 <Button
                   onClick={sendEmail}
-                  className="w-40 h-12"
+                  className="w-40 h-12 !bg-secondary"
                   variant="contained"
                 >
                   Send

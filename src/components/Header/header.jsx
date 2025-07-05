@@ -17,8 +17,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-white">
-      <header className="inset-x-0 top-0 z-50 bg-gray-200">
+    <div className="border-b">
+      <header className="inset-x-0 top-0 z-50 ">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <NavLink className="-m-1.5 p-1.5">
@@ -67,7 +67,7 @@ export default function Header() {
                 <span className="sr-only">Your Company</span>
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                src="/assets/Chigai_kuginuki.png"
                   className="h-8 w-auto"
                 />
               </a>
