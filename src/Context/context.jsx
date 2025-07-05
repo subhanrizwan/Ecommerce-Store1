@@ -5,7 +5,6 @@ import Contact from '../pages/contact';
 import productReducer from '../Reducer/productReducer';
 const AppContext = createContext();
 
-
 const AppProvider = ({children})=>{
 
     const initialState ={
