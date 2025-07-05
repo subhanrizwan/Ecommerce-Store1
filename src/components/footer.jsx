@@ -88,7 +88,7 @@ function Footer() {
         </footer>
         <div className="footer-bottom text-xs w-screen text-center border-t border border-gray-150 bg-gray-100 p-5">
           <p className="mt-1">
-            Copyright @2025 Subhan Ahmed.All Right Reserved
+            Copyright © 2025 All rights reserved by Subhan Ahmed
           </p>
         </div>
       </div>
