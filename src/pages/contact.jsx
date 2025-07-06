@@ -55,7 +55,7 @@ const Contact = () => {
           <div className="w-ful flex justify-center">
             <form
               ref={form}
-              className="md:w-3/4 sm:w-full rounded pt-6 pb-8 mb-4 p-5"
+              className="md:w-11/12 sm:w-full lg:w-4/5 rounded pt-6 pb-8 mb-4 p-5"
             >
               <div className="cont-row flex justify-between md:flex-wrap sm:flex-wrap flex-wrap mb-0">
                 <TextField
@@ -82,7 +82,7 @@ const Contact = () => {
                       xs: "100%",
                       sm: "100%",
                       lg: "32%",
-                      md: 300,
+                      md: 280,
                     },
                   }}
                 />
@@ -110,7 +110,7 @@ const Contact = () => {
                       xs: "100%",
                       sm: "100%",
                       lg: "32%",
-                      md: 300,
+                      md: 280,
                     },
                   }}
                 />
@@ -138,7 +138,7 @@ const Contact = () => {
                       xs: "100%",
                       sm: "100%",
                       lg: "32%",
-                      md: 300,
+                      md: 280,
                     },
                   }}
                 />
