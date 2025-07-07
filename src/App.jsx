@@ -6,9 +6,9 @@ import {
 } from "react-router";
 import Layout from "./components/layout";
 import Home from "./pages/home";
-import Product from "./pages/product";
+import Product from "./pages/Product";
 import About from "./pages/about";
-import Shop from "./pages/shop";
+import Shop from "./pages/Shop";
 import Blog from "./pages/blog";
 import Contact from "./pages/contact";
 import ErrorPage from "./pages/ErrorPage";
