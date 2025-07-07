@@ -1,5 +1,5 @@
 import React from 'react'
-import Herosection from '../components/Herosection';
+// import Herosection from '../componensts/Herosection';
 function About() {
   return (
     <>

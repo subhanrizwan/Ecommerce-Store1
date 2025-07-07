@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/Header/header.jsx'
+import Header from './Header/header.jsx'
 import Footer from './Footer/footer.jsx';
 import { Outlet } from 'react-router';
 import TopHeader from './Header/topHeader.jsx';

@@ -1,4 +1,4 @@
-import Herosection from "../components/Herosection";
+import Herosection from "../Sections/HomeSection/Herosection";
 // import { useAppContext } from "../Context/context";
 const Home = () => {
   // const { name, ContactComponent } = useAppContext();

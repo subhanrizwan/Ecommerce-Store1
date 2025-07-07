@@ -15,7 +15,7 @@ const AppProvider = ({children})=>{
     // }
     // const [state , dispatch] = useReducer(productReducer,initialState)
     
-    const Api = 'https://api.pujakaitem.com/api/products'
+    // const Api = 'https://api.pujakaitem.com/api/products'
     const getProducts = async(url)=>{
         // dispatch({type : "Set_LOADING"});
         try{
@@ -48,7 +48,7 @@ const AppProvider = ({children})=>{
         // }
     }
     useEffect(()=>{
-        getProducts(Api);
+        // getProducts(Api);
     },[])
     return <AppContext.Provider value={{}}>{children}</AppContext.Provider>;
 }

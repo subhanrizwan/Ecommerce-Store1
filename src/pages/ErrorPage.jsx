@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import ErrorImage from '../../assets/images/error-page/404error.png';
-import BreadcrumbComponent from '../components/breadcrumbs';
+import BreadcrumbComponent from '../components/Breadcrumbs';
 function ErrorPage() {
   const navigate = useNavigate();
 

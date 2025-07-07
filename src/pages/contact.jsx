@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { TextField, Button, Alert } from "@mui/material";
 import emailjs from "@emailjs/browser";
-import BreadcrumbComponent from "../components/breadcrumbs";
+import BreadcrumbComponent from "../components/Breadcrumbs";
 import swal from "sweetalert";
 
 const Contact = () => {
