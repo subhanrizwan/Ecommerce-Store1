@@ -15,6 +15,8 @@ import "./style.css";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
 
 export default function App() {
+    const isWidth = window.innerWidth <= 1024;
+
   return (
     <>
       <Swiper
@@ -41,17 +43,17 @@ export default function App() {
         ></div>
         <SwiperSlide>
           <div className="container flex justify-between">
-            <div style={{padding:'40px 60px'}} className="left-side">
+            <div className="left-side md:pl-9 lg:pl-20 sm:pl-9 md:w-3/5 sm:w-full">
               <div
-                className="flex space-x-2 space-y-2 mb-5 "
+                className="flex space-x-2 space-y-2 mb-5 md:mb-3"
                 data-swiper-parallax="-300"
               >
-                <div className="logo">
+                <div className="logo ">
                   <AppleIcon fontSize="large" />
                 </div>
                 <p className="text-sm">iPhone 14 Series</p>
               </div>
-              <div className="text-6xl mb-7" data-swiper-parallax="-200">
+              <div className="text-6xl md:text-5xl sm:3xl mb-7 md:mb-4" data-swiper-parallax="-200">
                 <h1 className="mb-3">Up to 10% </h1>
                 <h1>off Voucher</h1>
               </div>
@@ -61,8 +63,8 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <div className="right">
-                <img src={Heroimage} alt="" />
+            <div className="right flex justify-center items-center lg:justify-start md:w-[50%] sm:w-full">
+                <img src={Heroimage} className="md:w-full" alt="" />
             </div>
           </div>
         </SwiperSlide>
@@ -129,17 +131,17 @@ export default function App() {
             </p>
           </div> */}
              <div className="container flex justify-between">
-            <div  style={{padding:'40px 60px'}} className="left-side p-5">
+            <div  style={{padding:'40px 60px'}} className="right-side p-5 ">
               <div
-                className="flex space-x-2 space-y-2 mb-5"
+                className="flex space-x-2 space-y-2 mb-5 "
                 data-swiper-parallax="-300"
               >
                 <div className="logo">
-                  <AppleIcon fontSize="large" />
+                  <AppleIcon fontSize="large"/>
                 </div>
-                <p className="text-sm">iPhone 14 Series</p>
+                <p className="text-sm md:text-xs">iPhone 14 Series</p>
               </div>
-              <div className="text-6xl mb-7" data-swiper-parallax="-200">
+              <div className="lg:text-6xl md:text-4xl sm:text-3xl mb-7" data-swiper-parallax="-200">
                 <h1 className="mb-3">Up to 10% </h1>
                 <h1>off Voucher</h1>
               </div>
