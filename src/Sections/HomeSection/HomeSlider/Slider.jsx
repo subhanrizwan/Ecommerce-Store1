@@ -25,7 +25,9 @@ export default function Slider() {
         parallax={true}
         pagination={{
           clickable: true,
+
         }}
+        
         // navigation={true}
         modules={[Parallax, Pagination, Navigation]}
         className="mySwiper"

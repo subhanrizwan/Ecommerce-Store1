@@ -5,7 +5,7 @@ const Herosection = () => {
     <>
       <section className="hero-section">
         <div className="container mx-auto flex lg:justify-center ">
-          <div className="row w-full sm:w-full md:w-full lg:w-4/5 flex md:mt-5 md:mb-5">
+          <div className="row w-full sm:w-full md:w-full lg:w-4/5 flex md:mt-5 lg:mt-2 md:mb-5">
           <Slider />
           </div>
         </div>
