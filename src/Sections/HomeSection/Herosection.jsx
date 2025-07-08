@@ -1,21 +1,12 @@
-import CategoryList from './CategoryList'
-import HeroSlider from './HomeSlider/HeroSlider'
-const Herosection = ({ Home, About }) => {
+// import CategoryList from './CategoryList'
+import Slider from './HomeSlider/Slider'
+const Herosection = () => {
   return (
     <>
-      <section>
-        <div className="container hero-section">
-          <div className="flex justify-center w-screen h-[90vh] p-0">
-            <div className="w-full sm:w-full md:w-screen lg:w-10/12 bg-gray-200 flex justify-between h-auto p-5">
-              <div className="left h-5/6 w-[23%] md:w-[20%] sm:w-[35%]">
-                <div className="category-list">
-                    <CategoryList />
-                </div>
-              </div>
-              <div className="right h-4/5 w-3/4 md:w-4/5">
-                    <HeroSlider />
-              </div>
-            </div>
+      <section className="hero-section">
+        <div className="container mx-auto flex lg:justify-center ">
+          <div className="row w-full sm:w-full md:w-full lg:w-4/5 flex md:mt-5 md:mb-5">
+          <Slider />
           </div>
         </div>
       </section>
