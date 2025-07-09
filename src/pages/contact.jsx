@@ -167,6 +167,7 @@ const Contact = () => {
                 />{" "}
               </div>
               <div className="submit-btn mt-2 flex justify-end ">
+                
                 <Button
                   onClick={sendEmail}
                   className="w-40 h-12 !bg-secondary"

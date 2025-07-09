@@ -57,6 +57,7 @@ export default function Slider() {
                 </p>
               </div>
               <div className="submit-btn mt-2 ">
+                
                 <Button
                  className="w-40 h-12 !bg-secondary gap-1 "
                  variant="contained">
