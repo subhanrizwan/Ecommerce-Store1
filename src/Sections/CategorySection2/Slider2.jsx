@@ -1,4 +1,3 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styled from 'styled-components';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
@@ -7,7 +6,6 @@ import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
 import WatchOutlinedIcon from '@mui/icons-material/WatchOutlined';
 import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
@@ -23,7 +21,6 @@ const StyledSwiper = styled(Swiper)`
   margin-right: auto;
   background:transparent;
 `;
-
 const StyledSlide = styled(SwiperSlide)`
   text-align: center;
   font-size: 18px;
@@ -35,7 +32,13 @@ const StyledSlide = styled(SwiperSlide)`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition : 0.3s;
+   &:hover {
+    background-color:#DB4444;
+    color: white;
+  }
 `;
+
 
 export default function Slder2() {
   return (
@@ -51,10 +54,10 @@ export default function Slder2() {
     //   }}
       modules={[Grid, Pagination]}
     >
-      {[...Array(9)].map((_, idx) => (
+      {/* {[...Array(9)].map((_, idx) => (
         <StyledSlide key={idx}>Slide {idx + 1}</StyledSlide>
-      ))}
-      {/* <StyledSlide>
+      ))} */}
+       <StyledSlide>
         <div className="flex flex-col items-center gap-y-5">
     <HeadphonesOutlinedIcon fontSize='large' /> Headphone
     </div>
@@ -93,7 +96,7 @@ export default function Slder2() {
     <div className="flex flex-col items-center gap-y-5">
     <CameraAltOutlinedIcon fontSize='large' /> Camera
     </div>
-  </StyledSlide> */}
+  </StyledSlide>
 
     </StyledSwiper>
   );

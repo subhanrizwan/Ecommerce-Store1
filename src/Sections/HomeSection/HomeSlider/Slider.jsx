@@ -34,12 +34,12 @@ export default function Slider() {
       >
         <div
           slot="container-start"
-          className="parallax-bg bg-black"
+          className="parallax-bg bg-black "
           data-swiper-parallax="-23%"
         ></div>
         <SwiperSlide>
-          <div className="content flex justify-between">
-            <div className="left  pt-3 md:pt-5 lg:pt-16">
+          <div className="content flex justify-between ">
+            <div className="left pt-3 md:pt-5 lg:pt-16 lg:pb-16 lg:pl-10">
               <div className="" data-swiper-parallax="-200">
                 <AppleIcon /> Welcome
               </div>
@@ -56,8 +56,10 @@ export default function Slider() {
              
                 </p>
               </div>
-              <div className="submit-btn mt-2  ">
-                <Button className="w-40 h-12 !bg-secondary gap-1 " variant="contained">
+              <div className="submit-btn mt-2 ">
+                <Button
+                 className="w-40 h-12 !bg-secondary gap-1 "
+                 variant="contained">
                   Shop 
                   <ArrowOutwardIcon fontSize="small" />
                 </Button>
