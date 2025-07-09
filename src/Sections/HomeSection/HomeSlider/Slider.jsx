@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@mui/material";
 import Iphone from "../../../../assets/images/home hero/iphone.png";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import AppleIcon from '@mui/icons-material/Apple';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,7 +13,6 @@ import "./style.css";
 
 // import required modules
 import { Parallax, Pagination, Navigation } from "swiper/modules";
-
 export default function Slider() {
   return (
     <>
@@ -23,14 +23,14 @@ export default function Slider() {
         }}
         speed={600}
         parallax={true}
+
         pagination={{
           clickable: true,
-
         }}
         
         // navigation={true}
         modules={[Parallax, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper md:rounded rounded-none"
       >
         <div
           slot="container-start"
@@ -41,7 +41,7 @@ export default function Slider() {
           <div className="content flex justify-between">
             <div className="left  pt-3 md:pt-5 lg:pt-16">
               <div className="" data-swiper-parallax="-200">
-                Welcome
+                <AppleIcon /> Welcome
               </div>
               <div className="text-4xl mb-3 md:mb-5" data-swiper-parallax="-300">
                 To Subhii Store
