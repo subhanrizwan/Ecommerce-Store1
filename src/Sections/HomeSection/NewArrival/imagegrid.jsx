@@ -20,7 +20,6 @@ export default function WovenImageList() {
         },
         overflow: "hidden",
       }}
-    //   variant="woven"
       variant="woven"
       cols={3}
       gap={8}
