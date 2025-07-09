@@ -23,18 +23,16 @@ export default function Slider() {
         }}
         speed={600}
         parallax={true}
-
         pagination={{
           clickable: true,
         }}
-        
         // navigation={true}
         modules={[Parallax, Pagination, Navigation]}
         className="mySwiper md:rounded rounded-none"
       >
         <div
           slot="container-start"
-          className="parallax-bg bg-black "
+          className="parallax-bg bg-black"
           data-swiper-parallax="-23%"
         ></div>
         <SwiperSlide>
