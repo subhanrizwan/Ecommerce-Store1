@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import Shoes from "../../../../assets/images/products/image.png";
 import PriceCircle from "./PriceCircle";
 import FavoriteIcon from '@mui/icons-material/Favorite';import { useState } from "react";
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 const ProductCard = () => {
   const [heart,isHeartUpdate] = useState('#DB4444')
   
@@ -13,7 +14,10 @@ const ProductCard = () => {
     <PriceCircle />
     <FavoriteIcon
     fontSize="small"
-    className="absolute text-gray-400 -translate-y-24 mt-3 translate-x-12 rounded-[100%]  " /> 
+    className="absolute text-gray-400 -translate-y-24 mt-4 xl:mt-5 translate-x-12 rounded-[100%]  " /> 
+    <RemoveRedEyeIcon
+    fontSize="small"
+    className="absolute text-gray-400 -translate-y-24 mt-4 xl:mt-5 translate-x-20 rounded-[100%]  " /> 
       <div className="card group mt-10 pt-16 px-10 pb-0 w-80 h-[360px] bg-gray-100 rounded ">
         <img
           src={Shoes}
