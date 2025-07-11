@@ -37,7 +37,7 @@ export default function Slider() {
         ></div>
         <SwiperSlide>
           <div className="content flex justify-between ">
-            <div className="left pt-3 md:pt-5 lg:pt-10">
+            <div className="left pt-5 md:pt-5 lg:pt-16">
               <div className="" data-swiper-parallax="-200">
                 <AppleIcon /> Welcome
               </div>

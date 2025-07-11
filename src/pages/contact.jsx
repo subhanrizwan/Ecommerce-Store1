@@ -40,9 +40,11 @@ const Contact = () => {
   };
   return (
     <>
-      <section className="w-full mb-5 ">
-        <div className="title-contact text-center p-5 mb-0">
-         <BreadcrumbComponent ContactPage = "Contact" />
+       <div className="p-5">         <BreadcrumbComponent ContactPage = "Contact" />
+</div>
+      <section className="w-full">
+        <div className="title-contact text-center p-5 pt-0 mb-0">
+         {/* <BreadcrumbComponent ContactPage = "Contact" /> */}
           <h1 className="text-4xl font-900">Contact Us</h1>
         </div>
         <div className="form-wrap">

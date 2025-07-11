@@ -1,6 +1,6 @@
 import Herosection from "../Sections/HomeSection/Herosection";
 import Featured from "../Sections/HomeSection/NewArrival/Featured.jsx";
-// import { useAppContext } from "../Context/context";
+import Products from "../Sections/HomeSection/Products/Products.jsx"; 
 import Category2 from "../Sections/HomeSection/CategorySection/Category.jsx";
 import FeatureHighlight from "../Sections/HomeSection/FetaureHighlight/FeatureHighlight.jsx";
 // import Featured from "../Sections/HomeSection/NewArrival/Featured.jsx";
@@ -10,7 +10,7 @@ const Home = () => {
     <>
     <Herosection />
     <Category2 />
-    {/* <Featured /> */}
+    <Products />
     <Featured />
     <FeatureHighlight />
     </>

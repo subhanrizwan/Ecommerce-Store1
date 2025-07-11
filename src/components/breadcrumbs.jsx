@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 
-const BreadcrumbComponent=({ContactPage,ErrorPage})=>{
+const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage})=>{
       function handleClick(event) {
         event.preventDefault();
         console.info("You clicked a breadcrumb.");
@@ -18,7 +18,7 @@ const BreadcrumbComponent=({ContactPage,ErrorPage})=>{
               <Link underline="hover" color="inherit" href="#">
                 Home
               </Link>
-              <Typography sx={{ color: "text.primary" }}>{ContactPage}{ErrorPage}</Typography>
+              <Typography sx={{ color: "text.primary" }}>{ContactPage}{ErrorPage}{AboutPage}</Typography>
             </Breadcrumbs>
           </div>
         </>

@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -28,7 +28,7 @@ const cards = [
 ];
 
 function SelectActionCard() {
-  const [selectedCard, setSelectedCard] = React.useState(0);
+  const [selectedCard, setSelectedCard] = useState(0);
   return (
     <Box
       sx={{
@@ -44,6 +44,7 @@ function SelectActionCard() {
             boxShadow: "none",
             border:'1px solid lightgray',
             textAlign: "center",
+
           }}
         >
           <CardActionArea
@@ -80,6 +81,7 @@ function SelectActionCard() {
                 sx={{
                   marginBottom: "0.5rem",
                   fontWeight: "bold",
+                  
                 }}
                 variant="b"
                 component="div"
@@ -90,6 +92,7 @@ function SelectActionCard() {
                 sx={{
                   marginBottom: "0.5rem",
                   fontSize:'0.7rem',
+                  
                 }}
                 variant="body2"
                 color="text.secondary"

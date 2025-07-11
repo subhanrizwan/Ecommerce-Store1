@@ -33,6 +33,7 @@ const StyledSlide = styled(SwiperSlide)`
   justify-content: center;
   align-items: center;
   transition : 0.3s;
+  cursor:pointer;
    &:hover {
     background-color:#DB4444;
     color: white;
