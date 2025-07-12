@@ -4,14 +4,20 @@ import PriceCircle from "./PriceCircle";
 import FavoriteIcon from '@mui/icons-material/Favorite';import { useState } from "react";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 const ProductCard = () => {
-  const [heart,isHeartUpdate] = useState('#DB4444')
-
+  const [heart,isHeartUpdate] = useState('#DB4444');
+  // const FavrtBtn=()=>{
+  //   console.log("hellow");
+  // }
   return (
     <>
     <PriceCircle />
-    <FavoriteIcon
+    {/* <div
+    onClick={FavrtBtn} className="div"> */}
+ <FavoriteIcon
     fontSize="small"
     className="absolute text-gray-400 -translate-y-24 mt-4 xl:mt-5 translate-x-12 rounded-[100%]  " /> 
+    {/* </div> */}
+   
     <RemoveRedEyeIcon
     fontSize="small"
     className="absolute text-gray-400 -translate-y-24 mt-4 xl:mt-5 translate-x-20 rounded-[100%]  " /> 
