@@ -12,7 +12,6 @@ const ProductCard = () => {
  <FavoriteIcon
     fontSize="small"
     className="absolute text-gray-400 -translate-y-24 mt-4 xl:mt-5 translate-x-12 rounded-[100%]  " /> 
-    {/* </div> */}
    
     <RemoveRedEyeIcon
     fontSize="small"
