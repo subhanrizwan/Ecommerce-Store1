@@ -5,9 +5,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';import { useState } from
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 const ProductCard = () => {
   const [heart,isHeartUpdate] = useState('#DB4444');
-  // const FavrtBtn=()=>{
-  //   console.log("hellow");
-  // }
+
   return (
     <>
     <PriceCircle />
