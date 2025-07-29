@@ -1,5 +1,5 @@
 // import CategoryList from './CategoryList'
-import Slider from './HomeSlider/Slider'
+import Slider from './Slider'
 const Herosection = () => {
   return (
     <>

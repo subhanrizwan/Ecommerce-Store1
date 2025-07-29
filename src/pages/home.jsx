@@ -1,4 +1,4 @@
-import Herosection from "../Sections/HomeSection/Herosection";
+import Herosection from "../Sections/HomeSection/HomeSlider/Herosection.jsx";
 import Featured from "../Sections/HomeSection/NewArrival/Featured.jsx";
 import Products from "../Sections/HomeSection/Products/Products.jsx"; 
 import Category2 from "../Sections/HomeSection/CategorySection/Category.jsx";

@@ -3,7 +3,7 @@ import axios from  'axios';
 // import Contact from '../pages/contact';
 // createContext is used to create a context object
 // import productReducer from '../Reducer/productReducer';
-import Herosection from '../Sections/HomeSection/Herosection';
+import Herosection from '../Sections/HomeSection/HomeSlider/Herosection.jsx';
 const AppContext = createContext();
 
 const AppProvider = ({children})=>{

@@ -1,4 +1,4 @@
-import Herosection from '../Sections/HomeSection/Herosection';
+import Herosection from '../Sections/HomeSection/HomeSlider/Herosection.jsx';
 import FeatureHighlight from '../Sections/HomeSection/FetaureHighlight/FeatureHighlight';
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
 function About() {

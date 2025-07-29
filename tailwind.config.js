@@ -6,6 +6,18 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+    moveLeft: {
+      '100%': { transform: 'translateX(3.59586px)' },
+    },
+    moveRight: {
+      '100%': { transform: 'translateX(-5.71733px)' },
+    },
+  },
+  animation: {
+    moveLeft: 'moveLeft 3s linear infinite',
+    moveRight: 'moveRight 3s linear infinite',
+  },
       colors:{
         primary:'rgba(3, 4, 6, 1)',
         secondary:'#DB4444',
