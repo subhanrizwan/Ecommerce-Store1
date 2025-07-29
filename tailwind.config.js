@@ -28,7 +28,7 @@ export default {
   },
       colors:{
         primary:'rgba(3, 4, 6, 1)',
-        secondary:'#DB4444',
+        secondary:'#fa4f09',
         textFooter:'#fff',
         Fieldbg:'#F5F5F5'
       }

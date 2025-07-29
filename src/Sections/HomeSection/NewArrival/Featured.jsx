@@ -11,7 +11,7 @@ const Featured = () => {
               <Rectangle />Browse by category  <Rectangle />
             </div>
             <div className="title text-2xl mb-7">Browse By Category</div>
-          <ImageList />
+          {/* <ImageList /> */}
       </div>
       </div>
     </section>

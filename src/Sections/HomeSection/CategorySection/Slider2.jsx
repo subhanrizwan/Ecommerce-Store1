@@ -9,6 +9,7 @@ import SportsEsportsOutlinedIcon from "@mui/icons-material/SportsEsportsOutlined
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import { Tooltip,IconButton } from "@mui/material";
 
 // import required modules
 import { Grid, Pagination } from "swiper/modules";
@@ -26,79 +27,312 @@ const StyledSlide = styled(SwiperSlide)`
   font-size: 18px;
   color: #000;
   border: 1px solid lightgray;
-  border-radius: 2%;
+  border-radius: 50%;
   background: transparent;
-  height: 150px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s;
   cursor: pointer;
-  &:hover {
-    background-color: #db4444;
-    color: white;
-  }
+  // &:hover {
+  //   background-color: #db4444;
+  //   color: white;
+  // }
 `;
 
 export default function Slder2() {
   return (
     <StyledSwiper
-      slidesPerView={5}
-      grid={{
-        rows: 1,
-      }}
-      spaceBetween={40}
-      autoplay={{
-        delay: 1500,
-        disableOnInteraction: false,
-      }}
-      //       pagination={{
-      //   clickable: true,
-      // }}
-      modules={[Grid, Pagination]}
-    >
-      {/* {[...Array(9)].map((_, idx) => (
-        <StyledSlide key={idx}>Slide {idx + 1}</StyledSlide>
-      ))} */}
+  slidesPerView={5}
+  grid={{ rows: 1 }}
+  spaceBetween={40}   
+  breakpoints={{
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+    },
+    400: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    460: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 32,
+    },
+    1280: {
+      slidesPerView: 5,
+      spaceBetween: 40,
+    },
+  }}
+  autoplay={{
+    delay: 1500,
+    disableOnInteraction: false,
+  }}
+  modules={[Grid, Pagination]}
+>
+
       <StyledSlide>
-        <div className="flex flex-col items-center gap-y-5">
-          <HeadphonesOutlinedIcon fontSize="large" /> Headphone
-        </div>
+  <Tooltip title="Headphone" placement="bottom" arrow
+    componentsProps={{
+    tooltip: {
+      sx: {
+        bgcolor: '#fa4f09',         
+        color: '#fff',              
+        fontSize: '0.7rem',          
+        fontWeight: 600,
+        boxShadow: 3,    
+        borderRadius: 1,            
+        px: 2,                      
+        py: 1,   
+
+      }
+    },
+    arrow: {
+      sx: {
+        color: '#db4444',           // arrow color (same as bg)
+      }
+    }
+  }}
+  >
+        <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-14 rounded-full">
+    <HeadphonesOutlinedIcon fontSize="large" />
+  </div>
+</Tooltip>
+</StyledSlide>
+
+           <StyledSlide>
+              <Tooltip title="Phone" placement="bottom" arrow
+    componentsProps={{
+    tooltip: {
+      sx: {
+        bgcolor: '#fa4f09',         
+        color: '#fff',              
+        fontSize: '0.7rem',          
+        fontWeight: 600,
+        boxShadow: 3,    
+        borderRadius: 1,            
+        px: 2,                      
+        py: 1,   
+
+      }
+    },
+    arrow: {
+      sx: {
+        color: '#db4444',           // arrow color (same as bg)
+      }
+    }
+  }}
+  >
+                <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-14 rounded-full">
+                  <PhoneAndroidOutlinedIcon fontSize="large" />
+                </div>
+            </Tooltip>
+          </StyledSlide>
+      <StyledSlide>
+         <Tooltip title="Desktop" placement="bottom" arrow
+    componentsProps={{
+    tooltip: {
+      sx: {
+        bgcolor: '#fa4f09',         
+        color: '#fff',              
+        fontSize: '0.7rem',          
+        fontWeight: 600,
+        boxShadow: 3,    
+        borderRadius: 1,            
+        px: 2,                      
+        py: 1,   
+
+      }
+    },
+    arrow: {
+      sx: {
+        color: '#db4444',           // arrow color (same as bg)
+      }
+    }
+  }}
+  >
+          <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-14 rounded-full">
+            <DesktopMacOutlinedIcon fontSize="large" />
+          </div>
+        </Tooltip>
       </StyledSlide>
       <StyledSlide>
-        <div className="flex flex-col items-center gap-y-5">
-          <PhoneAndroidOutlinedIcon fontSize="large" /> Phone
-        </div>
+          <Tooltip title="Gaming" placement="bottom" arrow
+    componentsProps={{
+    tooltip: {
+      sx: {
+        bgcolor: '#fa4f09',         
+        color: '#fff',              
+        fontSize: '0.7rem',          
+        fontWeight: 600,
+        boxShadow: 3,    
+        borderRadius: 1,            
+        px: 2,                      
+        py: 1,   
+
+      }
+    },
+    arrow: {
+      sx: {
+        color: '#db4444',           // arrow color (same as bg)
+      }
+    }
+  }}
+  >
+            <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-14 rounded-full">
+              <SportsEsportsOutlinedIcon fontSize="large" />
+            </div>
+        </Tooltip>
       </StyledSlide>
       <StyledSlide>
-        <div className="flex flex-col items-center gap-y-5">
-          <DesktopMacOutlinedIcon fontSize="large" /> Phone
-        </div>
+         <Tooltip title="Watch" placement="bottom" arrow
+    componentsProps={{
+    tooltip: {
+      sx: {
+        bgcolor: '#fa4f09',         
+        color: '#fff',              
+        fontSize: '0.7rem',          
+        fontWeight: 600,
+        boxShadow: 3,    
+        borderRadius: 1,            
+        px: 2,                      
+        py: 1,   
+
+      }
+    },
+    arrow: {
+      sx: {
+        color: '#db4444',           // arrow color (same as bg)
+      }
+    }
+  }}
+  >
+          <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-14 rounded-full">
+            <WatchOutlinedIcon fontSize="large" />
+          </div>
+        </Tooltip>
       </StyledSlide>
       <StyledSlide>
-        <div className="flex flex-col items-center gap-y-5">
-          <SportsEsportsOutlinedIcon fontSize="large" /> Gaming
-        </div>
+          <Tooltip title="Headphone" placement="bottom" arrow
+    componentsProps={{
+    tooltip: {
+      sx: {
+        bgcolor: '#fa4f09',         
+        color: '#fff',              
+        fontSize: '0.7rem',          
+        fontWeight: 600,
+        boxShadow: 3,    
+        borderRadius: 1,            
+        px: 2,                      
+        py: 1,   
+
+      }
+    },
+    arrow: {
+      sx: {
+        color: '#db4444',           // arrow color (same as bg)
+      }
+    }
+  }}
+  >          {/* <IconButton> */}
+            <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-14 rounded-full">
+              <CameraAltOutlinedIcon fontSize="large" />
+            </div>
+          {/* </IconButton> */}
+        </Tooltip>
       </StyledSlide>
       <StyledSlide>
-        <div className="flex flex-col items-center gap-y-5">
-          <WatchOutlinedIcon fontSize="large" /> Watch
-        </div>
+        <Tooltip title="Headphone" placement="bottom" arrow
+    componentsProps={{
+    tooltip: {
+      sx: {
+        bgcolor: '#fa4f09',         
+        color: '#fff',              
+        fontSize: '0.7rem',          
+        fontWeight: 600,
+        boxShadow: 3,    
+        borderRadius: 1,            
+        px: 2,                      
+        py: 1,   
+
+      }
+    },
+    arrow: {
+      sx: {
+        color: '#db4444',           // arrow color (same as bg)
+      }
+    }
+  }}
+  >
+          <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-14 rounded-full">
+            <WatchOutlinedIcon fontSize="large" />
+          </div>
+        </Tooltip>
       </StyledSlide>
       <StyledSlide>
-        <div className="flex flex-col items-center gap-y-5">
-          <CameraAltOutlinedIcon fontSize="large" /> Camera
-        </div>
+       <Tooltip title="Headphone" placement="bottom" arrow
+    componentsProps={{
+    tooltip: {
+      sx: {
+        bgcolor: '#fa4f09',         
+        color: '#fff',              
+        fontSize: '0.7rem',          
+        fontWeight: 600,
+        boxShadow: 3,    
+        borderRadius: 1,            
+        px: 2,                      
+        py: 1,   
+
+      }
+    },
+    arrow: {
+      sx: {
+        color: '#db4444',           // arrow color (same as bg)
+      }
+    }
+  }}
+  >
+            <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-14 rounded-full">
+              <CameraAltOutlinedIcon fontSize="large" />
+            </div>
+        </Tooltip>
       </StyledSlide>
       <StyledSlide>
-        <div className="flex flex-col items-center gap-y-5">
-          <CameraAltOutlinedIcon fontSize="large" /> Camera
-        </div>
-      </StyledSlide>
-      <StyledSlide>
-        <div className="flex flex-col items-center gap-y-5">
-          <CameraAltOutlinedIcon fontSize="large" /> Camera
-        </div>
+          <Tooltip title="Headphone" placement="bottom" arrow
+    componentsProps={{
+    tooltip: {
+      sx: {
+        bgcolor: '#fa4f09',         
+        color: '#fff',              
+        fontSize: '0.7rem',          
+        fontWeight: 600,
+        boxShadow: 3,    
+        borderRadius: 1,            
+        px: 2,                      
+        py: 1,   
+
+      }
+    },
+    arrow: {
+      sx: {
+        color: '#db4444',           // arrow color (same as bg)
+      }
+    }
+  }}
+  >
+            <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-14 rounded-full">
+              <CameraAltOutlinedIcon fontSize="large" />
+            </div>
+        </Tooltip>
       </StyledSlide>
     </StyledSwiper>
   );
