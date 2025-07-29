@@ -8,10 +8,18 @@ export default {
     extend: {
       keyframes: {
     moveLeft: {
-      '100%': { transform: 'translateX(3.59586px)' },
-    },
-    moveRight: {
-      '100%': { transform: 'translateX(-5.71733px)' },
+      '0%': { transform: 'translateX(0)' },
+      '50%': {
+        transform: 'translateX(7px)',
+      },
+      '100%': { transform: 'translateX(0)' },
+    }, 
+   moveRight: {
+      '0%': { transform: 'translateX(0)' },
+      '50%': {
+        transform: 'translateX(-7px)',
+      },
+      '100%': { transform: 'translateX(0)' },
     },
   },
   animation: {
