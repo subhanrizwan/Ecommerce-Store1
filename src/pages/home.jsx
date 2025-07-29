@@ -1,5 +1,4 @@
 import Herosection from "../Sections/HomeSection/HomeSlider/Herosection.jsx";
-import Featured from "../Sections/HomeSection/NewArrival/Featured.jsx";
 import Products from "../Sections/HomeSection/Products/Products.jsx"; 
 import Category2 from "../Sections/HomeSection/CategorySection/Category.jsx";
 import FeatureHighlight from "../Sections/HomeSection/FetaureHighlight/FeatureHighlight.jsx";
@@ -11,7 +10,6 @@ const Home = () => {
     <Herosection />
     <Category2 />
     <Products />
-    <Featured />
     <FeatureHighlight />
     </>
   )

@@ -1,13 +1,14 @@
 import Rectangle from "../rectangle"
-function Heading() {
+function Heading({Product, Category}) {
   return (
     <>
-        <div className="row flex lg:justify-center md:justify-center p-8 flex-col sm:w-full md:w-full md:mt-5 lg:mt-0 md:mb-0">
-            <div className="subtitle text-xs md:text-sm text-secondary mb-3 sm:mb-7 inline-flex gap-3 items-center">
-              <Rectangle />Browse by category
+    <section className="Heading-section  p-5">
+            <div className="Heading w-full text-center text-2xl md:text-4xl text-secondary inline-flex gap-3 items-center justify-center">
+              <Rectangle />
+              <h1>{Category} {Product}</h1>
+              <Rectangle />
             </div>
-            <div className="title text-2xl mb-7">Browse By Category</div>
-          </div>
+    </section>
     </>
   )
 }

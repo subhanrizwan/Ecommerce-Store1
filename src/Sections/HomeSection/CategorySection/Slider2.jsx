@@ -1,17 +1,15 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
 import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
 import DesktopMacOutlinedIcon from "@mui/icons-material/DesktopMacOutlined";
 import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 import WatchOutlinedIcon from "@mui/icons-material/WatchOutlined";
 import HeadphonesOutlinedIcon from "@mui/icons-material/HeadphonesOutlined";
 import SportsEsportsOutlinedIcon from "@mui/icons-material/SportsEsportsOutlined";
-import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/pagination";
-import { Tooltip,IconButton } from "@mui/material";
-
-// import required modules
+import { Tooltip } from "@mui/material";
 import { Grid, Pagination } from "swiper/modules";
 
 // Styled Components
@@ -21,6 +19,8 @@ const StyledSwiper = styled(Swiper)`
   margin-left: auto;
   margin-right: auto;
   background: transparent;
+  display:flex;
+  justify-content:center;
 `;
 const StyledSlide = styled(SwiperSlide)`
   text-align: center;
@@ -30,6 +30,7 @@ const StyledSlide = styled(SwiperSlide)`
   border-radius: 50%;
   background: transparent;
   height: 200px;
+  width: 200px!important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,13 +45,18 @@ const StyledSlide = styled(SwiperSlide)`
 export default function Slder2() {
   return (
     <StyledSwiper
-  slidesPerView={5}
+  slidesPerView={4}
   grid={{ rows: 1 }}
   spaceBetween={40}   
   breakpoints={{
     320: {
       slidesPerView: 1,
+      grid:{row:2},
       spaceBetween: 16,
+    },
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 30,
     },
     400: {
       slidesPerView: 2,
