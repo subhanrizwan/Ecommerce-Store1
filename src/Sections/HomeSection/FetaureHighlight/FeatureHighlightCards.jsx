@@ -54,10 +54,8 @@ function SelectActionCard() {
               height: "100%",
               transition:'0.5s',
               "&[data-active]": {
-                // backgroundColor: "action.selected",
                 "&:hover": {
-                //   backgroundColor: "#DB4444!important",
-                //   color:'#fff'
+                
                 },
               },
             }}

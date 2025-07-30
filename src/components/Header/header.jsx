@@ -1,6 +1,4 @@
-
 "use client"
-
 import { useState } from "react"
 import { IconButton, Badge, Link } from "@mui/material"
 import {
@@ -27,15 +25,15 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 ml-1">
             {/* Mobile Menu Button - Only visible on mobile */}
             <div className="md:hidden">
-              <IconButton onClick={toggleMobileMenu} className="text-gray-600 hover:text-secondary" size="large">
+              <IconButton onClick={toggleMobileMenu} className="!text-black hover:!text-secondary" size="large">
                 <MenuIcon />
               </IconButton>
             </div>
 
             {/* Logo - Left on desktop, center on mobile */}
-            <div className="flex-shrink-0 md:flex-1">
+            <div className="flex-shrink-0 md:flex-1 w-[72%]">
               <Link underline="none" className="flex items-center justify-center md:justify-start pl-5">
-                <div className="text-2xl text-center font-bold text-gray-500"><h1>Store1</h1></div>
+                <div className="text-2xl text-center font-bold text-black"><h1>Store1</h1></div>
               </Link>
             </div>
 
@@ -44,7 +42,7 @@ export default function Header() {
               <Link
                 href="/"
                 underline="none"
-                className="flex items-center !text-gray-800 hover:!text-secondary font-medium transition-colors"
+                className="flex items-center !text-black hover:!text-secondary font-medium transition-colors"
               >
                 Home
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
@@ -52,14 +50,14 @@ export default function Header() {
               <Link
                 href="/about"
                 underline="none"
-                className="!text-gray-800 hover:!text-secondary font-medium transition-colors"
+                className="!text-black hover:!text-secondary font-medium transition-colors"
               >
                 About
               </Link>
               <Link
                 href="/shop"
                 underline="none"
-                className="flex items-center !text-gray-800 hover:!text-secondary font-medium transition-colors"
+                className="flex items-center !text-black hover:!text-secondary font-medium transition-colors"
               >
                 Shop
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
@@ -67,7 +65,7 @@ export default function Header() {
               <Link
                 href="/blog"
                 underline="none"
-                className="flex items-center !text-gray-800 hover:!text-secondary font-medium transition-colors"
+                className="flex items-center !text-black hover:!text-secondary font-medium transition-colors"
               >
                 Blog
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
@@ -75,7 +73,7 @@ export default function Header() {
               <Link
                 href="/pages"
                 underline="none"
-                className="flex items-center !text-gray-800 hover:!text-secondary font-medium transition-colors"
+                className="flex items-center !text-black hover:!text-secondary font-medium transition-colors"
               >
                 Pages
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
@@ -83,7 +81,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 underline="none"
-                className="!text-gray-800 hover:!text-secondary font-medium transition-colors"
+                className="!text-black hover:!text-secondary font-medium transition-colors"
               >
                 Contact
               </Link>
@@ -93,7 +91,7 @@ export default function Header() {
             <div className="flex items-center justify-end flex-1 md:flex-1 -translate-x-2">
               {/* Mobile - Only Cart */}
               <div className="md:hidden">
-                <IconButton className="relative text-gray-600 hover:!text-secondary">
+                <IconButton className="relative !text-black hover:!text-secondary">
                   <Badge badgeContent={0} color="error" className="text-xs">
                     <ShoppingCartIcon />
                   </Badge>
@@ -103,18 +101,18 @@ export default function Header() {
               {/* Desktop - Search, Profile, Favorites with smaller gaps */}
               <div className="hidden md:flex items-center space-x-1 mr-3">
                 {/* Search */}
-                <IconButton className="text-gray-600 hover:!text-secondary">
+                <IconButton className="!text-black hover:!text-secondary">
                   <SearchIcon />
                 </IconButton>
 
                 {/* Profile */}
-                <IconButton className="text-gray-600 hover:!text-secondary">
+                <IconButton className="!text-black hover:!text-secondary">
                   <PersonIcon />
                 </IconButton>
 
                 {/* Favorites */}
-                <IconButton className="relative text-gray-600 hover:!text-secondary">
-                  <Badge badgeContent={2} color="error" className="text-xs">
+                <IconButton className="relative !text-black hover:!text-secondary">
+                  <Badge badgeContent={1} color="error" className="text-xs">
                     <FavoriteBorderIcon />
                   </Badge>
                 </IconButton>
@@ -131,34 +129,37 @@ export default function Header() {
 
       {/* Mobile Menu Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-80 bg-black text-white z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 left-0 h-full w-80 bg-white text-white z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Close Button */}
-        <div className="flex justify-end p-4">
-          <IconButton onClick={toggleMobileMenu} className="text-white hover:text-teal-400" size="large">
+        <div className="flex justify-between p-4">
+           <Link underline="none" className="flex items-center justify-center md:justify-start pl-5">
+                <div className="text-2xl text-center font-bold text-black"><h1>Store1</h1></div>
+              </Link>
+          <IconButton onClick={toggleMobileMenu} className="!text-black hover:!text-secondary" size="large">
             <CloseIcon />
           </IconButton>
         </div>
 
         {/* Menu Items */}
-        <nav className="px-6 py-4">
+        <nav className="px-8 py-4">
           <div className="space-y-6">
             <Link
               href="/"
               underline="none"
-              className="flex items-center justify-between text-teal-400 hover:text-teal-300 font-medium text-lg transition-colors"
+              className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
               onClick={toggleMobileMenu}
             >
               Home
-              <KeyboardArrowDownIcon className="h-5 w-5" />
+              {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
             </Link>
 
             <Link
               href="/about"
               underline="none"
-              className="block text-white hover:text-teal-400 font-medium text-lg transition-colors"
+              className="block !text-black hover:!text-secondary font-medium text-lg transition-colors"
               onClick={toggleMobileMenu}
             >
               About
@@ -167,37 +168,37 @@ export default function Header() {
             <Link
               href="/shop"
               underline="none"
-              className="flex items-center justify-between text-teal-400 hover:text-teal-300 font-medium text-lg transition-colors"
+              className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
               onClick={toggleMobileMenu}
             >
               Shop
-              <KeyboardArrowDownIcon className="h-5 w-5" />
+              {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
             </Link>
 
             <Link
               href="/blog"
               underline="none"
-              className="flex items-center justify-between text-teal-400 hover:text-teal-300 font-medium text-lg transition-colors"
+              className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
               onClick={toggleMobileMenu}
             >
               Blog
-              <KeyboardArrowDownIcon className="h-5 w-5" />
+              {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
             </Link>
 
             <Link
               href="/pages"
               underline="none"
-              className="flex items-center justify-between text-teal-400 hover:text-teal-300 font-medium text-lg transition-colors"
+              className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
               onClick={toggleMobileMenu}
             >
               Pages
-              <KeyboardArrowDownIcon className="h-5 w-5" />
+              {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
             </Link>
 
             <Link
               href="/contact"
               underline="none"
-              className="block text-white hover:text-teal-400 font-medium text-lg transition-colors"
+              className="block !text-black hover:!text-secondary font-medium text-lg transition-colors"
               onClick={toggleMobileMenu}
             >
               Contact
