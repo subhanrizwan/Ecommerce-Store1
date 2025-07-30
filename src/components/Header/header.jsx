@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
-import { IconButton, Badge, Link } from "@mui/material"
+import { IconButton, Badge,Link } from "@mui/material"
+import { NavLink } from "react-router"
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
@@ -10,7 +11,7 @@ import {
   FavoriteBorder as FavoriteBorderIcon,
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material"
-
+import CartDrawer from '../CartDrawer/drawer.jsx'
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -39,63 +40,82 @@ export default function Header() {
 
             {/* Navigation Menu - Hidden on mobile, centered on desktop */}
             <nav className="hidden md:flex items-center justify-center space-x-8 flex-1">
-              <Link
-                href="/"
+              <NavLink
+                to="/"
                 underline="none"
-                className="flex items-center !text-black hover:!text-secondary font-medium transition-colors"
+                className={({isActive}) => 
+                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                }
               >
                 Home
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
-              </Link>
-              <Link
-                href="/about"
+              </NavLink>
+              <NavLink
+                to="/about"
                 underline="none"
-                className="!text-black hover:!text-secondary font-medium transition-colors"
+                className={({isActive}) => 
+                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                }
               >
                 About
-              </Link>
-              <Link
-                href="/shop"
+              </NavLink>
+              <NavLink
+                to="/shop"
                 underline="none"
-                className="flex items-center !text-black hover:!text-secondary font-medium transition-colors"
+                 className={({isActive}) => 
+                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                }
               >
                 Shop
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
-              </Link>
-              <Link
-                href="/blog"
+              </NavLink>
+              <NavLink
+                to="/blog"
                 underline="none"
-                className="flex items-center !text-black hover:!text-secondary font-medium transition-colors"
+                 className={({isActive}) => 
+                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                }
               >
                 Blog
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
-              </Link>
-              <Link
-                href="/pages"
+              </NavLink>
+              <NavLink
+                to="/pages"
                 underline="none"
-                className="flex items-center !text-black hover:!text-secondary font-medium transition-colors"
+                 className={({isActive}) => 
+                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                }
               >
                 Pages
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
-              </Link>
-              <Link
-                href="/contact"
+              </NavLink>
+              <NavLink
+                to="/contact"
                 underline="none"
-                className="!text-black hover:!text-secondary font-medium transition-colors"
+                className={({isActive}) => 
+                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                }
               >
                 Contact
-              </Link>
+              </NavLink>
             </nav>
 
             {/* Right Side Actions */}
             <div className="flex items-center justify-end flex-1 md:flex-1 -translate-x-2">
               {/* Mobile - Only Cart */}
               <div className="md:hidden">
-                <IconButton className="relative !text-black hover:!text-secondary">
+                {/* <IconButton className="relative !text-black hover:!text-secondary">
                   <Badge badgeContent={0} color="error" className="text-xs">
                     <ShoppingCartIcon />
                   </Badge>
-                </IconButton>
+                </IconButton> */}
+                <CartDrawer />
               </div>
 
               {/* Desktop - Search, Profile, Favorites with smaller gaps */}
@@ -135,9 +155,9 @@ export default function Header() {
       >
         {/* Close Button */}
         <div className="flex justify-between p-4">
-           <Link underline="none" className="flex items-center justify-center md:justify-start pl-5">
+           <NavLink underline="none" className="flex items-center justify-center md:justify-start pl-5">
                 <div className="text-2xl text-center font-bold text-black"><h1>Store1</h1></div>
-              </Link>
+              </NavLink>
           <IconButton onClick={toggleMobileMenu} className="!text-black hover:!text-secondary" size="large">
             <CloseIcon />
           </IconButton>
@@ -146,63 +166,88 @@ export default function Header() {
         {/* Menu Items */}
         <nav className="px-8 py-4">
           <div className="space-y-6">
-            <Link
-              href="/"
+            <NavLink
+              to="/"
               underline="none"
-              className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
+              className={({isActive})=>
+              `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
+              }`
+              }
+              // className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
               onClick={toggleMobileMenu}
             >
               Home
               {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
-            </Link>
+            </NavLink>
 
-            <Link
-              href="/about"
+            <NavLink
+              to="/about"
               underline="none"
-              className="block !text-black hover:!text-secondary font-medium text-lg transition-colors"
+              className={({isActive})=>
+              `block !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
+              }`
+              }
               onClick={toggleMobileMenu}
             >
               About
-            </Link>
+            </NavLink>
 
-            <Link
-              href="/shop"
+            <NavLink
+              to="/shop"
               underline="none"
-              className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
+              className={({isActive})=>
+              `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
+              }`
+              }
               onClick={toggleMobileMenu}
             >
               Shop
               {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
-            </Link>
+            </NavLink>
 
-            <Link
-              href="/blog"
+            <NavLink
+              to="/blog"
               underline="none"
-              className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
+              className={({isActive})=>
+              `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
+              }`
+              }
               onClick={toggleMobileMenu}
             >
               Blog
               {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
-            </Link>
+            </NavLink>
 
-            <Link
-              href="/pages"
+            <NavLink
+              to="/pages"
               underline="none"
-              className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
+              className={({isActive})=>
+              `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
+              }`
+              }
               onClick={toggleMobileMenu}
             >
               Pages
               {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
-            </Link>
+            </NavLink>
 
-            <Link
-              href="/contact"
+            <NavLink
+              to="/contact"
               underline="none"
-              className="block !text-black hover:!text-secondary font-medium text-lg transition-colors"
+              className={({isActive})=>
+              `block !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
+              }`
+              }
               onClick={toggleMobileMenu}
             >
               Contact
-            </Link>
+            </NavLink>
           </div>
         </nav>
       </div>
