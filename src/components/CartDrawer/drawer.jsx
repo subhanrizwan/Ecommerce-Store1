@@ -10,7 +10,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-
+import { IconButton, Badge } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 export default function CartDrawer() {
   const [state, setState] = React.useState({
     top: false,
@@ -66,7 +67,12 @@ export default function CartDrawer() {
     <div>
       {['right'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+           <IconButton className="relative !text-black hover:!text-secondary">
+                  <Badge onClick={toggleDrawer(anchor, true)} badgeContent={0} color="error" className="text-xs">
+                    <ShoppingCartIcon  />{anchor}
+                  </Badge>
+                </IconButton>
+          {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>   */}
           <Drawer
             anchor={anchor}
             open={state[anchor]}
