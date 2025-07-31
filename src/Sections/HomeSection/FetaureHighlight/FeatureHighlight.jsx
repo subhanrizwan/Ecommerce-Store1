@@ -1,5 +1,5 @@
-import Slder2 from "../CategorySection/Slider2.jsx";
-import Rectangle from "../../../components/rectangle.jsx";
+// import Slder2 from "../CategorySection/Slider2.jsx";
+// import Rectangle from "../../../components/rectangle.jsx";
 import SelectAction from "./FeatureHighlightCards.jsx";
 const FeatureHighlight = () => {
   return (

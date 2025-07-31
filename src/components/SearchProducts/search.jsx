@@ -3,20 +3,21 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { IconButton } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import TextField from "@mui/material/TextField";
+
 const style = {
   position: "absolute",
-  top: "50%",
+  top: "10%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "100%",
-  height: "100%",
-  background: "rgba(255, 255, 255, 0.8);",
+  height: "20%",
+  // background: "rgba(255, 255, 255, 0.8);",
+  background: "rgb(255, 255, 255);",
   border: "2px solid #000",
   boxShadow: 24,
-  transition:'background 0.3s ease-in-out',
+  transition: "background 0.3s ease-in-out",
   p: 4,
 };
 
@@ -31,8 +32,39 @@ export default function SearchModal() {
         className="!text-black hover:!text-secondary"
         onClick={handleOpen}
       >
-         <svg className="icon" stroke="currentColor" fill="none" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true" height="0.9em" width="0.9em" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      {/* <svg
+     className="icon"
+     stroke="currentColor"
+          fill="none"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          height="0.9em"
+          width="0.9em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    ></path>
+  </svg> */}
+        <svg
+          className="icon"
+          stroke="currentColor"
+          fill="none"
+          strokeWidth={1.5}
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          height="0.9em"
+          width="0.9em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            // d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
         </svg>
         {/* <SearchIcon /> */}
       </IconButton>
@@ -43,44 +75,80 @@ export default function SearchModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-            <div className="flex justify-between items-center">
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <IconButton onClick={handleClose} className="!text-black hover:!text-secondary">
-              <CloseIcon />
+          <div className="flex justify-around items-center">
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              
+            </Typography>
+              <TextField
+              id="standard-basic"
+              label="How can we help you?"
+              className="w-2/5"
+              variant="outlined"
+              InputLabelProps={{
+                style: {
+                  color: "gray",
+                },
+              }}
+              InputProps={{
+                style: {
+                  color: "#03ada4",
+                },
+                disableUnderline: false,
+                sx: {
+                  // "&:before": {
+                  //   border: "1.5px solid #000",
+                  // },
+                  // "&:hover:not(.Mui-disabled):before": {
+                  //   border: "1.5px solid #028b85",
+                  // },
+                  // "&:after": {
+                  //   border: "1.5px solid #03ada4",
+                  // },
+                },
+              }}
+            />
+            <IconButton
+              onClick={handleClose}
+              className="!text-black hover:!text-secondary group flex items-center justify-center relative z-10 [transition:all_0.5s_ease] rounded-[0.375rem] p-[5px] cursor-pointer border outline-none focus-visible:outline-0"
+            >
+              <svg fill="currentColor" stroke="none" strokeWidth={0} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-[0.9em] h-[0.9em] group-hover:fill-secondary overflow-visible [transition:transform_.35s_ease] group-hover:[transition-delay:.25s] [&_path]:[transition:transform_.35s_ease] group-hover:rotate-45">
+        <path className="group-hover:[transform:rotate(112.5deg)_translate(-27.2%,-80.2%)] " d="m3.45,8.83c-.39,0-.76-.23-.92-.62-.21-.51.03-1.1.54-1.31L14.71,2.08c.51-.21,1.1.03,1.31.54.21.51-.03,1.1-.54,1.31L3.84,8.75c-.13.05-.25.08-.38.08Z" />
+        <path className="group-hover:[transform:rotate(22.5deg)_translate(15.5%,-23%)]" d="m2.02,17.13c-.39,0-.76-.23-.92-.62-.21-.51.03-1.1.54-1.31L21.6,6.94c.51-.21,1.1.03,1.31.54.21.51-.03,1.1-.54,1.31L2.4,17.06c-.13.05-.25.08-.38.08Z" />
+        <path className="group-hover:[transform:rotate(112.5deg)_translate(-15%,-149.5%)]" d="m8.91,21.99c-.39,0-.76-.23-.92-.62-.21-.51.03-1.1.54-1.31l11.64-4.82c.51-.21,1.1.03,1.31.54.21.51-.03,1.1-.54,1.31l-11.64,4.82c-.13.05-.25.08-.38.08Z" />
+      </svg>
+              {/* <CloseIcon /> */}
             </IconButton>
-
-            </div>
-            <div className="mt-4 h-[70%] flex justify-center items-center">
-         <TextField id="standard-basic" label="Search..." className="w-2/5" variant="standard"
-         InputLabelProps={{
-            style:{
-                color:'gray'
-            }
-         }}
-         InputProps={{
-            style:{
-                color:'#03ada4'
-            },
-            disableUnderline: false,
-    sx: {
-      '&:before': {
-        borderBottom: '1.5px solid #03ada4', 
-      },
-      '&:hover:not(.Mui-disabled):before': {
-        borderBottom: '1.5px solid #028b85', 
-      },
-      '&:after': {
-        borderBottom: '1.5px solid #03ada4', 
-      },
-    }
-
-         }}
-
-         />
-            </div>
-          
+          </div>
+          <div className="mt-4 h-[70%] flex justify-center items-center">
+            {/* <TextField
+              id="standard-basic"
+              label="Search..."
+              className="w-2/5"
+              variant="standard"
+              InputLabelProps={{
+                style: {
+                  color: "gray",
+                },
+              }}
+              InputProps={{
+                style: {
+                  color: "#03ada4",
+                },
+                disableUnderline: false,
+                sx: {
+                  "&:before": {
+                    borderBottom: "1.5px solid #03ada4",
+                  },
+                  "&:hover:not(.Mui-disabled):before": {
+                    borderBottom: "1.5px solid #028b85",
+                  },
+                  "&:after": {
+                    borderBottom: "1.5px solid #03ada4",
+                  },
+                },
+              }}
+            /> */}
+          </div>
         </Box>
       </Modal>
     </div>

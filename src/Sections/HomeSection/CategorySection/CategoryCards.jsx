@@ -1,32 +1,9 @@
-import { SwiperSlide } from "swiper/react";
 import { Tooltip } from "@mui/material";
-import styled from "styled-components";
-import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/pagination";
 
-// Styled Components
-
-const StyledSlide = styled(SwiperSlide)`
-  text-align: center;
-  font-size: 18px;
-  color: #000;
-  border: 1px solid lightgray;
-  border-radius: 50%;
-  background: transparent;
-  height: 130px;
-  width: 130px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
-  cursor: pointer;
-`;
-
-export default function Slder2({ icon: Icon, title }) {
+export default function CategoryCards({ icon: Icon, title }) {
   return (
     <>
-      <StyledSlide>
+      <div className="text-center text-[18px] text-black border border-gray-300 rounded-full bg-transparent h-[130px] w-[130px] flex justify-center items-center transition duration-300 cursor-pointer flex-col text-sm gap-y-5">
         <Tooltip
           title={title}
           placement="bottom"
@@ -34,7 +11,7 @@ export default function Slder2({ icon: Icon, title }) {
           componentsProps={{
             tooltip: {
               sx: {
-                bgcolor: "#fa4f09",
+                bgcolor: "#03ada4",
                 color: "#fff",
                 fontSize: "0.7rem",
                 fontWeight: 600,
@@ -46,7 +23,7 @@ export default function Slder2({ icon: Icon, title }) {
             },
             arrow: {
               sx: {
-                color: "#db4444", 
+                color: "#03ada4",
               },
             },
           }}
@@ -55,7 +32,7 @@ export default function Slder2({ icon: Icon, title }) {
           <Icon fontSize="large" />
           </div>
         </Tooltip>
-      </StyledSlide>
+      </div>
 
       
     </>

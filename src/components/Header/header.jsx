@@ -1,9 +1,9 @@
-"use client"
-import { useState } from "react"
-import { IconButton, Badge,Link } from "@mui/material"
-import { NavLink } from "react-router"
-import CartDrawer from '../CartDrawer/drawer.jsx'
-import SearchModal from "../SearchProducts/search.jsx"
+"use client";
+import { useState } from "react";
+import { IconButton, Badge, Link } from "@mui/material";
+import { NavLink } from "react-router";
+import CartDrawer from "../CartDrawer/drawer.jsx";
+import SearchModal from "../SearchProducts/search.jsx";
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
@@ -12,13 +12,13 @@ import {
   Person as PersonIcon,
   FavoriteBorder as FavoriteBorderIcon,
   ShoppingCart as ShoppingCartIcon,
-} from "@mui/icons-material"
+} from "@mui/icons-material";
 export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <>
@@ -27,15 +27,24 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 ml-1">
             {/* Mobile Menu Button - Only visible on mobile */}
             <div className="md:hidden">
-              <IconButton onClick={toggleMobileMenu} className="!text-black hover:!text-secondary" size="large">
+              <IconButton
+                onClick={toggleMobileMenu}
+                className="!text-black hover:!text-secondary"
+                size="large"
+              >
                 <MenuIcon />
               </IconButton>
             </div>
 
             {/* Logo - Left on desktop, center on mobile */}
             <div className="flex-shrink-0 md:flex-1 w-[72%]">
-              <Link underline="none" className="flex items-center justify-center md:justify-start pl-5">
-                <div className="text-2xl text-center font-bold text-black"><h1>Store1</h1></div>
+              <Link
+                underline="none"
+                className="flex items-center justify-center md:justify-start pl-5"
+              >
+                <div className="text-2xl text-center font-bold text-black">
+                  <h1>Store1</h1>
+                </div>
               </Link>
             </div>
 
@@ -44,9 +53,12 @@ export default function Header() {
               <NavLink
                 to="/"
                 underline="none"
-                className={({isActive}) => 
+                className={({ isActive }) =>
                   `!text-black hover:!text-secondary font-medium transition-colors ${
-                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                    isActive
+                      ? "!text-secondary font-semibold"
+                      : "!text-black font-normal"
+                  }`
                 }
               >
                 Home
@@ -55,9 +67,12 @@ export default function Header() {
               <NavLink
                 to="/about"
                 underline="none"
-                className={({isActive}) => 
+                className={({ isActive }) =>
                   `!text-black hover:!text-secondary font-medium transition-colors ${
-                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                    isActive
+                      ? "!text-secondary font-semibold"
+                      : "!text-black font-normal"
+                  }`
                 }
               >
                 About
@@ -65,9 +80,12 @@ export default function Header() {
               <NavLink
                 to="/shop"
                 underline="none"
-                 className={({isActive}) => 
+                className={({ isActive }) =>
                   `!text-black hover:!text-secondary font-medium transition-colors ${
-                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                    isActive
+                      ? "!text-secondary font-semibold"
+                      : "!text-black font-normal"
+                  }`
                 }
               >
                 Shop
@@ -76,9 +94,12 @@ export default function Header() {
               <NavLink
                 to="/blog"
                 underline="none"
-                 className={({isActive}) => 
+                className={({ isActive }) =>
                   `!text-black hover:!text-secondary font-medium transition-colors ${
-                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                    isActive
+                      ? "!text-secondary font-semibold"
+                      : "!text-black font-normal"
+                  }`
                 }
               >
                 Blog
@@ -87,9 +108,12 @@ export default function Header() {
               <NavLink
                 to="/pages"
                 underline="none"
-                 className={({isActive}) => 
+                className={({ isActive }) =>
                   `!text-black hover:!text-secondary font-medium transition-colors ${
-                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                    isActive
+                      ? "!text-secondary font-semibold"
+                      : "!text-black font-normal"
+                  }`
                 }
               >
                 Pages
@@ -98,9 +122,12 @@ export default function Header() {
               <NavLink
                 to="/contact"
                 underline="none"
-                className={({isActive}) => 
+                className={({ isActive }) =>
                   `!text-black hover:!text-secondary font-medium transition-colors ${
-                  isActive ? "!text-secondary font-semibold" : "!text-black font-normal"}`
+                    isActive
+                      ? "!text-secondary font-semibold"
+                      : "!text-black font-normal"
+                  }`
                 }
               >
                 Contact
@@ -123,9 +150,18 @@ export default function Header() {
                 {/* Profile */}
                 <IconButton className="!text-black hover:!text-secondary">
                   {/* <PersonIcon /> */}
-                   <svg className="icon" stroke="currentColor" fill="currentColor" strokeWidth={0} viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z" />
-      </svg>
+                  <svg
+                    className="icon"
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth={0}
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z" />
+                  </svg>
                 </IconButton>
 
                 {/* Favorites */}
@@ -142,7 +178,10 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" onClick={toggleMobileMenu} />
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          onClick={toggleMobileMenu}
+        />
       )}
 
       {/* Mobile Menu Sidebar */}
@@ -153,10 +192,19 @@ export default function Header() {
       >
         {/* Close Button */}
         <div className="flex justify-between p-4">
-           <NavLink underline="none" className="flex items-center justify-center md:justify-start pl-5">
-                <div className="text-2xl text-center font-bold text-black"><h1>Store1</h1></div>
-              </NavLink>
-          <IconButton onClick={toggleMobileMenu} className="!text-black hover:!text-secondary" size="large">
+          <NavLink
+            underline="none"
+            className="flex items-center justify-center md:justify-start pl-5"
+          >
+            <div className="text-2xl text-center font-bold text-black">
+              <h1>Store1</h1>
+            </div>
+          </NavLink>
+          <IconButton
+            onClick={toggleMobileMenu}
+            className="!text-black hover:!text-secondary"
+            size="large"
+          >
             <CloseIcon />
           </IconButton>
         </div>
@@ -167,12 +215,13 @@ export default function Header() {
             <NavLink
               to="/"
               underline="none"
-              className={({isActive})=>
-              `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
-                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
-              }`
+              className={({ isActive }) =>
+                `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                  isActive
+                    ? "!text-secondary font-semibold"
+                    : "!text-black font-normal"
+                }`
               }
-              // className="flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors"
               onClick={toggleMobileMenu}
             >
               Home
@@ -182,10 +231,12 @@ export default function Header() {
             <NavLink
               to="/about"
               underline="none"
-              className={({isActive})=>
-              `block !text-black hover:!text-secondary font-medium text-lg transition-colors ${
-                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
-              }`
+              className={({ isActive }) =>
+                `block !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                  isActive
+                    ? "!text-secondary font-semibold"
+                    : "!text-black font-normal"
+                }`
               }
               onClick={toggleMobileMenu}
             >
@@ -195,10 +246,12 @@ export default function Header() {
             <NavLink
               to="/shop"
               underline="none"
-              className={({isActive})=>
-              `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
-                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
-              }`
+              className={({ isActive }) =>
+                `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                  isActive
+                    ? "!text-secondary font-semibold"
+                    : "!text-black font-normal"
+                }`
               }
               onClick={toggleMobileMenu}
             >
@@ -209,10 +262,12 @@ export default function Header() {
             <NavLink
               to="/blog"
               underline="none"
-              className={({isActive})=>
-              `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
-                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
-              }`
+              className={({ isActive }) =>
+                `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                  isActive
+                    ? "!text-secondary font-semibold"
+                    : "!text-black font-normal"
+                }`
               }
               onClick={toggleMobileMenu}
             >
@@ -223,10 +278,12 @@ export default function Header() {
             <NavLink
               to="/pages"
               underline="none"
-              className={({isActive})=>
-              `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
-                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
-              }`
+              className={({ isActive }) =>
+                `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                  isActive
+                    ? "!text-secondary font-semibold"
+                    : "!text-black font-normal"
+                }`
               }
               onClick={toggleMobileMenu}
             >
@@ -237,10 +294,12 @@ export default function Header() {
             <NavLink
               to="/contact"
               underline="none"
-              className={({isActive})=>
-              `block !text-black hover:!text-secondary font-medium text-lg transition-colors ${
-                isActive ? "!text-secondary font-semibold" : "!text-black font-normal"
-              }`
+              className={({ isActive }) =>
+                `block !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                  isActive
+                    ? "!text-secondary font-semibold"
+                    : "!text-black font-normal"
+                }`
               }
               onClick={toggleMobileMenu}
             >
@@ -250,5 +309,5 @@ export default function Header() {
         </nav>
       </div>
     </>
-  )
+  );
 }
