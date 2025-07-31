@@ -14,9 +14,9 @@ const style = {
   width: "100%",
   height: "100%",
   background: "rgba(255, 255, 255, 0.8);",
-  Opacity:0.1,
   border: "2px solid #000",
   boxShadow: 24,
+  transition:'background 0.3s ease-in-out',
   p: 4,
 };
 
@@ -31,7 +31,10 @@ export default function SearchModal() {
         className="!text-black hover:!text-secondary"
         onClick={handleOpen}
       >
-        <SearchIcon />
+         <svg className="icon" stroke="currentColor" fill="none" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true" height="0.9em" width="0.9em" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        {/* <SearchIcon /> */}
       </IconButton>
       <Modal
         open={open}
@@ -53,7 +56,7 @@ export default function SearchModal() {
          <TextField id="standard-basic" label="Search..." className="w-2/5" variant="standard"
          InputLabelProps={{
             style:{
-                color:'#03ada4'
+                color:'gray'
             }
          }}
          InputProps={{
@@ -63,13 +66,13 @@ export default function SearchModal() {
             disableUnderline: false,
     sx: {
       '&:before': {
-        borderBottom: '1.5px solid #03ada4', // normal state
+        borderBottom: '1.5px solid #03ada4', 
       },
       '&:hover:not(.Mui-disabled):before': {
-        borderBottom: '1.5px solid #028b85', // hover state
+        borderBottom: '1.5px solid #028b85', 
       },
       '&:after': {
-        borderBottom: '1.5px solid #03ada4', // focused state
+        borderBottom: '1.5px solid #03ada4', 
       },
     }
 

@@ -18,7 +18,7 @@ const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage})=>{
               <Link underline="hover" color="inherit" href="#">
                 Home
               </Link>
-              <Typography sx={{ color: "text.primary" }}>{ContactPage}{ErrorPage}{AboutPage}</Typography>
+              <Typography  className="text-secondary">{ContactPage}{ErrorPage}{AboutPage}</Typography>
             </Breadcrumbs>
           </div>
         </>
