@@ -2,6 +2,8 @@
 import { useState } from "react"
 import { IconButton, Badge,Link } from "@mui/material"
 import { NavLink } from "react-router"
+import CartDrawer from '../CartDrawer/drawer.jsx'
+import SearchModal from "../SearchProducts/search.jsx"
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
@@ -11,7 +13,6 @@ import {
   FavoriteBorder as FavoriteBorderIcon,
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material"
-import CartDrawer from '../CartDrawer/drawer.jsx'
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -110,21 +111,15 @@ export default function Header() {
             <div className="flex items-center justify-end flex-1 md:flex-1 -translate-x-2">
               {/* Mobile - Only Cart */}
               <div className="md:hidden">
-                {/* <IconButton className="relative !text-black hover:!text-secondary">
-                  <Badge badgeContent={0} color="error" className="text-xs">
-                    <ShoppingCartIcon />
-                  </Badge>
-                </IconButton> */}
                 <CartDrawer />
               </div>
 
               {/* Desktop - Search, Profile, Favorites with smaller gaps */}
               <div className="hidden md:flex items-center space-x-1 mr-3">
                 {/* Search */}
-                <IconButton className="!text-black hover:!text-secondary">
-                  <SearchIcon />
-                </IconButton>
+                <SearchModal />
 
+                {/* Cart */}
                 {/* Profile */}
                 <IconButton className="!text-black hover:!text-secondary">
                   <PersonIcon />
