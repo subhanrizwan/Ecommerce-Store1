@@ -1,5 +1,3 @@
-import React from 'react'
-
 function FooterBottom() {
   return (
 <div className="footer-bottom text-xs w-screen text-center bg-primary p-5">

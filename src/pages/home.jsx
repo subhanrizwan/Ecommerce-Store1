@@ -2,7 +2,7 @@ import Herosection from "../Sections/HomeSection/HomeSlider/Herosection.jsx";
 import Products from "../Sections/HomeSection/Products/Products.jsx"; 
 import Category2 from "../Sections/HomeSection/CategorySection/Category.jsx";
 import FeatureHighlight from "../Sections/HomeSection/FetaureHighlight/FeatureHighlight.jsx";
-import ProductSlider from "../Sections/HomeSection/Products/ProductSlider.jsx";
+import ScrollingBanner from "../Sections/HomeSection/ScrollingItems/BannnerScrolling.jsx";
 const Home = () => {
   return (
     <>
@@ -10,6 +10,7 @@ const Home = () => {
     <Category2 />
     <Products />
     <FeatureHighlight />
+    <ScrollingBanner />
     </>
   )
 };
