@@ -32,46 +32,43 @@ export default function CategorySlider() {
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
-        // pagination={{
-        //   clickable: true,
-        // }}
         autoplay={{
             delay:1500,
             disableOnInteraction: true,
         }}
+        
         modules={[Pagination, Autoplay]}
-        className="!w-4/5 h-96 !bg-gray-400 " // Applied w-full and h-96 (example height) directly
+        // className="!w-full h-96 !bg-gray-400" 
+        className="!w-full max-w-screen-xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px]" 
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          540: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
       >
           
         {categories.map((cat, idx) => (
-          <SwiperSlide key={idx} className="bg-transparent flex justify-center items-center">
+          <SwiperSlide key={idx} className="!flex !justify-center !items-center !p-1">
                     <CategoryCards icon={cat.icon} title={cat.title} />
         </SwiperSlide>
                   ))}
-        {/* <SwiperSlide className="text-center text-lg bg-[#444] flex justify-center items-center">
-          {"Slide 2"}
-        </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-[#444] flex justify-center items-center">
-          {"Slide 3"}
-        </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-[#444] flex justify-center items-center">
-          {"Slide 4"}
-        </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-[#444] flex justify-center items-center">
-          {"Slide 5"}
-        </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-[#444] flex justify-center items-center">
-          {"Slide 6"}
-        </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-[#444] flex justify-center items-center">
-          {"Slide 7"}
-        </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-[#444] flex justify-center items-center">
-          {"Slide 8"}
-        </SwiperSlide>
-        <SwiperSlide className="text-center text-lg bg-[#444] flex justify-center items-center">
-          {"Slide 9"}
-        </SwiperSlide> */}
       </Swiper>
     </div>
   )
