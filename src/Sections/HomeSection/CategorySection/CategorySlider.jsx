@@ -39,7 +39,7 @@ export default function CategorySlider() {
         
         modules={[Pagination, Autoplay]}
         // className="!w-full h-96 !bg-gray-400" 
-        className="!w-full max-w-screen-xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px]" 
+        className="!w-full !bg-transparent max-w-screen-xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px]" 
         breakpoints={{
           320: {
             slidesPerView: 1,

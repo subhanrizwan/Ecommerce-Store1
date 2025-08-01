@@ -4,7 +4,7 @@ const Products = () => {
   return (
     <>
     <Heading Product={'Our Products'} />
-      <section className="category-section sm:px-4 md:px-12 p-8 mt-0 mb-10 bg-gray-700">
+      <section className="category-section sm:px-4 md:px-12 p-8 mt-0 mb-10 ">
             <ProductSlider />
       </section>
     </>

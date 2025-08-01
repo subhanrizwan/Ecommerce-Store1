@@ -28,7 +28,7 @@ export default function CategoryCards({ icon: Icon, title }) {
             },
           }}
         >
-          <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-16 rounded-full">
+          <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-cardbg p-16 rounded-full">
           <Icon fontSize="large" />
           </div>
         </Tooltip>

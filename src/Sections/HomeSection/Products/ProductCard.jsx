@@ -15,7 +15,7 @@ const ProductCard = () => {
         fontSize="small"
         className="absolute text-gray-400 translate-y-10 mt-4 xl:mt-5 translate-x-20 rounded-[100%]  "
       />
-      <div className="relative card group mt-6 pt-16 px-12 pb-0 w-80 h-[360px] bg-gray-100 rounded       ">
+      <div className="relative card group mt-6 pt-16 px-12 pb-0 w-80 h-[360px] bg-cardbg rounded       ">
         <img
           src={Shoes}
           alt=""
@@ -37,7 +37,6 @@ const ProductCard = () => {
         style={{ transition: ".5s" }}
         className="text-gray-500 translate-x-2 translate-y-30 opacity-0 group-hover:transform group-hover:opacity-100 group-hover:translate-y-0  "
       />
-      {/* absolute text-gray-400 translate-y-10 mt-4 xl:mt-5 translate-x-12 rounded-[100%]   */}
           </h1>
          
           {/* <div className="">
