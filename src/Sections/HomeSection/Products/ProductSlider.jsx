@@ -4,6 +4,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import ProductCard from "./ProductCard.jsx"
+import { Autoplay } from "swiper/modules"
 
 // Custom Next Arrow Component
 function NextArrow(props) {
@@ -63,30 +64,19 @@ function PrevArrow(props) {
 }
 
 export default function ResponsiveSlider() {
-//  useEffect(() => {
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-//       .slick-prev:before,
-//       .slick-next:before {
-//         color: #03ada4 !important;
-//       }
-//     `;
-//     document.head.appendChild(style);
-//     return () => {
-//       document.head.removeChild(style); // cleanup
-//     };
-//   }, []);
+
   var settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
+    autoplay:true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: true,
-    nextArrow: <NextArrow />, // Use custom next arrow
-    prevArrow: <PrevArrow />, // Use custom prev arrow
-    
+    nextArrow: <NextArrow />, 
+    prevArrow: <PrevArrow />, 
+
     responsive: [
       {
         breakpoint: 1024,
@@ -118,38 +108,39 @@ export default function ResponsiveSlider() {
   }
   
   return (
-    
-    <div className="container mx-auto py-0 px-4 max-w-screen-xl">
-      {" "}
-      {/* Added max-w-screen-xl for better containment */}
-      
+    // max-w-screen-xl
+    <div className="container mx-auto py-0 max-w-screen-xl bg-gray-300">
+      {" "}      
       <Slider {...settings}>
         {/* Added px-2 to the wrapper div for spacing between cards */}
-        <div className="px-2">
+        <div className="">
           <ProductCard />
         </div>
-        <div className="px-2">
+        <div className="">
           <ProductCard />
         </div>
-        <div className="px-2">
+        <div className="">
           <ProductCard />
         </div>
-        <div className="px-2">
+        <div className="">
           <ProductCard />
         </div>
-        <div className="px-2">
+        <div className="">
           <ProductCard />
         </div>
-        <div className="px-2">
+        <div className="">
           <ProductCard />
         </div>
-        <div className="px-2">
+        <div className="">
           <ProductCard />
         </div>
-        <div className="px-2">
+        <div className="">
           <ProductCard />
         </div>
-        <div className="px-2">
+        <div className="">
+          <ProductCard />
+        </div>
+        <div className="">
           <ProductCard />
         </div>
       </Slider>

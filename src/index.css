@@ -25,9 +25,9 @@ html,body{
 }
 
 .slick-prev {
-  left: 10px !important;
+  left: 1px !important;
 }
 
 .slick-next {
-  right: 10px !important;
+  right: 1px !important;
 }

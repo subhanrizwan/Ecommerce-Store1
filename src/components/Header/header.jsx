@@ -54,7 +54,7 @@ export default function Header() {
                 to="/"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -68,7 +68,7 @@ export default function Header() {
                 to="/about"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -81,7 +81,7 @@ export default function Header() {
                 to="/shop"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -95,7 +95,7 @@ export default function Header() {
                 to="/blog"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -109,7 +109,7 @@ export default function Header() {
                 to="/pages"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -123,7 +123,7 @@ export default function Header() {
                 to="/contact"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black hover:!text-secondary font-medium transition-colors ${
+                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -216,7 +216,7 @@ export default function Header() {
               to="/"
               underline="none"
               className={({ isActive }) =>
-                `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                `flex items-center justify-between !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -232,7 +232,7 @@ export default function Header() {
               to="/about"
               underline="none"
               className={({ isActive }) =>
-                `block !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                `block !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -247,7 +247,7 @@ export default function Header() {
               to="/shop"
               underline="none"
               className={({ isActive }) =>
-                `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                `flex items-center justify-between !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -263,7 +263,7 @@ export default function Header() {
               to="/blog"
               underline="none"
               className={({ isActive }) =>
-                `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                `flex items-center justify-between !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -279,7 +279,7 @@ export default function Header() {
               to="/pages"
               underline="none"
               className={({ isActive }) =>
-                `flex items-center justify-between !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                `flex items-center justify-between !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -295,9 +295,9 @@ export default function Header() {
               to="/contact"
               underline="none"
               className={({ isActive }) =>
-                `block !text-black hover:!text-secondary font-medium text-lg transition-colors ${
+                `block !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
-                    ? "!text-secondary font-semibold"
+                    ? "!text-secondary !font-semibold"
                     : "!text-black font-normal"
                 }`
               }

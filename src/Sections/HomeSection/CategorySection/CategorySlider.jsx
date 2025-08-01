@@ -40,7 +40,7 @@ export default function CategorySlider() {
             disableOnInteraction: true,
         }}
         modules={[Pagination, Autoplay]}
-        className="!w-4/5 h-96 !bg-transparent" // Applied w-full and h-96 (example height) directly
+        className="!w-4/5 h-96 !bg-gray-400 " // Applied w-full and h-96 (example height) directly
       >
           
         {categories.map((cat, idx) => (

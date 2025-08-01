@@ -3,7 +3,7 @@ import { Tooltip } from "@mui/material";
 export default function CategoryCards({ icon: Icon, title }) {
   return (
     <>
-      <div className="text-center text-[18px] text-black border border-gray-300 rounded-full bg-transparent h-[130px] w-[130px] flex justify-center items-center transition duration-300 cursor-pointer flex-col text-sm gap-y-5">
+      <div className="text-center text-[18px] text-black border border-gray-300 rounded-full bg-transparent h-[160px] w-[160px] flex justify-center items-center transition duration-300 cursor-pointer flex-col text-sm gap-y-5">
         <Tooltip
           title={title}
           placement="bottom"
@@ -28,7 +28,7 @@ export default function CategoryCards({ icon: Icon, title }) {
             },
           }}
         >
-          <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-10 rounded-full">
+          <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-gray-100 p-12 rounded-full">
           <Icon fontSize="large" />
           </div>
         </Tooltip>
