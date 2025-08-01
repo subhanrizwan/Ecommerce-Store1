@@ -9,7 +9,7 @@ const ProductCard = () => {
 
   return (
     <>
-      <PriceCircle />
+      {/* <PriceCircle /> */}
 {/* 
       <RemoveRedEyeIcon
         fontSize="small"
