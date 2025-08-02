@@ -44,9 +44,9 @@ export default function CustomerLove() {
           <div className="max-w-7xl">
             {/* Header with gradient line */}
             {/* <div className="flex items-start mb-12">
-              <div className="w-1 h-32 bg-gradient-to-b from-purple-500 to-orange-500 rounded-full mr-8 flex-shrink-0"></div>
+              <div className="w-1 h-32 bg-gradient-to-b from-secondary  rounded-full mr-8 flex-shrink-0"></div>
               <div>
-                <p className="text-gray-600 mb-4 text-lg">Our Impact ____________</p>
+                <p className="text-secondary mb-4 text-lg">Why Customer Love Us ____________</p>
                 <div className="flex items-start mb-6">
                   <svg
                     className="w-8 h-8 text-secondary mr-4 mt-1 flex-shrink-0"

@@ -4,6 +4,7 @@ import { IconButton, Badge, Link } from "@mui/material";
 import { NavLink } from "react-router";
 import CartDrawer from "../CartDrawer/drawer.jsx";
 import SearchModal from "../SearchProducts/search.jsx";
+import Logo from '../../../assets/images/logo/logo.png';
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
@@ -43,7 +44,9 @@ export default function Header() {
                 className="flex items-center justify-center md:justify-start pl-5"
               >
                 <div className="text-2xl text-center font-bold text-black">
-                  <h1>Store1</h1>
+                  {/* <h1>Store1</h1> */}
+                  <img className="w-10" src={Logo} alt="" />
+                  {/* <h1>Store</h1> */}
                 </div>
               </Link>
             </div>
@@ -54,7 +57,7 @@ export default function Header() {
                 to="/"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
+                  `!text-black  hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -68,7 +71,7 @@ export default function Header() {
                 to="/about"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
+                  `!text-black  hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -81,7 +84,7 @@ export default function Header() {
                 to="/shop"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
+                  `!text-black  hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -95,7 +98,7 @@ export default function Header() {
                 to="/blog"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
+                  `!text-black  hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -109,7 +112,7 @@ export default function Header() {
                 to="/pages"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
+                  `!text-black  hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -123,7 +126,7 @@ export default function Header() {
                 to="/contact"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black font-thin hover:!text-secondary font-medium transition-colors ${
+                  `!text-black  hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -216,7 +219,7 @@ export default function Header() {
               to="/"
               underline="none"
               className={({ isActive }) =>
-                `flex items-center justify-between !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
+                `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -232,7 +235,7 @@ export default function Header() {
               to="/about"
               underline="none"
               className={({ isActive }) =>
-                `block !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
+                `block !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -247,7 +250,7 @@ export default function Header() {
               to="/shop"
               underline="none"
               className={({ isActive }) =>
-                `flex items-center justify-between !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
+                `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -263,7 +266,7 @@ export default function Header() {
               to="/blog"
               underline="none"
               className={({ isActive }) =>
-                `flex items-center justify-between !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
+                `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -279,7 +282,7 @@ export default function Header() {
               to="/pages"
               underline="none"
               className={({ isActive }) =>
-                `flex items-center justify-between !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
+                `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary font-semibold"
                     : "!text-black font-normal"
@@ -295,7 +298,7 @@ export default function Header() {
               to="/contact"
               underline="none"
               className={({ isActive }) =>
-                `block !text-black font-thin hover:!text-secondary font-medium text-lg transition-colors ${
+                `block !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
                   isActive
                     ? "!text-secondary !font-semibold"
                     : "!text-black font-normal"

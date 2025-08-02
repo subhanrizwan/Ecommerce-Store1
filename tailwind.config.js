@@ -31,7 +31,7 @@ export default {
         // secondary:'#fa4f09',
         secondary:'#03ada4',
         cardbg:'#f6f6f6',
-        textFooter:'#fff',
+        textFooter:'#000',
         Fieldbg:'#F5F5F5'
       }
     },
