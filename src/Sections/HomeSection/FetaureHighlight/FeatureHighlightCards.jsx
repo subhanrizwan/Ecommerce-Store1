@@ -36,15 +36,16 @@ function SelectActionCard() {
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(min(200px, 100%), 1fr))",
         gap: 3,
+    padding: "2rem 0", 
       }}
     >
+    
       {cards.map((card, index) => (
         <Card
           sx={{
             boxShadow: "none",
             border:'1px solid lightgray',
             textAlign: "center",
-
           }}
         >
           <CardActionArea
@@ -68,7 +69,7 @@ function SelectActionCard() {
               <Typography
                 sx={{
                   marginTop: "0.5rem",
-                  marginBottom: "0.8rem",
+                  marginBottom: "1.2rem",
                 }}
                 variant="b"
                 component="div"
@@ -77,7 +78,7 @@ function SelectActionCard() {
               </Typography>
               <Typography
                 sx={{
-                  marginBottom: "0.5rem",
+                  marginBottom: "1rem",
                   fontWeight: "bold",
                   
                 }}
@@ -101,7 +102,7 @@ function SelectActionCard() {
           </CardActionArea>
         </Card>
       ))}
-    </Box>
+     </Box>
   );
 }
 
