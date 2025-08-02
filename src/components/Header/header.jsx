@@ -57,7 +57,7 @@ export default function Header() {
                 to="/"
                 underline="none"
                 className={({ isActive }) =>
-                  `!text-black  hover:!text-secondary font-medium transition-colors ${
+                  `!text-black hover:!text-secondary font-medium transition-colors ${
                     isActive
                       ? "!text-secondary font-semibold"
                       : "!text-black font-normal"
@@ -173,6 +173,11 @@ export default function Header() {
                     <FavoriteBorderIcon />
                   </Badge>
                 </IconButton>
+                   <IconButton className="!text-black hover:!text-secondary">
+                <CartDrawer />
+                </IconButton>
+
+                
               </div>
             </div>
           </div>
