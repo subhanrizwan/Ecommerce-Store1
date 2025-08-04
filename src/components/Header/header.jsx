@@ -64,7 +64,7 @@ export default function Header() {
                   }`
                 }
               >
-                Home
+                Hom
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
               </NavLink>
               <NavLink
