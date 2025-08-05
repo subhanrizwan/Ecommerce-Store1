@@ -1,11 +1,10 @@
 import { Link } from "react-router";
-import { FaLinkedin,FaGithub,FaTwitter} from "react-icons/fa";
-import { MdMarkEmailUnread } from "react-icons/md";
 import CtaFooter from "../ctaSection";
 import FooterBottom from "./footerBottom";
 import Logo from '../../../assets/images/logo/logo.png';
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { FaPhoneVolume } from "react-icons/fa6";
+import Socialicons from "../SocialIcon/socialicons.jsx";
 
 function Footer() {
   return (
@@ -21,20 +20,29 @@ function Footer() {
                 It is a long established fact that from will be distracted by the readable from when looking.{" "}
               </p>
             </div>
-            <div className="social-icons md:w-72 md:flex flex space-x-10 md:space-x-5 pt-8">
+            {/* <Socialicons /> */}
+            {/* <div className="social-icons md:w-72 md:flex flex space-x-10 md:space-x-2 pt-8">
+              <IconButton className="group">
               <Link>
-                <FaLinkedin className="text-3xl md:text-2xl" />
+                <GrFacebookOption className="text-[1.2rem] group-hover:text-secondary" />
               </Link>
+              </IconButton>
+              <IconButton className="group">
               <Link>
-                <FaGithub className="text-3xl md:text-2xl" />
+                <IoLogoInstagram className="text-[1.2rem] group-hover:text-secondary" />
               </Link>
+              </IconButton>
+              <IconButton className="group">
               <Link>
-                <FaTwitter className="text-3xl md:text-2xl" />
+                <RiTwitterXFill className="text-[1.2rem] group-hover:text-secondary" />
               </Link>
+              </IconButton>
+              <IconButton className="group">
               <Link>
-                <MdMarkEmailUnread className="text-3xl md:text-2xl" />
+                <LuMails className="text-[1.2rem] group-hover:text-secondary" />
               </Link>
-            </div>
+              </IconButton>
+            </div> */}
           </div>
          <div className="step3 menus md:w-[18%] sm:w-[40%] w-[100%] md:h-92 p-5 text-textFooter mb-5">
   <h2 className="text-2xl">Pages</h2>

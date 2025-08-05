@@ -5,6 +5,8 @@ import { NavLink } from "react-router";
 import CartDrawer from "../CartDrawer/drawer.jsx";
 import SearchModal from "../SearchProducts/search.jsx";
 import Logo from '../../../assets/images/logo/logo.png';
+import { MdFacebook } from "react-icons/md";
+
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
@@ -64,7 +66,7 @@ export default function Header() {
                   }`
                 }
               >
-                Hom
+                Home
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
               </NavLink>
               <NavLink
