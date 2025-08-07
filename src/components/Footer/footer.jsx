@@ -10,9 +10,12 @@ function Footer() {
   return (
     <>
       <CtaFooter />
-      <section className="">
+      <section className="">          
       <div className="container">
-        <footer className="flex sm:flex-wrap flex-wrap bg-cardbg mx-auto md:w-screen sm:w-screen md:justify-center border-b border-gray-200 py-10 px-5 pb-3 mt-5">
+        <footer className="flex sm:flex-wrap flex-wrap relative bg-cardbg mx-auto md:w-screen sm:w-screen md:justify-center border-b border-gray-200 py-16 pb-10 px-5 pb-3 mt-5">
+                   {/* <span className="absolute w-40 h-40 bg-secondary rounded-full opacity-15 top-40 left-96 animate-[float_4s_ease-in-out_infinite_0s]"></span> */}
+        <span className="absolute w-32 h-32 bg-teal-400 rounded-full opacity-15 -bottom-8 right-1/3 animate-[float_4s_ease-in-out_infinite_2s]"></span>
+        <span className="absolute w-20 h-20 bg-teal-400 rounded-full opacity-15 top-1/3 -right-8 animate-[float_4s_ease-in-out_infinite_1s]"></span>
           <div className="step1 md:w-[30%] sm:h-68 p-5 text-textFooter">
             <div className="resturant-title pr-6">
               <img className="w-16 h-16" src={Logo} alt="" />
@@ -20,29 +23,6 @@ function Footer() {
                 It is a long established fact that from will be distracted by the readable from when looking.{" "}
               </p>
             </div>
-            {/* <Socialicons /> */}
-            {/* <div className="social-icons md:w-72 md:flex flex space-x-10 md:space-x-2 pt-8">
-              <IconButton className="group">
-              <Link>
-                <GrFacebookOption className="text-[1.2rem] group-hover:text-secondary" />
-              </Link>
-              </IconButton>
-              <IconButton className="group">
-              <Link>
-                <IoLogoInstagram className="text-[1.2rem] group-hover:text-secondary" />
-              </Link>
-              </IconButton>
-              <IconButton className="group">
-              <Link>
-                <RiTwitterXFill className="text-[1.2rem] group-hover:text-secondary" />
-              </Link>
-              </IconButton>
-              <IconButton className="group">
-              <Link>
-                <LuMails className="text-[1.2rem] group-hover:text-secondary" />
-              </Link>
-              </IconButton>
-            </div> */}
           </div>
          <div className="step3 menus md:w-[18%] sm:w-[40%] w-[100%] md:h-92 p-5 text-textFooter mb-5">
   <h2 className="text-2xl">Pages</h2>
@@ -68,7 +48,7 @@ function Footer() {
   </ul>
 </div>
 
-          <div className="step4 menus md:w-[18%] sm:w-[40%] w-[100%] md:h-92 p-5 text-textFooter">
+          <div className="step4 z-50 menus md:w-[18%] sm:w-[40%] w-[100%] md:h-92 p-5 text-textFooter">
             <h2 className="text-2xl">Quick Links</h2>
             <ul className="pt-5 text-1xl">
              <li className="mb-5 hover:translate-x-4 duration-500">

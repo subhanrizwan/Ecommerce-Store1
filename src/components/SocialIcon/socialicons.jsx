@@ -11,22 +11,22 @@ function Socialicons() {
  <div className="social-icons md:w-72 md:flex flex !items-center justify-center space-x-10 md:space-x-2 pt-0">
               <IconButton className="group">
               <Link>
-                <GrFacebookOption className="text-[1.2rem] group-hover:text-secondary" />
+                <GrFacebookOption className="text-[1.2rem] text-black  group-hover:text-secondary" />
               </Link>
               </IconButton>
               <IconButton className="group">
               <Link>
-                <IoLogoInstagram className="text-[1.2rem] group-hover:text-secondary" />
+                <IoLogoInstagram className="text-[1.2rem] text-black group-hover:text-secondary" />
               </Link>
               </IconButton>
               <IconButton className="group">
               <Link>
-                <RiTwitterXFill className="text-[1.2rem] group-hover:text-secondary" />
+                <RiTwitterXFill className="text-[1.2rem] text-black group-hover:text-secondary" />
               </Link>
               </IconButton>
               <IconButton className="group">
               <Link>
-                <LuMails className="text-[1.2rem] group-hover:text-secondary" />
+                <LuMails className="text-[1.2rem] text-black  group-hover:text-secondary" />
               </Link>
               </IconButton>
             </div>  )
