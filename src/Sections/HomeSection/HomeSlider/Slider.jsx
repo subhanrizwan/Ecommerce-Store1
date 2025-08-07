@@ -9,55 +9,6 @@ import "swiper/css/navigation";
 import "./style.css";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
 
-// <style>
-//   {
-//     `
-// .swiper {
-//   width: 100%;
-//   height: 100%;
-//   background: #000;
-// }
-
-// .swiper-slide {
-//   font-size: 18px;
-//   color: #fff;
-//   -webkit-box-sizing: border-box;
-//   box-sizing: border-box;
-//   padding: 40px 60px;
-// }
-
-// .parallax-bg {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 130%;
-//   height: 100%;
-//   -webkit-background-size: cover;
-//   background-size: cover;
-//   background-position: center;
-// }
-
-// .swiper-slide .title {
-//   font-size: 41px;
-//   font-weight: 300;
-// }
-
-// .swiper-slide .subtitle {
-//   font-size: 21px;
-// }
-
-// .swiper-slide .text {
-//   font-size: 14px;
-//   max-width: 400px;
-//   line-height: 1.3;
-// }
-// .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-//     background: lightgray;
-// }
-
-//     `
-//   }
-// </style>
 export default function Slider() {
   return (
     <>
@@ -170,7 +121,7 @@ export default function Slider() {
              
                 </p>
               </div>
-              <div className="submit-btn mt-2  ">
+              <div className="submit-btn mt-2">
                 <Button className="w-40 h-12 !bg-secondary gap-1 " variant="contained">
                   Shop 
                   <ArrowOutwardIcon fontSize="small" />
