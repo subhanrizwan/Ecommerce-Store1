@@ -1,8 +1,10 @@
 import { Tooltip } from "@mui/material";
+import zIndex from "@mui/material/styles/zIndex";
 
 export default function CategoryCards({ icon: Icon, title }) {
   return (
     <>
+    <div className="">
       <div className="text-center text-[18px] flex justify-center items-center text-black border border-gray-300 rounded-full h-[200px] w-[200px] transition duration-300 cursor-pointer flex-col text-sm">
         <Tooltip
           title={title}
@@ -29,10 +31,18 @@ export default function CategoryCards({ icon: Icon, title }) {
           }}
         >
           <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-cardbg p-16 rounded-full">
+           <div className="">
           <Icon fontSize="large" />
+           </div>
+          
           </div>
         </Tooltip>
       </div>
+       <div className="flex justify-center p-6 text-black">
+        <p>{title}</p>
+         </div>
+        
+    </div>
     </>
   );
 }

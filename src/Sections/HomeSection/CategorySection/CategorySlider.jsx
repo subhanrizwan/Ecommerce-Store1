@@ -25,6 +25,7 @@ const categories = [
   { icon: WatchOutlinedIcon, title: "Watch" },
   { icon: CameraAltOutlinedIcon, title: "Camera" },
 ];
+
 export default function CategorySlider() {
   return (
     <div className="w-full h-full flex items-center justify-center">

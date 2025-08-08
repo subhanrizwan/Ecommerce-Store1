@@ -7,6 +7,12 @@ export default {
   theme: {
     extend: {
       keyframes: {
+        //For Hero Section
+          float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+
     moveLeft: {
       '0%': { transform: 'translateX(0)' },
       '50%': {
@@ -26,9 +32,11 @@ export default {
     moveLeft: 'moveLeft 3s linear infinite',
     moveRight: 'moveRight 3s linear infinite',
   },
+  animation: {
+        float: 'float 4s ease-in-out infinite',
+      },
       colors:{
         primary:'rgba(3, 4, 6, 1)',
-        // secondary:'#fa4f09',
         secondary:'#03ada4',
         cardbg:'#f6f6f6',
         textFooter:'#000',

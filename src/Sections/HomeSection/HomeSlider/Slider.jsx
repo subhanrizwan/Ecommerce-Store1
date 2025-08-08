@@ -1,23 +1,24 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@mui/material";
-import Iphone from "../../../../assets/images/home hero/headphone_31.png";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import AppleIcon from "@mui/icons-material/Apple";
+
+import Iphone from "../../../../assets/images/home hero/headphone_31.png";
 import Banner1 from "../../../../assets/images/banner/banner1.jpg";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./style.css";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
 
-export default function Slider() {
   const slides = [
   {
     id: 1,
     title: "Welcome to Subhii Store",
     subtitle: <><AppleIcon /> Latest Electronics</>,
     text: `Discover top-notch electronic gadgets for every need — from smartphones to smartwatches, power banks to Bluetooth speakers. Explore a world of innovation with quality you can trust.`,
-    img: Iphone, // Replace with Headphones image if needed
+    img: Iphone, 
     bg: Banner1,
   },
   {
@@ -39,6 +40,8 @@ export default function Slider() {
 ];
 
 
+export default function Slider() {
+
   return (
     <Swiper
       style={{
@@ -52,6 +55,7 @@ export default function Slider() {
       modules={[Parallax, Pagination, Navigation]}
       className="mySwiper md:rounded rounded-none "
     >
+      
       {slides.map((slide) => (
         <SwiperSlide
           key={slide.id}
@@ -65,6 +69,9 @@ export default function Slider() {
             padding:'2rem 0rem 3rem 0rem',
           }}
         >
+           <span className="absolute w-72 h-72 z-10 bg-secondary rounded-full opacity-15 top-0 left-72 animate-float"></span>
+<span className="absolute w-32 h-32 z-10 bg-teal-400 rounded-full opacity-15 -bottom-8 right-1/3 animate-float [animation-delay:2s]"></span>
+<span className="absolute w-20 h-20 z-10 bg-teal-400 rounded-full opacity-15 top-1/3 -right-8 animate-float [animation-delay:1s]"></span>
            <div className="content flex flex-col md:flex-row justify-between items-center w-full h-full max-w-7xl mx-auto p-6 md:px-6 lg:px-8">
           {/* Left Content Section */}
           <div className="left flex flex-col justify-center text-center md:text-left flex-1 p-0 py-6 md:p-12 text-black">
@@ -85,12 +92,11 @@ export default function Slider() {
             </div>
             {/* Shop Button */}
             <div className="submit-btn mt-2">
-              {/* Using Material-UI Button with custom styling */}
               <Button
                 className="w-40 h-12 !bg-[#00C7B1] hover:!bg-[#00A08C] !text-white gap-1 !rounded-md !shadow-lg !transition-all !duration-300" // Teal color from screenshot
-                variant="contained" // Use 'contained' for solid background
+                variant="contained" 
               >
-                Shop {/* Using ArrowOutwardIcon from Material-UI */}
+                Shop 
                 <ArrowOutwardIcon fontSize="small" />
               </Button>
             </div>
