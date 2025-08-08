@@ -7,7 +7,6 @@ import DeliveryDiningOutlinedIcon from '@mui/icons-material/DeliveryDiningOutlin
 import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
 import KeyboardReturnOutlinedIcon from '@mui/icons-material/KeyboardReturnOutlined';
 import DiscountOutlinedIcon from '@mui/icons-material/DiscountOutlined';
-
 const cards = [
   {
     id: 1,

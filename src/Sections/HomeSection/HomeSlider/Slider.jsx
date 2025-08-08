@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@mui/material";
-// import Iphone from "../../../../assets/images/home hero/iphone.png";
 import Iphone from "../../../../assets/images/home hero/headphone_31.png";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import AppleIcon from "@mui/icons-material/Apple";

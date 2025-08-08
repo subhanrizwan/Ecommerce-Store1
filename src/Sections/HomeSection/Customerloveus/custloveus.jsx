@@ -2,8 +2,6 @@ import { Link } from "react-router";
 import { Button, Card, CardContent, Badge } from "@mui/material";
 import Heading from "../../../components/heading/Heading";
 import StarIcon from "@mui/icons-material/Star";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InventoryOutlinedIcon  from '@mui/icons-material/InventoryOutlined';
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
