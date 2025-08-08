@@ -1,6 +1,9 @@
 import Img from '../../../../assets/images/home hero/36-540x550-1.png'
+import Heading from '../../../components/heading/Heading';
 export default function ProductGrid() {
   return (
+    <>
+        <Heading ProductGrids={'Best Products'} />
     <div className="flex flex-col lg:flex-row gap-4 p-4 mb-8 md:p-8 bg-gray-50 min-h-screen items-center justify-center">
       {/* Left - Large Product Card */}
       <div className="relative flex flex-col items-center justify-center bg-white p-6 md:p-10 rounded-lg shadow-sm w-full lg:w-3/5 h-[300px] md:h-[400px] lg:h-[500px]">
@@ -35,5 +38,6 @@ export default function ProductGrid() {
       </div>
       
     </div>
+    </>
   );
 }

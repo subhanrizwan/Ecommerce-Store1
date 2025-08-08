@@ -1,5 +1,5 @@
 import Rectangle from "../rectangle"
-function Heading({Product, Category,CustomerLove}) {
+function Heading({Product, Category,CustomerLove,ProductGrids}) {
   return (
     <>
     <section className="Heading-section p-5">
@@ -8,7 +8,7 @@ function Heading({Product, Category,CustomerLove}) {
               <Rectangle />
               <h1 className="text-4xl pb-4 md:text-6xl font-extrabold text-center
                    bg-secondary  text-transparent bg-clip-text
-                   bg-[length:200%_auto] animate-shimmer">{Category} {Product}{CustomerLove}</h1>
+                   bg-[length:200%_auto] animate-shimmer">{Category} {Product}{CustomerLove}{ProductGrids}</h1>
               <Rectangle />
             </div>
               </section>
