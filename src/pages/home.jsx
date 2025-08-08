@@ -11,8 +11,8 @@ const Home = () => {
     <Herosection />
     <Category2 />
     <Products />
-    <ProductGrid />
     <CustomerLove />
+    <ProductGrid />
     <FeatureHighlight />
     {/* <ScrollingBanner /> */}
     </>

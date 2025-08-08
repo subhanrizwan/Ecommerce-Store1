@@ -5,32 +5,34 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import { CiDeliveryTruck } from "react-icons/ci";
-
+import DeliveryDiningOutlinedIcon from '@mui/icons-material/DeliveryDiningOutlined';
+import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
+import KeyboardReturnOutlinedIcon from '@mui/icons-material/KeyboardReturnOutlined';
+import DiscountOutlinedIcon from '@mui/icons-material/DiscountOutlined';
 const cards = [
   {
     id: 1,
-    icon: <CiDeliveryTruck fontSize="large" />,
+    icon: <DeliveryDiningOutlinedIcon fontSize="large" className="text-1xl" />,
     title: "FREE AND FAST DELIVERY",
     description: "Free delivery for all orders over $140",
   },
   {
     id: 2,
-    icon: <LocalShippingIcon fontSize="large" />,
-    title: "FREE AND FAST DELIVERY",
-    description: "Free delivery for all orders over $140",
+    icon: <KeyboardReturnOutlinedIcon fontSize="large" />,
+    title: "14-Day Returns",
+    description: "Risk-free shopping with easy returns",
   },
   {
     id: 3,
-    icon: <LocalShippingIcon fontSize="large" />,
-    title: "FREE AND FAST DELIVERY",
-    description: "Free delivery for all orders over $140",
+    icon: <SupportAgentOutlinedIcon fontSize="large" />,
+    title: "24/7 Support",
+    description: "24/7 Support,always here just for you",
   },
   {
     id: 3,
-    icon: <LocalShippingIcon fontSize="large" />,
-    title: "FREE AND FAST DELIVERY",
-    description: "Free delivery for all orders over $140",
+    icon: <DiscountOutlinedIcon fontSize="large" />,
+    title: "Memeber Discount",
+    description: "Special prices for our loyal customer",
   },
 ];
 
@@ -43,21 +45,21 @@ function SelectActionCard() {
         <Card
           sx={{
             boxShadow: "none",
-            // border:'1px solid lightgray',
             textAlign: "center",
+           
           }}
         >
           <CardActionArea
             onClick={() => setSelectedCard(index)}
-            data-active={selectedCard === index ? "" : undefined}
+            // data-active={selectedCard === index ? "" : undefined}
             sx={{
               height: "100%",
-              transition:'0.5s',
-              "&[data-active]": {
-                "&:hover": {
+              // transition:'0.5s',
+              // "&[data-active]": {
+              //   "&:hover": {
                 
-                },
-              },
+              //   },
+              // },
             }}
           >
             <CardContent
@@ -65,8 +67,9 @@ function SelectActionCard() {
                 height: "100%",
               }}
             >
-              <Typography
-                sx={{
+              <Typography className="text-secondary"
+                              sx={{
+
                   marginTop: "0.5rem",
                   marginBottom: "1.2rem",
                 }}
@@ -75,8 +78,9 @@ function SelectActionCard() {
               >
                 {card.icon}
               </Typography>
-              <Typography
+              <Typography className="text-secondary"
                 sx={{
+                  fontSize:'1.3rem',
                   marginBottom: "1rem",
                   fontWeight: "bold",
                   
@@ -86,10 +90,10 @@ function SelectActionCard() {
               >
                 {card.title}
               </Typography>
-              <Typography
+              <Typography className="!text-secondary"
                 sx={{
                   marginBottom: "0.5rem",
-                  fontSize:'0.7rem',
+                  fontSize:'0.8rem',
                   
                 }}
                 variant="body2"
