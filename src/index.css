@@ -5,3 +5,29 @@
 html,body{
     overflow-x: hidden;
 }
+.slick-next::before,
+.slick-prev::before {
+  display: none !important;
+}
+
+.slick-prev,
+.slick-next {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  z-index: 10;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.slick-prev {
+  left: 1px !important;
+}
+
+.slick-next {
+  right: 1px !important;
+}

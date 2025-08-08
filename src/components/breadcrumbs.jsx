@@ -10,7 +10,7 @@ const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage})=>{
     return(
         <>
          <div
-            className="mb-5 md:mb-9 p-5"
+            className="mb-0 md:mb-9 p-3 pl-5"
             role="presentation"
             onClick={handleClick}
           >
@@ -18,7 +18,7 @@ const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage})=>{
               <Link underline="hover" color="inherit" href="#">
                 Home
               </Link>
-              <Typography sx={{ color: "text.primary" }}>{ContactPage}{ErrorPage}{AboutPage}</Typography>
+              <Typography  className="text-secondary">{ContactPage}{ErrorPage}{AboutPage}</Typography>
             </Breadcrumbs>
           </div>
         </>

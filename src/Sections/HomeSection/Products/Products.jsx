@@ -1,11 +1,11 @@
 import Heading from "../../../components/heading/Heading.jsx";
-import BasicCard from "./ProductCard.jsx";
+import ProductSlider from "./ProductSlider.jsx";
 const Products = () => {
   return (
     <>
     <Heading Product={'Our Products'} />
-      <section className="category-section p-8 lg:p-5  flex justify-center ">
-            <BasicCard />
+      <section className="category-section sm:px-4 md:px-12 p-6 mt-0 mb-10 ">
+            <ProductSlider />
       </section>
     </>
   );

@@ -8,7 +8,6 @@ const Rectangle=()=> {
     after:content-[''] after:absolute after:w-[14px] after:h-[14px] after:rounded-full after:border-2 after:border-secondary after:bg-secondary after:top-0 after:right-0 after:transition-all after:animate-moveRight
   "
 ></span>
-
     </>
   )
 }
