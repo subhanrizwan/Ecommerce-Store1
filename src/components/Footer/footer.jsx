@@ -26,16 +26,16 @@ function Footer() {
                   shopping simple, safe, and fun.
                 </p>
               </div>
-              <div className="flex gap-x-6">
+              <div className="flex gap-x-2 gap-y-4 md:gap-x-4">
                 <Button
-                  className="w-36 h-12 !bg-[#00C7B1] hover:!bg-[#00A08C] !text-white gap-1 !rounded-md !shadow-lg !transition-all !duration-300" // Teal color from screenshot
+                  className="w-28 md:w-36 h-10 md:h-12 !bg-[#00C7B1] hover:!bg-[#00A08C] !text-white gap-1 !rounded-md !shadow-lg !transition-all !duration-300" // Teal color from screenshot
                   variant="contained" 
                 >
                   Shop 
                   <ArrowOutwardIcon fontSize="small" />
                 </Button>
                 <Button
-                  className="w-36 h-12 !bg-[#00C7B1] hover:!bg-[#00A08C] !text-white gap-1 !rounded-md !shadow-lg !transition-all !duration-300" // Teal color from screenshot
+                  className="w-28 md:w-36 h-10 md:h-12 !bg-[#00C7B1] hover:!bg-[#00A08C] !text-white gap-1 !rounded-md !shadow-lg !transition-all !duration-300" // Teal color from screenshot
                   variant="contained"
                 >
                   Shop 
