@@ -10,7 +10,7 @@ const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage})=>{
     return(
         <>
          <div
-            className="mb-5 md:mb-9 p-5"
+            className="mb-0 md:mb-9 p-3 pl-5"
             role="presentation"
             onClick={handleClick}
           >

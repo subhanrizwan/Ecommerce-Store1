@@ -7,8 +7,7 @@ function Heading({Product, Category,CustomerLove}) {
                
               <Rectangle />
               <h1 className="text-4xl pb-4 md:text-6xl font-extrabold text-center
-                   bg-gradient-to-r from-[#03ADA4] via-[#40B3D6] to-white
-                   text-transparent bg-clip-text
+                   bg-secondary  text-transparent bg-clip-text
                    bg-[length:200%_auto] animate-shimmer">{Category} {Product}{CustomerLove}</h1>
               <Rectangle />
             </div>
