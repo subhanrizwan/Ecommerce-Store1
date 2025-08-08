@@ -1,15 +1,16 @@
 import { useState } from "react";
-import Box from "@mui/material/Box";
+// import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import { CiDeliveryTruck } from "react-icons/ci";
 
 const cards = [
   {
     id: 1,
-    icon: <LocalShippingIcon fontSize="large" />,
+    icon: <CiDeliveryTruck fontSize="large" />,
     title: "FREE AND FAST DELIVERY",
     description: "Free delivery for all orders over $140",
   },
@@ -25,26 +26,24 @@ const cards = [
     title: "FREE AND FAST DELIVERY",
     description: "Free delivery for all orders over $140",
   },
+  {
+    id: 3,
+    icon: <LocalShippingIcon fontSize="large" />,
+    title: "FREE AND FAST DELIVERY",
+    description: "Free delivery for all orders over $140",
+  },
 ];
 
 function SelectActionCard() {
   const [selectedCard, setSelectedCard] = useState(0);
   return (
-    <Box
-      sx={{
-        width: "100%",
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(min(200px, 100%), 1fr))",
-        gap: 3,
-    padding: "2rem 0", 
-      }}
-    >
-    
+    <>
+    <div className="flex justify-center justify-around ">
       {cards.map((card, index) => (
         <Card
           sx={{
             boxShadow: "none",
-            border:'1px solid lightgray',
+            // border:'1px solid lightgray',
             textAlign: "center",
           }}
         >
@@ -102,7 +101,8 @@ function SelectActionCard() {
           </CardActionArea>
         </Card>
       ))}
-     </Box>
+    </div>
+    </>
   );
 }
 

@@ -4,8 +4,8 @@ const FeatureHighlight = () => {
   return (
     <>
       <section className="featureHighlight-section py-6">
-        <div className="container">
-          <div className="p-5 max-w-4xl w-full mx-auto md:mt-5 lg:mt-0 md:mb-0">
+        <div className="container max-auto flex flex-col justify-center">
+          <div className="max-w-7xl">
             <SelectAction/>
           </div>
         </div>
