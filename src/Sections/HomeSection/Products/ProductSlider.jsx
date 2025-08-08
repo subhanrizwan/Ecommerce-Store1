@@ -122,6 +122,7 @@ export default function ResponsiveSlider() {
     // max-w-screen-xl
     <div className="container mx-auto !w-full max-w-screen-xl">
       {" "}      
+      
       <Slider {...settings}>
         {/* Added px-2 to the wrapper div for spacing between cards */}
         <div className="!flex !justify-center !items-center">
