@@ -10,7 +10,7 @@ import Harsha from '../../../../assets/images/OurTeam/harsha.webp';
 import Ami from '../../../../assets/images/OurTeam/ami.webp';
 import Andre from '../../../../assets/images/OurTeam/andre.webp';
 import Gluseppe from '../../../../assets/images/OurTeam/gluseppe.webp';
-
+import Heading from "../../../components/heading/Heading";
 const mentors = [
   { id: 1, name: "Murali Manoj", image: Murali },
   { id: 2, name: "Afshan Rehman", image: Harsha },
@@ -21,7 +21,9 @@ const mentors = [
 
 const OurTeam = () => {
   return (
-    <div className="py-6 bg-white">
+    <>
+    <Heading OurTeam={'Our Team'} />
+    <div className="py-6 mb-10 bg-white">
       <div className="container">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-wrap gap-x-6 gap-y-10 justify-center">
@@ -65,6 +67,7 @@ const OurTeam = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
