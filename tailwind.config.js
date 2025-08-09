@@ -12,7 +12,7 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
         },
-
+          
     moveLeft: {
       '0%': { transform: 'translateX(0)' },
       '50%': {
@@ -31,10 +31,9 @@ export default {
   animation: {
     moveLeft: 'moveLeft 3s linear infinite',
     moveRight: 'moveRight 3s linear infinite',
+    float: 'float 4s ease-in-out infinite',
   },
-  animation: {
-        float: 'float 4s ease-in-out infinite',
-      },
+
       colors:{
         primary:'rgba(3, 4, 6, 1)',
         secondary:'#03ada4',
@@ -47,3 +46,6 @@ export default {
   plugins: [],
 }
 
+// animation: {
+//         float: 'float 4s ease-in-out infinite',
+//       },

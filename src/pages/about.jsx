@@ -1,6 +1,7 @@
 import Herosection from '../Sections/HomeSection/HomeSlider/Herosection.jsx';
-import FeatureHighlight from '../Sections/HomeSection/FetaureHighlight/FeatureHighlight';
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
+import FeatureHighlight from "../Sections/HomeSection/FetaureHighlight/FeatureHighlight.jsx";
+import CustomerLove from "../Sections/HomeSection/Customerloveus/custloveus.jsx";
 function About() {
   return (
     <>
@@ -8,7 +9,8 @@ function About() {
            <Breadcrumbs AboutPage = "About" />
     </div>
      <Herosection />
-     <FeatureHighlight />
+    <CustomerLove />
+    <FeatureHighlight />
     </>
   )
 }

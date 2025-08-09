@@ -110,7 +110,7 @@ export default function Header() {
                 Blog
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 to="/pages"
                 underline="none"
                 className={({ isActive }) =>
@@ -122,8 +122,7 @@ export default function Header() {
                 }
               >
                 Pages
-                {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 to="/contact"
                 underline="none"

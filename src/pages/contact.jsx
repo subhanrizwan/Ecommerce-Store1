@@ -3,9 +3,9 @@ import { TextField, Button, Alert } from "@mui/material";
 import emailjs from "@emailjs/browser";
 import BreadcrumbComponent from "../components/Breadcrumbs";
 import swal from "sweetalert";
+import Heading from "../components/heading/Heading";
 
 const Contact = () => {
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -40,12 +40,13 @@ const Contact = () => {
   };
   return (
     <>
-       <div className="p-5">         <BreadcrumbComponent ContactPage = "Contact" />
-</div>
+      <div className="p-5">
+        {" "}
+        <BreadcrumbComponent ContactPage="Contact" />
+      </div>
       <section className="w-full">
         <div className="title-contact text-center p-5 pt-0 mb-0">
-         {/* <BreadcrumbComponent ContactPage = "Contact" /> */}
-          <h1 className="text-4xl font-900">Contact Us</h1>
+                <Heading Contact={"Contact Us"} />
         </div>
         <div className="form-wrap">
           <div className="form-tagline bg-gray">
@@ -77,9 +78,9 @@ const Contact = () => {
                   style={{ marginBottom: "1rem" }}
                   fullWidth
                   sx={{
-                      '& .MuiFormLabel-asterisk':{
-                  color: '#DB4444',
-                },
+                    "& .MuiFormLabel-asterisk": {
+                      color: "#03ada4",
+                    },
                     width: {
                       xs: "100%",
                       sm: "100%",
@@ -105,9 +106,9 @@ const Contact = () => {
                   style={{ marginBottom: "1rem" }}
                   fullWidth
                   sx={{
-                      '& .MuiFormLabel-asterisk':{
-                  color: '#DB4444',
-                },
+                    "& .MuiFormLabel-asterisk": {
+                      color: "#03ada4",
+                    },
                     width: {
                       xs: "100%",
                       sm: "100%",
@@ -133,9 +134,9 @@ const Contact = () => {
                   style={{ marginBottom: "1rem" }}
                   fullWidth
                   sx={{
-                    '& .MuiFormLabel-asterisk':{
-                  color: '#DB4444',
-                },
+                    "& .MuiFormLabel-asterisk": {
+                      color: "#03ada4",
+                    },
                     width: {
                       xs: "100%",
                       sm: "100%",
@@ -151,11 +152,11 @@ const Contact = () => {
                   id="outlined-multiline-static"
                   label="Message"
                   required
-               sx={{
-                '& .MuiFormLabel-asterisk':{
-                  color: '#DB4444',
-                },
-               }}
+                  sx={{
+                    "& .MuiFormLabel-asterisk": {
+                      color: "#03ada4",
+                    },
+                  }}
                   autoComplete="off"
                   value={message}
                   onChange={(e) => {
@@ -169,7 +170,6 @@ const Contact = () => {
                 />{" "}
               </div>
               <div className="submit-btn mt-2 flex justify-end ">
-                
                 <Button
                   onClick={sendEmail}
                   className="w-40 h-12 !bg-secondary"
