@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./style.css";
-import { Parallax, Pagination, Navigation } from "swiper/modules";
+import { Parallax, Pagination, Navigation ,Autoplay} from "swiper/modules";
 
   const slides = [
   {
@@ -50,9 +50,14 @@ export default function Slider() {
         background:'transparent'
       }}
       speed={600}
+      autoplay={{
+            delay:1500,
+            disableOnInteraction: true,
+        }}
+        
       parallax
       pagination={{ clickable: true }}
-      modules={[Parallax, Pagination, Navigation]}
+      modules={[Parallax, Pagination, Navigation,Autoplay]}
       className="mySwiper md:rounded rounded-none "
     >
       
