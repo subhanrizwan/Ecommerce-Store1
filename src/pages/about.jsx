@@ -6,7 +6,7 @@ import OurTeam from '../Sections/AboutSections/OurTeam/ourteam.jsx';
 function About() {
   return (
     <>
-    <div className="p-5 pb-0">
+    <div className="py-5 pb-0">
            <Breadcrumbs AboutPage = "About" />
     </div>
      <Herosection />

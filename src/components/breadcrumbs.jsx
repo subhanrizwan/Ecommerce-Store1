@@ -1,8 +1,13 @@
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
+import { useNavigate } from "react-router";
 
-const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage})=>{
+const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage,SignupPage})=>{
+  let navigate = useNavigate();
+  const Handle =()=>{
+    navigate('/');
+  } 
       function handleClick(event) {
         event.preventDefault();
         console.info("You clicked a breadcrumb.");
@@ -10,15 +15,15 @@ const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage})=>{
     return(
         <>
          <div
-            className="mb-0 md:mb-9 p-3 pl-5"
+            className="mb-0 md:mb-9 p-0 py-6 pl-10 bg-gray-50"
             role="presentation"
             onClick={handleClick}
           >
             <Breadcrumbs aria-label="breadcrumb">
-              <Link underline="hover" color="inherit" href="#">
+              <Link underline="hover" onClick={Handle} className="hover:text-secondary" color="inherit" href="#">
                 Home
               </Link>
-              <Typography  className="text-secondary">{ContactPage}{ErrorPage}{AboutPage}</Typography>
+              <Typography  className="text-secondary cursor-pointer">{ContactPage}{ErrorPage}{AboutPage}{SignupPage}</Typography>
             </Breadcrumbs>
           </div>
         </>

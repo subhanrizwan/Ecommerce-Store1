@@ -40,7 +40,7 @@ const Contact = () => {
   };
   return (
     <>
-      <div className="p-5">
+      <div className="py-5">
         {" "}
         <BreadcrumbComponent ContactPage="Contact" />
       </div>

@@ -46,6 +46,3 @@ export default {
   plugins: [],
 }
 
-// animation: {
-//         float: 'float 4s ease-in-out infinite',
-//       },

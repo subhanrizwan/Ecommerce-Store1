@@ -5,9 +5,13 @@ import { NavLink } from "react-router";
 import CartDrawer from "../CartDrawer/drawer.jsx";
 import SearchModal from "../SearchProducts/search.jsx";
 import Logo from '../../../assets/images/logo/logo.png';
+import { GoPerson } from "react-icons/go";
 import { MdFacebook } from "react-icons/md";
 
-import {
+import { useNavigate } from "react-router";
+
+import
+ {
   Menu as MenuIcon,
   Close as CloseIcon,
   KeyboardArrowDown as KeyboardArrowDownIcon,
@@ -16,8 +20,15 @@ import {
   FavoriteBorder as FavoriteBorderIcon,
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // toggle signup page
+  const navigate = useNavigate();
+  const HandleSignup=()=>{
+    return navigate('/signup')
+  }
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -110,19 +121,7 @@ export default function Header() {
                 Blog
                 {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
               </NavLink>
-              {/* <NavLink
-                to="/pages"
-                underline="none"
-                className={({ isActive }) =>
-                  `!text-black  hover:!text-secondary font-medium transition-colors ${
-                    isActive
-                      ? "!text-secondary font-semibold"
-                      : "!text-black font-normal"
-                  }`
-                }
-              >
-                Pages
-              </NavLink> */}
+              
               <NavLink
                 to="/contact"
                 underline="none"
@@ -149,25 +148,10 @@ export default function Header() {
               <div className="hidden md:flex items-center space-x-1 mr-3">
                 {/* Search */}
                 <SearchModal />
-
-                {/* Cart */}
                 {/* Profile */}
-                <IconButton className="!text-black hover:!text-secondary">
-                  {/* <PersonIcon /> */}
-                  <svg
-                    className="icon"
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth={0}
-                    viewBox="0 0 24 24"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z" />
-                  </svg>
+                <IconButton onClick={HandleSignup} className="!text-black hover:!text-secondary">
+                  <GoPerson />
                 </IconButton>
-
                 {/* Favorites */}
                 <IconButton className="relative !text-black hover:!text-secondary">
                   <Badge badgeContent={1} color="error" className="text-xs">

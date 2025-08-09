@@ -11,6 +11,8 @@ import About from "./pages/about";
 import Shop from "./pages/Shop";
 import Blog from "./pages/blog";
 import Contact from "./pages/contact";
+import Signup from "./pages/LoginSignup/Signup";
+import Login from "./pages/LoginSignup/Login";
 import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter(
@@ -22,6 +24,8 @@ const router = createBrowserRouter(
       <Route path="/shop" element={<Shop />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   )
