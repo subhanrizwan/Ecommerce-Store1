@@ -14,7 +14,7 @@ const Login = () => {
     <>
       <div className="py-5">
         {" "}
-        <BreadcrumbComponent SignupPage="Signup" />
+        <BreadcrumbComponent LoginPage="Login" />
       </div>
       <section className="w-full">
         <div className="title-contact text-center p-0 pt-0 mb-0">

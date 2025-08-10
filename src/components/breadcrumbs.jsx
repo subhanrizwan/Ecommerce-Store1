@@ -3,7 +3,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import { useNavigate } from "react-router";
 
-const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage,SignupPage})=>{
+const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage,SignupPage,LoginPage})=>{
   let navigate = useNavigate();
   const Handle =()=>{
     navigate('/');
@@ -21,9 +21,9 @@ const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage,SignupPage})=>{
           >
             <Breadcrumbs aria-label="breadcrumb">
               <Link underline="hover" onClick={Handle} className="hover:text-secondary" color="inherit" href="#">
-                Home
+                Homes
               </Link>
-              <Typography  className="text-secondary cursor-pointer">{ContactPage}{ErrorPage}{AboutPage}{SignupPage}</Typography>
+              <Typography  className="text-secondary cursor-pointer">{ContactPage}{LoginPage}{ErrorPage}{AboutPage}{SignupPage}</Typography>
             </Breadcrumbs>
           </div>
         </>
