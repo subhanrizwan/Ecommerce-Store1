@@ -1,8 +1,8 @@
 import Socialicons from "../SocialIcon/socialicons";
 function FooterBottom() {
   return (
-<div className="footer-bottom text-xs flex justify-center md:justify-between flex-wrap w-screen text-center bg-cardbg p-3">
-          <p className="mt-1 p-3 md:p-5">
+<div className="flex flex-wrap justify-center w-screen p-3 text-xs text-center bg-gray-100 footer-bottom md:justify-between">
+          <p className="p-3 mt-1 md:p-5">
             Copyright © 2025 All rights reserved by Subhan Ahmed
           </p>
           <Socialicons />

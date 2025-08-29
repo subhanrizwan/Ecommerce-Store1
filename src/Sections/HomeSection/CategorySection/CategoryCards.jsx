@@ -29,8 +29,8 @@ export default function CategoryCards({ icon: Icon, title }) {
             },
           }}
         >
-          <div className="flex flex-col text-black items-center text-sm gap-y-5 bg-cardbg p-16 rounded-full">
-           <div className="group-hover:text-secondary transition-all duration-200">
+          <div className="flex flex-col items-center p-16 text-sm text-black bg-gray-100 rounded-full gap-y-5">
+           <div className="transition-all duration-200 group-hover:text-secondary">
           <Icon fontSize="large" />
            </div>
           

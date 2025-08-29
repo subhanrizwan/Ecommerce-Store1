@@ -24,9 +24,9 @@ const OurTeam = () => {
     <>
     <Heading OurTeam={'Our Team'} />
     <div className="py-6 mb-10 bg-white">
-      <div className="container">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap gap-x-6 gap-y-10 justify-center">
+      <div className="container mx-auto">
+        <div className="px-4 mx-auto max-w-7xl">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-10">
             {mentors.map((mentor) => (
               <div
                 key={mentor.id}
@@ -39,26 +39,26 @@ const OurTeam = () => {
                 />
 
                 {/* Dark overlay on hover */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                <div className="absolute inset-0 transition-all duration-300 opacity-0 bg-black/40 group-hover:opacity-100" />
 
                 {/* Social Icons */}
-                <div className="absolute inset-0 flex flex-col items-end translate-x-6 group-hover:-translate-x-5 justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute inset-0 flex flex-col items-end justify-center gap-4 transition-all duration-300 translate-x-6 opacity-0 group-hover:-translate-x-5 group-hover:opacity-100">
                   <Link>
-                    <GrFacebookOption className="text-white text-xl hover:text-secondary" />
+                    <GrFacebookOption className="text-xl text-white hover:text-secondary" />
                   </Link>
                   <Link>
-                    <IoLogoInstagram className="text-white text-xl hover:text-secondary" />
+                    <IoLogoInstagram className="text-xl text-white hover:text-secondary" />
                   </Link>
                   <Link>
-                    <RiTwitterXFill className="text-white text-xl hover:text-secondary" />
+                    <RiTwitterXFill className="text-xl text-white hover:text-secondary" />
                   </Link>
                   <Link>
-                    <LuMails className="text-white text-xl hover:text-secondary" />
+                    <LuMails className="text-xl text-white hover:text-secondary" />
                   </Link>
                 </div>
 
                 {/* Mentor Name */}
-                <p className="absolute bottom-3 left-4 text-white font-semibold text-lg drop-shadow-md">
+                <p className="absolute text-lg font-semibold text-white bottom-3 left-4 drop-shadow-md ">
                   {mentor.name}
                 </p>
               </div>

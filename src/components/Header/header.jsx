@@ -6,7 +6,7 @@ import CartDrawer from "../CartDrawer/drawer.jsx";
 import SearchModal from "../SearchProducts/search.jsx";
 import Logo from '../../../assets/images/logo/logo.png';
 import { GoPerson } from "react-icons/go";
-import { MdFacebook } from "react-icons/md";
+import { IoMdHeartEmpty } from "react-icons/io";
 
 import { useNavigate } from "react-router";
 
@@ -36,7 +36,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full bg-white border-b border-gray-200 relative z-50">
+      <header className="relative z-50 w-full bg-white border-b border-gray-200">
         <div className="container mx-auto ">
           <div className="flex items-center justify-between h-16 ml-1">
             {/* Mobile Menu Button - Only visible on mobile */}
@@ -54,18 +54,16 @@ export default function Header() {
             <div className="flex-shrink-0 md:flex-1 w-[72%]">
               <Link
                 underline="none"
-                className="flex items-center justify-center md:justify-start pl-5"
+                className="flex items-center justify-center pl-5 md:justify-start"
               >
-                <div className="text-2xl text-center font-bold text-black">
-                  {/* <h1>Store1</h1> */}
+                <div className="text-2xl font-bold text-center text-black">
                   <img className="w-10" src={Logo} alt="" />
-                  {/* <h1>Store</h1> */}
                 </div>
               </Link>
             </div>
 
             {/* Navigation Menu - Hidden on mobile, centered on desktop */}
-            <nav className="hidden md:flex items-center justify-center space-x-8 flex-1">
+            <nav className="items-center justify-center flex-1 hidden space-x-8 md:flex">
               <NavLink
                 to="/"
                 underline="none"
@@ -78,7 +76,7 @@ export default function Header() {
                 }
               >
                 Home
-                {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
+                {/* <KeyboardArrowDownIcon className="w-4 h-4 ml-1" /> */}
               </NavLink>
               <NavLink
                 to="/about"
@@ -105,7 +103,7 @@ export default function Header() {
                 }
               >
                 Shop
-                {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
+                {/* <KeyboardArrowDownIcon className="w-4 h-4 ml-1" /> */}
               </NavLink>
               <NavLink
                 to="/blog"
@@ -119,7 +117,7 @@ export default function Header() {
                 }
               >
                 Blog
-                {/* <KeyboardArrowDownIcon className="ml-1 h-4 w-4" /> */}
+                {/* <KeyboardArrowDownIcon className="w-4 h-4 ml-1" /> */}
               </NavLink>
               
               <NavLink
@@ -138,14 +136,14 @@ export default function Header() {
             </nav>
 
             {/* Right Side Actions */}
-            <div className="flex items-center justify-end flex-1 md:flex-1 -translate-x-2">
+            <div className="flex items-center justify-end flex-1 -translate-x-2 md:flex-1">
               {/* Mobile - Only Cart */}
               <div className="md:hidden">
                 <CartDrawer />
               </div>
 
               {/* Desktop - Search, Profile, Favorites with smaller gaps */}
-              <div className="hidden md:flex items-center space-x-1 mr-3">
+              <div className="items-center hidden mr-3 space-x-1 md:flex">
                 {/* Search */}
                 <SearchModal />
                 {/* Profile */}
@@ -155,7 +153,8 @@ export default function Header() {
                 {/* Favorites */}
                 <IconButton className="relative !text-black hover:!text-secondary">
                   <Badge badgeContent={1} color="error" className="text-xs">
-                    <FavoriteBorderIcon />
+                    {/* <FavoriteBorderIcon /> */}
+                    <IoMdHeartEmpty fontSize={'1.5rem'} />
                   </Badge>
                 </IconButton>
                    <IconButton className="!text-black hover:!text-secondary">
@@ -172,7 +171,7 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 z-40 bg-black bg-opacity-50 md:hidden"
           onClick={toggleMobileMenu}
         />
       )}
@@ -187,9 +186,9 @@ export default function Header() {
         <div className="flex justify-between p-4">
           <NavLink
             underline="none"
-            className="flex items-center justify-center md:justify-start pl-5"
+            className="flex items-center justify-center pl-5 md:justify-start"
           >
-            <div className="text-2xl text-center font-bold text-black">
+            <div className="text-2xl font-bold text-center text-black">
               <h1>Store1</h1>
             </div>
           </NavLink>
@@ -218,7 +217,7 @@ export default function Header() {
               onClick={toggleMobileMenu}
             >
               Home
-              {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
+              {/* <KeyboardArrowDownIcon className="w-5 h-5" /> */}
             </NavLink>
 
             <NavLink
@@ -249,7 +248,7 @@ export default function Header() {
               onClick={toggleMobileMenu}
             >
               Shop
-              {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
+              {/* <KeyboardArrowDownIcon className="w-5 h-5" /> */}
             </NavLink>
 
             <NavLink
@@ -265,7 +264,7 @@ export default function Header() {
               onClick={toggleMobileMenu}
             >
               Blog
-              {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
+              {/* <KeyboardArrowDownIcon className="w-5 h-5" /> */}
             </NavLink>
 
             <NavLink
@@ -281,7 +280,7 @@ export default function Header() {
               onClick={toggleMobileMenu}
             >
               Pages
-              {/* <KeyboardArrowDownIcon className="h-5 w-5" /> */}
+              {/* <KeyboardArrowDownIcon className="w-5 h-5" /> */}
             </NavLink>
 
             <NavLink

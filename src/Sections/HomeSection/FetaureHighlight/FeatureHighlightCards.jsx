@@ -3,10 +3,12 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
-import DeliveryDiningOutlinedIcon from '@mui/icons-material/DeliveryDiningOutlined';
-import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
-import KeyboardReturnOutlinedIcon from '@mui/icons-material/KeyboardReturnOutlined';
-import DiscountOutlinedIcon from '@mui/icons-material/DiscountOutlined';
+import DeliveryDiningOutlinedIcon from "@mui/icons-material/DeliveryDiningOutlined";
+import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
+import KeyboardReturnOutlinedIcon from "@mui/icons-material/KeyboardReturnOutlined";
+import DiscountOutlinedIcon from "@mui/icons-material/DiscountOutlined";
+
+
 const cards = [
   {
     id: 1,
@@ -38,25 +40,18 @@ function SelectActionCard() {
   const [selectedCard, setSelectedCard] = useState(0);
   return (
     <>
-    {/* <div className="flex !justify-center flex-wrap"> */}
       {cards.map((card, index) => (
         <Card
           sx={{
             boxShadow: "none",
             textAlign: "center",
-           
           }}
         >
           <CardActionArea
+            value={selectedCard}
             onClick={() => setSelectedCard(index)}
-            // data-active={selectedCard === index ? "" : undefined}
             sx={{
               height: "100%",
-              // transition:'0.5s',
-              // "&[data-active]": {
-              //   "&:hover": {
-              //   },
-              // },
             }}
           >
             <CardContent
@@ -64,9 +59,9 @@ function SelectActionCard() {
                 height: "100%",
               }}
             >
-              <Typography className="text-secondary"
-                              sx={{
-
+              <Typography
+                className="text-secondary"
+                sx={{
                   marginTop: "0.5rem",
                   marginBottom: "1.2rem",
                 }}
@@ -75,23 +70,23 @@ function SelectActionCard() {
               >
                 {card.icon}
               </Typography>
-              <Typography className="text-secondary"
+              <Typography
+                className="text-secondary"
                 sx={{
-                  fontSize:'1.3rem',
+                  fontSize: "1.3rem",
                   marginBottom: "1rem",
                   fontWeight: "bold",
-                  
                 }}
                 variant="b"
                 component="div"
               >
                 {card.title}
               </Typography>
-              <Typography className="!text-secondary"
+              <Typography
+                className="!text-secondary"
                 sx={{
                   marginBottom: "0.5rem",
-                  fontSize:'0.8rem',
-                  
+                  fontSize: "0.8rem",
                 }}
                 variant="body2"
                 color="text.secondary"
@@ -102,7 +97,6 @@ function SelectActionCard() {
           </CardActionArea>
         </Card>
       ))}
-    {/* </div> */}
     </>
   );
 }

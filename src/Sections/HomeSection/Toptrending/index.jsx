@@ -4,10 +4,10 @@ export default function ProductGrid() {
   return (
     <>
         <Heading ProductGrids={'Best Products'} />
-    <div className="flex flex-col lg:flex-row gap-4 p-4 mb-8 md:p-8 bg-gray-50 min-h-screen items-center justify-center">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-4 p-4 mb-8 lg:flex-row md:p-8 bg-gray-50">
       {/* Left - Large Product Card */}
       <div className="relative flex flex-col items-center justify-center bg-white p-6 md:p-10 rounded-lg shadow-sm w-full lg:w-3/5 h-[300px] md:h-[400px] lg:h-[500px]">
-        <div className="relative w-full max-w-md h-auto flex justify-center items-center">
+        <div className="relative flex items-center justify-center w-full h-auto max-w-md">
           <img
             src={Img}
             alt="Xpeed Projector"
@@ -16,14 +16,14 @@ export default function ProductGrid() {
             className="object-contain"
           />
         </div>
-        <div className="absolute bottom-6 left-6 bg-green-600 text-white rounded-full w-16 h-16 flex flex-col items-center justify-center text-xs font-bold">
+        <div className="absolute flex flex-col items-center justify-center w-16 h-16 text-xs font-bold text-white bg-green-600 rounded-full bottom-6 left-6">
           <span>4%</span>
           <span>Offer</span>
         </div>
       </div>
 
       {/* Right - Grid of Small Product Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full lg:w-2/5 h-full">
+      <div className="grid w-full h-full grid-cols-1 gap-4 sm:grid-cols-2 lg:w-2/5">
         {Array(4).fill(0).map((_, i) => (
           <div key={i} className="flex flex-col items-center justify-center bg-white p-4 rounded-lg shadow-sm h-[200px] md:h-[240px]">
             <img
