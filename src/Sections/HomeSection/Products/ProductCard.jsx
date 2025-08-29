@@ -39,13 +39,6 @@ const ProductCard = () => {
           >
             $12.00
           </h1>
-
-          {/* <p
-            style={{ transition: ".5s" }}
-            className="card__description text-center -translate-x-20 group-hover:translate-x-1 group-hover:transform group-hover:opacity-100 group-hover:-translate-y-[4.5rem] text-sm mb-0 opacity-0 mt-3 text-gray-500 "
-          >
-            Nike Air Jordan Footwear basketball sneakers.
-          </p> */}
           <div
             style={{ transition: ".5s" }}
             className="flex justify-center items-center gap-x-6 mb-3 mt-0 opacity-0 group-hover:transform group-hover:opacity-100 group-hover:-translate-y-[3rem]"

@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-import { Button, Card, CardContent, Badge } from "@mui/material";
 import Heading from "../../../components/heading/Heading";
 import StarIcon from "@mui/icons-material/Star";
 import InventoryOutlinedIcon  from '@mui/icons-material/InventoryOutlined';
@@ -39,16 +37,16 @@ export default function CustomerLove() {
           <Heading CustomerLove={'Why Customer Love Us'} />
       <section className="py-10">
         <div className="container mx-auto lg:flex lg:justify-center">
-          <div className="max-w-7xl p-8 py-0">            
+          <div className="p-8 py-0 max-w-7xl">            
             {/* Statistics Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4  gap-6">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {/* Countries Represented */}
               {stats.map((stat,ind)=>{
                 return (
-                  <div key={ind} className="bg-white rounded-2xl p-12 shadow-sm shadow-slate-300 border border-gray-100">
-                    <div className="text-5xl font-bold text-secondary mb-3">{stat.title}</div>
-                    <div className="text-gray-700 font-medium mb-6">{stat.description}</div>
-                    <div className="w-12 h-12 bg-cardbg text-secondary rounded-full flex items-center justify-center">
+                  <div key={ind} className="p-12 bg-white border border-gray-100 shadow-sm rounded-2xl shadow-slate-300">
+                    <div className="mb-3 text-5xl font-bold text-secondary">{stat.title}</div>
+                    <div className="mb-6 font-medium text-gray-700">{stat.description}</div>
+                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cardbg text-secondary">
                       {stat.icon}
                     </div>
                   </div>

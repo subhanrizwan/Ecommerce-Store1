@@ -17,7 +17,7 @@ function Footer() {
             <span className="absolute w-32 h-32 bg-teal-400 rounded-full opacity-15 -bottom-8 right-1/3 animate-[float_4s_ease-in-out_infinite_2s]"></span>
             <span className="absolute w-20 h-20 bg-teal-400 rounded-full opacity-15 top-1/3 -right-8 animate-[float_4s_ease-in-out_infinite_1s]"></span>
             <div className="step1 md:w-[30%] sm:h-68 p-5 text-textFooter">
-              <div className="pr-6 resturant-title">
+              <div className="pr-6 title">
                 <img className="w-16 h-16 mb-4" src={Logo} alt="" />
                 <p className="pt-5 mb-10 text-md md:text-md">
                   Bringing you quality products at the best prices, delivered
