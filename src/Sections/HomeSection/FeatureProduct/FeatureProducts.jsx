@@ -9,15 +9,13 @@ const mentors = [
   { id: 1, name: "Murali Manoj", image: Subhan },
   { id: 2, name: "Afshan Rehman", image: Subhan },
   { id: 3, name: "Richard Stewart", image: Subhan },
-  { id: 4, name: "Giuseppe Dotto", image: Subhan },
-  { id: 5, name: "Ami Nigam", image: Subhan },
-  { id: 6, name: "Ami Nigam", image: Subhan },
+
 ];
 
 const FeatureProducts = () => {
   return (
     <>
-      <Heading OurTeam={"Our Team"} />
+      <Heading FeatureProduct={"Feature Products"} />{" "}
       <div className="py-6 mb-10 bg-white">
         <div className="container mx-auto">
           <div className="px-4 mx-auto max-w-7xl">
@@ -42,12 +40,12 @@ const FeatureProducts = () => {
                           <IoIosHeart className="text-sm text-white " />
                         </div>
                       </Link>
-                        <Link>
-                          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-secondary">
-                            <IoEyeOutline className="text-sm text-white " />
-                          </div>
-                        </Link>
-                          <Tooltip title="Add to Cart" arrow>
+                      <Link>
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-secondary">
+                          <IoEyeOutline className="text-sm text-white " />
+                        </div>
+                      </Link>
+                      <Tooltip title="Add to Cart" arrow>
                         <Link>
                           <div className="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-secondary">
                             <IoCartOutline className="text-white text-md" />
