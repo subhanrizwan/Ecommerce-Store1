@@ -1,85 +1,47 @@
-// context create kia
 // createContext is a global store
-import { createContext ,useContext, useEffect} from "react";
-import axios from  'axios';
-// import Contact from '../pages/contact';
-// import productReducer from '../Reducer/productReducer';
-// import Herosection from '../Sections/HomeSection/HomeSlider/Herosection.jsx';
+import { createContext, useContext, useEffect, useReducer } from "react";
+import axios from "axios";
+import productReducer from "../Reducer/productReducer";
 
 // createContext is a global store
 const AppContext = createContext();
 
 // provider like a wrapper component
 const AppProvider = ({ children }) => {
-  // const initialState ={
-  //     isLoading : false,
-  //     isError:false,
-  //     products:[],
-  //     featureProducts:[]
-  // }
-  // const [state , dispatch] = useReducer(productReducer,initialState)
+  const initialState = {
+    isLoading: false,
+    isError: false,
+    products: [],
+    featureProducts: [],
+  };
+  const [state, dispatch] = useReducer(productReducer, initialState);
 
-  const Api = 'https://api.pujakaitem.com/api/products'
+  const Api = "https://api.pujakaitem.com/api/products";
+  const GetApiData = async (Api) => {
+    dispatch({ type: "IsLoading" });
+    try {
+      const res = await axios.get(Api);
+      let products = await res.data;
+      dispatch({ type: "API_DATA", payload: products });
+      console.log(products);
+    } catch (error) {
+      dispatch({ type: "IsError" });
+      console.log(error.message);
+    }
+  };
 
-//   let Get = async (Api) => {
-//       try {
-//           const apiRes = await axios.get(Api);
-//           const apiProducts = await apiRes.data;
-//           console.log(apiProducts);
-//       }
-//       catch(error){
-//         console.log(error.message);
-//       }
-//   }
-//   useEffect(()=>{
-//   Get(Api);
-//   },[])
+  useEffect(() => {
+    GetApiData(Api);
+  }, []);
 
- let Get = async (Api) => {
-      axios.get(Api)
-      .then(res=> console.log(res.data))
-      .catch((err)=> console.log(err));
-  }
-  useEffect(()=>{
-  Get(Api);
-  },[])
-  // const getProducts = async(url)=>{
-  // dispatch({type : "Set_LOADING"});
-  // try{
-  //     const res = await axios.get(url);
-  //     const products = await res.data;
-  //     console.log(products);
-
-  // //     dispatch({type:"MY_API_DATA", payload: products});
-  // }
-  // catch(error){
-  //     console.log(error.message);
-
-  // //    dispatch({type : "Set_Error"});
-  // }
-
-  // 1st method
-  //  (await fetch(url)).json()
-  // .then((res)=> console.log(res))
-  // .catch((err)=> console.log(err,err.message))
-
-  // second method
-  // try{
-  //     let data = await fetch(url);
-  //     let response = await data.json();
-  //     console.log(response);
-  // }
-  // catch(err){
-  //     console.log(err,err.message);
-  // }
-  // }
-
-  return <AppContext.Provider value={"Subhan Ahmed"}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+  );
 };
 
 // custom hook to use the context
-const useAppContext=()=>{
-return useContext(AppContext);
-}
+// const useProductContext = () => {
+//   return useContext(AppContext);
+// };
 
-export { AppProvider, AppContext, useAppContext };
+export { AppProvider, AppContext };
