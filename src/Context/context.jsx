@@ -1,7 +1,7 @@
 // context create kia
 // createContext is a global store
-import { createContext ,useContext} from "react";
-// import axios from  'axios';
+import { createContext ,useContext, useEffect} from "react";
+import axios from  'axios';
 // import Contact from '../pages/contact';
 // import productReducer from '../Reducer/productReducer';
 // import Herosection from '../Sections/HomeSection/HomeSlider/Herosection.jsx';
@@ -19,7 +19,30 @@ const AppProvider = ({ children }) => {
   // }
   // const [state , dispatch] = useReducer(productReducer,initialState)
 
-  // const Api = 'https://api.pujakaitem.com/api/products'
+  const Api = 'https://api.pujakaitem.com/api/products'
+
+//   let Get = async (Api) => {
+//       try {
+//           const apiRes = await axios.get(Api);
+//           const apiProducts = await apiRes.data;
+//           console.log(apiProducts);
+//       }
+//       catch(error){
+//         console.log(error.message);
+//       }
+//   }
+//   useEffect(()=>{
+//   Get(Api);
+//   },[])
+
+ let Get = async (Api) => {
+      axios.get(Api)
+      .then(res=> console.log(res.data))
+      .catch((err)=> console.log(err));
+  }
+  useEffect(()=>{
+  Get(Api);
+  },[])
   // const getProducts = async(url)=>{
   // dispatch({type : "Set_LOADING"});
   // try{
@@ -50,9 +73,7 @@ const AppProvider = ({ children }) => {
   //     console.log(err,err.message);
   // }
   // }
-  // useEffect(()=>{
-  // getProducts(Api);
-  // },[])
+
   return <AppContext.Provider value={"Subhan Ahmed"}>{children}</AppContext.Provider>;
 };
 
