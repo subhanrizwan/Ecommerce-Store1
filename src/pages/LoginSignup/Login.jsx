@@ -2,9 +2,8 @@ import { useState, useRef } from "react";
 import { TextField, Button, Alert } from "@mui/material";
 import BreadcrumbComponent from "../../components/Breadcrumbs.jsx";
 import Heading from "../../components/heading/Heading.jsx";
-
 const Login = () => {
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -17,21 +16,21 @@ const Login = () => {
         <BreadcrumbComponent LoginPage="Login" />
       </div>
       <section className="w-full">
-        <div className="title-contact text-center p-0 pt-0 mb-0">
+        <div className="p-0 pt-0 mb-0 text-center title-contact">
                 <Heading Login={"Login into Exclusive"} />
         </div>
         <div className="form-wrap">
           <div className="form-tagline bg-gray">
-            <p className="text-center p-0 mb-3">
+            <p className="p-0 mb-3 text-center">
              Enter your details below
             </p>
           </div>
-          <div className="w-ful flex justify-center">
+          <div className="flex justify-center w-ful">
             <form
               ref={form}
-              className="md:w-11/12 sm:w-full lg:w-4/5 rounded pt-6 pb-8 mb-0 p-5"
+              className="p-5 pt-6 pb-8 mb-0 rounded md:w-11/12 sm:w-full lg:w-4/5"
             >
-              <div className="cont-row flex justify-center flex-wrap mb-0 gap-y-10">
+              <div className="flex flex-wrap justify-center mb-0 cont-row gap-y-10">
                 {/* <TextField
                   name="user_name"
                   id="filled-basic"
@@ -45,7 +44,7 @@ const Login = () => {
                     console.clear();
                     console.log(e.target.value);
                   }}
-                  className=" rounded"
+                  className="rounded "
                   fullWidth
                   sx={{
                     "& .MuiFormLabel-asterisk": {
@@ -67,7 +66,7 @@ const Login = () => {
                   required
                   autoComplete="off"
                   value={email}
-                  className=" rounded"
+                  className="rounded "
                   fullWidth
                   sx={{
                     "& .MuiFormLabel-asterisk": {
@@ -94,7 +93,7 @@ const Login = () => {
                     console.clear();
                     console.log(e.target.value);
                   }}
-                  className=" rounded"
+                  className="rounded "
                   fullWidth
                   sx={{
                     "& .MuiFormLabel-asterisk": {
@@ -112,19 +111,19 @@ const Login = () => {
               </div>
             </form>
           </div>
-              <div className="submit-btn mt-2 text-center flex justify-center items-center gap-x-72 ">
+              <div className="flex items-center justify-center mt-2 text-center submit-btn gap-x-72 ">
                 <Button
                   className="w-40 h-12 !bg-secondary"
                   variant="contained"
                 >
                   Login
                 </Button>
-                <p className="hover:text-secondary cursor-pointer">Forget Password?</p>
+                <p className="cursor-pointer hover:text-secondary">Forget Password?</p>
               </div>
         </div>
        
       </section>
-      <section className="map-section w-full"></section>
+      <section className="w-full map-section"></section>
     </>
   );
 };

@@ -1,4 +1,3 @@
-"use client";
 import { Link } from "react-router";
 import { IoCartOutline, IoEyeOutline } from "react-icons/io5";
 import { IoIosHeart } from "react-icons/io";
@@ -9,7 +8,6 @@ const mentors = [
   { id: 1, name: "Murali Manoj", image: Subhan },
   { id: 2, name: "Afshan Rehman", image: Subhan },
   { id: 3, name: "Richard Stewart", image: Subhan },
-
 ];
 
 const FeatureProducts = () => {

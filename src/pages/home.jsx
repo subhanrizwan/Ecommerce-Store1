@@ -1,5 +1,5 @@
 import Herosection from "../Sections/HomeSection/HomeSlider/Herosection.jsx";
-import Products from "../Sections/HomeSection/Products/Products.jsx"; 
+import Products from "../Sections/HomeSection/Products/Products.jsx";
 import Category2 from "../Sections/HomeSection/CategorySection/Category.jsx";
 import FeatureProducts from "../Sections/HomeSection/FeatureProduct/FeatureProducts.jsx";
 import FeatureHighlight from "../Sections/HomeSection/FetaureHighlight/FeatureHighlight.jsx";
@@ -8,15 +8,14 @@ import ProductGrid from "../Sections/HomeSection/Toptrending/index.jsx";
 const Home = () => {
   return (
     <>
-    <Herosection />
-    <Category2 />
-    <FeatureProducts />
-    {/* <Products /> */}
-    <CustomerLove />
-    <ProductGrid />
-    <FeatureHighlight />
+      <Herosection />
+      <Category2 />
+      <FeatureProducts />
+      <CustomerLove />
+      <ProductGrid />
+      <FeatureHighlight />
     </>
-  )
+  );
 };
 
 export default Home;
