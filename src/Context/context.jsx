@@ -1,5 +1,5 @@
 // createContext is a global store
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import productReducer from "../Reducer/productReducer";
 
@@ -38,10 +38,5 @@ const AppProvider = ({ children }) => {
     <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
   );
 };
-
-// custom hook to use the context
-// const useProductContext = () => {
-//   return useContext(AppContext);
-// };
 
 export { AppProvider, AppContext };

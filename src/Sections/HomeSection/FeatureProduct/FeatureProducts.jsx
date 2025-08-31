@@ -2,20 +2,17 @@ import { Link } from "react-router";
 import { IoCartOutline, IoEyeOutline } from "react-icons/io5";
 import { IoIosHeart } from "react-icons/io";
 import Heading from "../../../components/heading/Heading";
-import Subhan from "../../../../assets/images/OurTeam/subhan.jfif";
 import { Tooltip } from "@mui/material";
 import { useContext } from "react";
 import { AppContext } from "../../../Context/context";
-
+import FormatePrice from "../../../Helpers/FormatePrice";
 const FeatureProducts = () => {
+  const { isLoading, featureProducts } = useContext(AppContext);
 
-const { isLoading, featureProducts } = useContext(AppContext);
-
-if(isLoading){
-  return <div>Loading...</div>
-}
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+  }
   return (
-    
     <>
       <Heading FeatureProduct={"Feature Products"} />{" "}
       <div className="py-6 mb-10 bg-white">
@@ -62,7 +59,9 @@ if(isLoading){
                     <p className="text-base font-semibold text-gray-800">
                       {Product.name}
                     </p>
-                    <p className="text-sm font-medium text-secondary">{Product.price}</p>
+                    <p className="text-sm font-medium text-secondary">
+                      <FormatePrice price={Product.price} />
+                    </p>
                   </div>
                 </div>
               ))}
