@@ -6,12 +6,20 @@ import { Tooltip } from "@mui/material";
 import { useContext } from "react";
 import { AppContext } from "../../../Context/context";
 import FormatePrice from "../../../Helpers/FormatePrice";
+import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 const FeatureProducts = () => {
+  const navigate = useNavigate();
+
+  const goToSingleProduct = (id) => {
+    navigate(`/SingleProduct/${id}`);
+  };
   const { isLoading, featureProducts } = useContext(AppContext);
 
   if (isLoading) {
     return <div className="text-center">Loading...</div>;
   }
+
   return (
     <>
       <Heading FeatureProduct={"Feature Products"} />{" "}
@@ -22,6 +30,7 @@ const FeatureProducts = () => {
               {featureProducts.map((Product) => (
                 <div
                   key={Product.id}
+                  onClick={() => goToSingleProduct(Product.id)}
                   className="relative group cursor-pointer w-[300px]"
                 >
                   {/* Mentor Image */}

@@ -2,7 +2,7 @@
 import { createContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import productReducer from "../Reducer/productReducer";
-
+ 
 // createContext is a global store
 const AppContext = createContext();
 
@@ -13,6 +13,8 @@ const AppProvider = ({ children }) => {
     isError: false,
     products: [],
     featureProducts: [],
+    isSingleLoading: false,
+    singleProduct: {},
   };
   const [state, dispatch] = useReducer(productReducer, initialState);
 
@@ -30,12 +32,31 @@ const AppProvider = ({ children }) => {
     }
   };
 
+  // my second api call for single product data
+  const GetSingleProduct = async (Api) => {
+    dispatch({ type: "Single_Loading" });
+    try {
+      const res = await axios.get(Api);
+      let single_product = await res.data;
+      dispatch({ type: "Single_Product", payload: single_product });
+      console.log(single_product);
+    } catch (error) {
+      dispatch({ type: "Single_Error" });
+      console.log(error.message);
+    }
+  };
+
+
   useEffect(() => {
     GetApiData(Api);
   }, []);
 
+  // const useProducts = () => {
+  //   return useContext(AppContext);
+  // };
+
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state,GetSingleProduct }}>{children}</AppContext.Provider>
   );
 };
 
