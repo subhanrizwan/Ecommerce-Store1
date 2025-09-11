@@ -8,7 +8,6 @@ import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 import KeyboardReturnOutlinedIcon from "@mui/icons-material/KeyboardReturnOutlined";
 import DiscountOutlinedIcon from "@mui/icons-material/DiscountOutlined";
 
-
 const cards = [
   {
     id: 1,
@@ -40,8 +39,9 @@ function SelectActionCard() {
   const [selectedCard, setSelectedCard] = useState(0);
   return (
     <>
-      {cards.map((card, index) => (
+      {cards.map((item, index) => (
         <Card
+          key={index}
           sx={{
             boxShadow: "none",
             textAlign: "center",
@@ -68,7 +68,7 @@ function SelectActionCard() {
                 variant="b"
                 component="div"
               >
-                {card.icon}
+                {item.icon}
               </Typography>
               <Typography
                 className="text-secondary"
@@ -80,7 +80,7 @@ function SelectActionCard() {
                 variant="b"
                 component="div"
               >
-                {card.title}
+                {item.title}
               </Typography>
               <Typography
                 className="!text-secondary"
@@ -91,7 +91,7 @@ function SelectActionCard() {
                 variant="body2"
                 color="text.secondary"
               >
-                {card.description}
+                {item.description}
               </Typography>
             </CardContent>
           </CardActionArea>

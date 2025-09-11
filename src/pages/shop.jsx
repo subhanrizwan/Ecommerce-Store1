@@ -1,9 +1,7 @@
-import React from 'react'
-
-function shop() {
+function Shop() {
   return (
-    <div><h1 className='text-4xl text-center fw-bold'>shop</h1></div>
+    <div><h1 className='text-4xl text-center fw-bold'>Shop</h1></div>
   )
 }
 
-export default shop
+export default Shop;

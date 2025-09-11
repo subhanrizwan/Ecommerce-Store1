@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../../Context/context";
 import FormatePrice from "../../Helpers/FormatePrice";
+import BreadcrumbComponent from "../Breadcrumbs";
 const url = "https://api.pujakaitem.com/api/products";
 function SingleProduct() {
   const { id } = useParams();
@@ -18,6 +19,10 @@ function SingleProduct() {
 
   return (
     <>
+    <div className="py-5">
+            {" "}
+            <BreadcrumbComponent ContactPage={singleProduct.name} />
+          </div>
       <div className="text-5xl text-center">
         <h1>Single Product {id}</h1>
         <h1>{singleProduct.name}</h1>

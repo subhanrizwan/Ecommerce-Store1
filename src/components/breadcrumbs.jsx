@@ -15,15 +15,15 @@ const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage,SignupPage,LoginPage
     return(
         <>
          <div
-            className="mb-0 md:mb-9 p-0 py-6 pl-10 bg-gray-50"
+            className="p-0 py-6 pl-10 mb-0 md:mb-9 bg-gray-50"
             role="presentation"
             onClick={handleClick}
           >
             <Breadcrumbs aria-label="breadcrumb">
               <Link underline="hover" onClick={Handle} className="hover:text-secondary" color="inherit" href="#">
-                Homes
+                Home
               </Link>
-              <Typography  className="text-secondary cursor-pointer">{ContactPage}{LoginPage}{ErrorPage}{AboutPage}{SignupPage}</Typography>
+              <Typography  className="cursor-pointer text-secondary">{ContactPage}{LoginPage}{ErrorPage}{AboutPage}{SignupPage}</Typography>
             </Breadcrumbs>
           </div>
         </>

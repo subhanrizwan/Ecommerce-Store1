@@ -4,14 +4,11 @@ import { IconButton, Badge, Link } from "@mui/material";
 import { NavLink } from "react-router";
 import CartDrawer from "../CartDrawer/drawer.jsx";
 import SearchModal from "../SearchProducts/search.jsx";
-import Logo from '../../../assets/images/logo/logo.png';
+import Logo from "../../../assets/images/logo/logo.png";
 import { GoPerson } from "react-icons/go";
 import { IoMdHeartEmpty } from "react-icons/io";
-
 import { useNavigate } from "react-router";
-
-import
- {
+import {
   Menu as MenuIcon,
   Close as CloseIcon,
   KeyboardArrowDown as KeyboardArrowDownIcon,
@@ -21,14 +18,33 @@ import
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
 
+const NavigationMenu = [
+  {
+    label: "Home",
+    path: "/",
+  },
+  {
+    label: "Products",
+    path: "/product",
+  },
+  {
+    label: "About",
+    path: "/about",
+  },
+  {
+    label: "Contact",
+    path: "/contact",
+  },
+];
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // toggle signup page
   const navigate = useNavigate();
-  const HandleSignup=()=>{
-    return navigate('/signup')
-  }
+  const HandleSignup = () => {
+    return navigate("/signup");
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -62,77 +78,23 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Navigation Menu - Hidden on mobile, centered on desktop */}
             <nav className="items-center justify-center flex-1 hidden space-x-8 md:flex">
-              <NavLink
-                to="/"
-                underline="none"
-                className={({ isActive }) =>
-                  `!text-black hover:!text-secondary font-medium transition-colors ${
-                    isActive
-                      ? "!text-secondary font-semibold"
-                      : "!text-black font-normal"
-                  }`
-                }
-              >
-                Home
-                {/* <KeyboardArrowDownIcon className="w-4 h-4 ml-1" /> */}
-              </NavLink>
-              <NavLink
-                to="/about"
-                underline="none"
-                className={({ isActive }) =>
-                  `!text-black  hover:!text-secondary font-medium transition-colors ${
-                    isActive
-                      ? "!text-secondary font-semibold"
-                      : "!text-black font-normal"
-                  }`
-                }
-              >
-                About
-              </NavLink>
-              <NavLink
-                to="/shop"
-                underline="none"
-                className={({ isActive }) =>
-                  `!text-black  hover:!text-secondary font-medium transition-colors ${
-                    isActive
-                      ? "!text-secondary font-semibold"
-                      : "!text-black font-normal"
-                  }`
-                }
-              >
-                Shop
-                {/* <KeyboardArrowDownIcon className="w-4 h-4 ml-1" /> */}
-              </NavLink>
-              <NavLink
-                to="/blog"
-                underline="none"
-                className={({ isActive }) =>
-                  `!text-black  hover:!text-secondary font-medium transition-colors ${
-                    isActive
-                      ? "!text-secondary font-semibold"
-                      : "!text-black font-normal"
-                  }`
-                }
-              >
-                Blog
-                {/* <KeyboardArrowDownIcon className="w-4 h-4 ml-1" /> */}
-              </NavLink>
-              
-              <NavLink
-                to="/contact"
-                underline="none"
-                className={({ isActive }) =>
-                  `!text-black  hover:!text-secondary font-medium transition-colors ${
-                    isActive
-                      ? "!text-secondary font-semibold"
-                      : "!text-black font-normal"
-                  }`
-                }
-              >
-                Contact
-              </NavLink>
+              {NavigationMenu.map((menu) => (
+                <NavLink
+                  key={menu.label}
+                  to={menu.path}
+                  underline="none"
+                  className={({ isActive }) =>
+                    `!text-black hover:!text-secondary font-medium transition-colors ${
+                      isActive
+                        ? "!text-secondary font-semibold"
+                        : "!text-black font-normal"
+                    }`
+                  }
+                >
+                  {menu.label}
+                </NavLink>
+              ))}
             </nav>
 
             {/* Right Side Actions */}
@@ -147,21 +109,22 @@ export default function Header() {
                 {/* Search */}
                 <SearchModal />
                 {/* Profile */}
-                <IconButton onClick={HandleSignup} className="!text-black hover:!text-secondary">
+                <IconButton
+                  onClick={HandleSignup}
+                  className="!text-black hover:!text-secondary"
+                >
                   <GoPerson />
                 </IconButton>
                 {/* Favorites */}
                 <IconButton className="relative !text-black hover:!text-secondary">
                   <Badge badgeContent={1} color="error" className="text-xs">
                     {/* <FavoriteBorderIcon /> */}
-                    <IoMdHeartEmpty fontSize={'1.5rem'} />
+                    <IoMdHeartEmpty fontSize={"1.5rem"} />
                   </Badge>
                 </IconButton>
-                   <IconButton className="!text-black hover:!text-secondary">
-                <CartDrawer />
+                <IconButton className="!text-black hover:!text-secondary">
+                  <CartDrawer />
                 </IconButton>
-
-                
               </div>
             </div>
           </div>
@@ -204,99 +167,23 @@ export default function Header() {
         {/* Menu Items */}
         <nav className="px-8 py-4">
           <div className="space-y-6">
-            <NavLink
-              to="/"
-              underline="none"
-              className={({ isActive }) =>
-                `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
-                  isActive
-                    ? "!text-secondary font-semibold"
-                    : "!text-black font-normal"
-                }`
-              }
-              onClick={toggleMobileMenu}
-            >
-              Home
-              {/* <KeyboardArrowDownIcon className="w-5 h-5" /> */}
-            </NavLink>
-
-            <NavLink
-              to="/about"
-              underline="none"
-              className={({ isActive }) =>
-                `block !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
-                  isActive
-                    ? "!text-secondary font-semibold"
-                    : "!text-black font-normal"
-                }`
-              }
-              onClick={toggleMobileMenu}
-            >
-              About
-            </NavLink>
-
-            <NavLink
-              to="/shop"
-              underline="none"
-              className={({ isActive }) =>
-                `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
-                  isActive
-                    ? "!text-secondary font-semibold"
-                    : "!text-black font-normal"
-                }`
-              }
-              onClick={toggleMobileMenu}
-            >
-              Shop
-              {/* <KeyboardArrowDownIcon className="w-5 h-5" /> */}
-            </NavLink>
-
-            <NavLink
-              to="/blog"
-              underline="none"
-              className={({ isActive }) =>
-                `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
-                  isActive
-                    ? "!text-secondary font-semibold"
-                    : "!text-black font-normal"
-                }`
-              }
-              onClick={toggleMobileMenu}
-            >
-              Blog
-              {/* <KeyboardArrowDownIcon className="w-5 h-5" /> */}
-            </NavLink>
-
-            <NavLink
-              to="/pages"
-              underline="none"
-              className={({ isActive }) =>
-                `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
-                  isActive
-                    ? "!text-secondary font-semibold"
-                    : "!text-black font-normal"
-                }`
-              }
-              onClick={toggleMobileMenu}
-            >
-              Pages
-              {/* <KeyboardArrowDownIcon className="w-5 h-5" /> */}
-            </NavLink>
-
-            <NavLink
-              to="/contact"
-              underline="none"
-              className={({ isActive }) =>
-                `block !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
-                  isActive
-                    ? "!text-secondary !font-semibold"
-                    : "!text-black font-normal"
-                }`
-              }
-              onClick={toggleMobileMenu}
-            >
-              Contact
-            </NavLink>
+            {NavigationMenu.map((menu) => (
+              <NavLink
+                key={menu.path}
+                to={menu.path}
+                underline="none"
+                className={({ isActive }) =>
+                  `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
+                    isActive
+                      ? "!text-secondary font-semibold"
+                      : "!text-black font-normal"
+                  }`
+                }
+                onClick={toggleMobileMenu}
+              >
+                {menu.label}
+              </NavLink>
+            ))}
           </div>
         </nav>
       </div>
