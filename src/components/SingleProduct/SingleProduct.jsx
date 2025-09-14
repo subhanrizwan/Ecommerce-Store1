@@ -19,24 +19,38 @@ function SingleProduct() {
 
   return (
     <>
-    <div className="py-5">
-            {" "}
-            <BreadcrumbComponent ContactPage={singleProduct.name} />
-          </div>
-      <div className="text-5xl text-center">
-        <h1>Single Product {id}</h1>
-        <h1>{singleProduct.name}</h1>
-        <h1>{singleProduct.category}</h1>
-        <h1>{singleProduct.featured}</h1>
-        <h1>
-          {" "}
-          <FormatePrice price={singleProduct.price} />
-        </h1>
-        <h1>{singleProduct.reviews}</h1>
-        <h1>{singleProduct.stars}</h1>
-        <h2>{singleProduct.company}</h2>
-        <h3>{singleProduct.stock}</h3>
+      <div className="py-5">
+        {" "}
+        <BreadcrumbComponent ContactPage={singleProduct.name} />
       </div>
+      <section className="py-10 SingleProduct-page">
+        <div className="container mx-auto ">
+          <div className="flex justify-between p-8 py-0 max-w-7xl">
+            <div className="products-images">
+              <div className="flex gap-x-4">
+                {/* <!-- Left thumbnails --> */}
+                <div className="flex flex-col w-24 gap-2">
+                  {/* <!-- small images --> */}
+                  <div className="w-24 h-28 smallimg1 bg-slate-300">
+                  </div>
+                  <div className="w-24 h-28 smallimg1 bg-slate-300">
+                  </div>
+                  <div className="w-24 h-28 smallimg1 bg-slate-300">
+                  </div>
+                </div>
+                {/* <!-- Right main image --> */}
+                <div class="flex-1 ">
+                  <div className="w-[50rem] h-96 smallimg1 bg-slate-400">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="products-details flex">
+              
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
