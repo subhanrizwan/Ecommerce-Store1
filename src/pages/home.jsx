@@ -12,7 +12,7 @@ const Home = () => {
       <Category2 />
       <FeatureProducts />
       <CustomerLove />
-      <ProductGrid />
+      {/* <ProductGrid /> */}
       <FeatureHighlight />
     </>
   );

@@ -24,12 +24,12 @@ const NavigationMenu = [
     path: "/",
   },
   {
-    label: "Products",
-    path: "/product",
-  },
-  {
     label: "About",
     path: "/about",
+  },
+  {
+    label: "Products",
+    path: "/product",
   },
   {
     label: "Contact",
@@ -85,10 +85,9 @@ export default function Header() {
                   to={menu.path}
                   underline="none"
                   className={({ isActive }) =>
-                    `!text-black hover:!text-secondary font-medium transition-colors ${
-                      isActive
-                        ? "!text-secondary font-semibold"
-                        : "!text-black font-normal"
+                    `!text-black hover:!text-secondary font-medium transition-colors ${isActive
+                      ? "!text-secondary font-semibold"
+                      : "!text-black font-normal"
                     }`
                   }
                 >
@@ -141,9 +140,8 @@ export default function Header() {
 
       {/* Mobile Menu Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-80 bg-white text-white z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
-          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full w-80 bg-white text-white z-50 transform transition-transform duration-300 ease-in-out md:hidden ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {/* Close Button */}
         <div className="flex justify-between p-4">
@@ -173,10 +171,9 @@ export default function Header() {
                 to={menu.path}
                 underline="none"
                 className={({ isActive }) =>
-                  `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${
-                    isActive
-                      ? "!text-secondary font-semibold"
-                      : "!text-black font-normal"
+                  `flex items-center justify-between !text-black  hover:!text-secondary font-medium text-lg transition-colors ${isActive
+                    ? "!text-secondary font-semibold"
+                    : "!text-black font-normal"
                   }`
                 }
                 onClick={toggleMobileMenu}

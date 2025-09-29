@@ -46,7 +46,7 @@ const Contact = () => {
       </div>
       <section className="w-full">
         <div className="title-contact text-center p-5 pt-0 mb-0">
-                <Heading Contact={"Contact Us"} />
+                <Heading Contact={"Say Hello To Us!"} />
         </div>
         <div className="form-wrap">
           <div className="form-tagline bg-gray">
