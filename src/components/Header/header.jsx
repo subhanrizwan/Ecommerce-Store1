@@ -117,7 +117,6 @@ export default function Header() {
                 {/* Favorites */}
                 <IconButton className="relative !text-black hover:!text-secondary">
                   <Badge badgeContent={1} color="error" className="text-xs">
-                    {/* <FavoriteBorderIcon /> */}
                     <IoMdHeartEmpty fontSize={"1.5rem"} />
                   </Badge>
                 </IconButton>

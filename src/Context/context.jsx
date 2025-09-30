@@ -17,7 +17,6 @@ const AppProvider = ({ children }) => {
     singleProduct: {},
   };
   const [state, dispatch] = useReducer(productReducer, initialState);
-
   const Api = "https://api.pujakaitem.com/api/products";
   const GetApiData = async (Api) => {
     dispatch({ type: "IsLoading" });

@@ -3,12 +3,13 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import { IconButton, Badge, Typography, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+
 import { useNavigate } from "react-router";
 export default function CartDrawer() {
   // navigate shop page
   const navigate = useNavigate();
   const GoShoppingPage = () => {
-    navigate("/shop");
+    navigate("/product");
     setOpen(false)
   };
   const [open, setOpen] = useState(false);
@@ -77,22 +78,21 @@ export default function CartDrawer() {
               className="group flex items-center justify-center relative z-10 [transition:all_0.5s_ease] rounded-[0.375rem] p-[5px] cursor-pointer border outline-none focus-visible:outline-0"
             >
               <CloseIcon className='!text-black hover:!text-secondary' />
-
             </IconButton>
           </Box>
           {/* Drawer Content */}
           <Box sx={{ flex: 1, p: 2 }} className="flex flex-col items-center">
+
             <div className="py-4 text-[1.1rem] title">
               <h1>Your cart is empty</h1>
             </div>
-             <div className="mt-2 submit-btn">
+            <div className="mt-2 submit-btn">
               <Button
-              onClick={GoShoppingPage}
+                onClick={GoShoppingPage}
                 className="w-52 h-12 !bg-[#00C7B1] hover:!bg-[#00A08C] !text-white gap-1 !rounded-md !shadow-lg !transition-all !duration-300"
-                variant="contained" 
+                variant="contained"
               >
-                Continue Shopping 
-                {/* <ArrowOutwardIcon fonstSize="small" /> */}
+                Continue Shopping
               </Button>
             </div>
           </Box>

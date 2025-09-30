@@ -1,4 +1,5 @@
 "use client"
+import { useEffect } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Pagination } from "swiper/modules"
 import "swiper/css"
@@ -10,22 +11,35 @@ import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 import WatchOutlinedIcon from "@mui/icons-material/WatchOutlined";
 import HeadphonesOutlinedIcon from "@mui/icons-material/HeadphonesOutlined";
 import SportsEsportsOutlinedIcon from "@mui/icons-material/SportsEsportsOutlined";
+import { useContext } from "react"
+import { AppContext } from "../../../Context/context.jsx"
+// import AppContext from "../../../src/Context/context.jsx";
 
-const categories = [
-  { icon: HeadphonesOutlinedIcon, title: "Headphone" },
-  { icon: PhoneAndroidOutlinedIcon, title: "Phone" },
-  { icon: DesktopMacOutlinedIcon, title: "Desktop" },
-  { icon: SportsEsportsOutlinedIcon, title: "Gaming" },
-  { icon: WatchOutlinedIcon, title: "Watch" },
-  { icon: CameraAltOutlinedIcon, title: "Camera" },
-  { icon: HeadphonesOutlinedIcon, title: "Headphone" },
-  { icon: PhoneAndroidOutlinedIcon, title: "Phone" },
-  { icon: DesktopMacOutlinedIcon, title: "Desktop" },
-  { icon: SportsEsportsOutlinedIcon, title: "Gaming" },
-  { icon: WatchOutlinedIcon, title: "Watch" },
-  { icon: CameraAltOutlinedIcon, title: "Camera" },
-];
+// const categories = [
+//   { icon: HeadphonesOutlinedIcon, title: "Headphone" },
+//   { icon: PhoneAndroidOutlinedIcon, title: "Phone" },
+//   { icon: DesktopMacOutlinedIcon, title: "Desktop" },
+//   { icon: SportsEsportsOutlinedIcon, title: "Gaming" },
+//   { icon: WatchOutlinedIcon, title: "Watch" },
+//   { icon: CameraAltOutlinedIcon, title: "Camera" },
+//   { icon: HeadphonesOutlinedIcon, title: "Headphone" },
+//   { icon: PhoneAndroidOutlinedIcon, title: "Phone" },
+//   { icon: DesktopMacOutlinedIcon, title: "Desktop" },
+//   { icon: SportsEsportsOutlinedIcon, title: "Gaming" },
+//   { icon: WatchOutlinedIcon, title: "Watch" },
+//   { icon: CameraAltOutlinedIcon, title: "Camera" },
+// ];
 export default function CategorySlider() {
+    const { isLoading, products } = useContext(AppContext);
+  
+  if (isLoading) {
+    return <div className="text-center">Loading...</div>;
+    
+  }
+
+  // useEffect(()=>{
+  //   console.log(products.name);
+  // })
   return (
     <div className="w-full h-full flex items-center justify-center">
       {" "}
@@ -63,9 +77,10 @@ export default function CategorySlider() {
         }}
       >
           
-        {categories.map((cat, idx) => (
+        {products.map((cat, idx) => (
           <SwiperSlide key={idx} className="!flex !justify-center !items-center !p-1">
-                    <CategoryCards icon={cat.icon} title={cat.title} />
+            <div className="">{cat.category}</div>
+                    {/* <CategoryCards icon={cat.cateogry} title={cat.cateogry} /> */}
         </SwiperSlide>
                   ))}
       </Swiper>

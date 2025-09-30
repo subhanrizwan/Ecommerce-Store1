@@ -1,8 +1,8 @@
 // Currency Format Api
 const FormatePrice = ({ price }) => {
-  return Intl.NumberFormat("en-PK", {
+  return Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "PKR",
+    currency: "USD",
   }).format(price)
 }
 

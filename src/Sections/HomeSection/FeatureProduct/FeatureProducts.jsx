@@ -10,7 +10,6 @@ import { useNavigate } from "react-router";
 // import { useNavigate } from "react-router";
 const FeatureProducts = () => {
   const navigate = useNavigate();
-
   const goToSingleProduct = (id) => {
     navigate(`/SingleProduct/${id}`);
   };

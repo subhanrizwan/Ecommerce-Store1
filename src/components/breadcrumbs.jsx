@@ -15,7 +15,7 @@ const BreadcrumbComponent=({ContactPage,ErrorPage,AboutPage,SignupPage,LoginPage
     return(
         <>
          <div
-            className="p-0 py-6 pl-10 mb-0 md:mb-9 bg-gray-50"
+            className="p-0 py-6 pl-10 mb-0 md:mb-5 bg-gray-50"
             role="presentation"
             onClick={handleClick}
           >
