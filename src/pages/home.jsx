@@ -4,7 +4,7 @@ import FeatureProducts from "../Sections/HomeSection/FeatureProduct/FeatureProdu
 import FeatureHighlight from "../Sections/HomeSection/FetaureHighlight/FeatureHighlight.jsx";
 import CustomerLove from "../Sections/HomeSection/Customerloveus/custloveus.jsx";
 import ProductGrid from "../Sections/HomeSection/Toptrending/index.jsx";
-import Products from "./product.jsx";
+import Products from "./shop.jsx";
 const Home = () => {
   return (
     <>

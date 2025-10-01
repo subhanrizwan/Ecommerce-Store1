@@ -29,7 +29,7 @@ const NavigationMenu = [
   },
   {
     label: "Products",
-    path: "/product",
+    path: "/shop",
   },
   {
     label: "Contact",
