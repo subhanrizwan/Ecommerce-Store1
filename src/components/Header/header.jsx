@@ -1,13 +1,12 @@
 "use client";
 import { useState } from "react";
 import { IconButton, Badge, Link } from "@mui/material";
-import { NavLink } from "react-router";
+import { NavLink,useNavigate } from "react-router";
+import { GoPerson } from "react-icons/go";
+import { IoMdHeartEmpty } from "react-icons/io";
 import CartDrawer from "../CartDrawer/drawer.jsx";
 import SearchModal from "../SearchProducts/search.jsx";
 import Logo from "../../../assets/images/logo/logo.png";
-import { GoPerson } from "react-icons/go";
-import { IoMdHeartEmpty } from "react-icons/io";
-import { useNavigate } from "react-router";
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
