@@ -8,8 +8,6 @@ import Layout from "./components/layout";
 import Home from "./pages/home";
 import Shop from "./pages/shop";
 import About from "./pages/about";
-// import Shop from "./pages/shop";
-// import Blog from "./pages/blog";
 import Contact from "./pages/contact";
 import Signup from "./pages/LoginSignup/Signup";
 import Login from "./pages/LoginSignup/Login";
@@ -24,7 +22,6 @@ const router = createBrowserRouter(
       <Route path="/shop" element={<Shop />} />
       {/* <Route path="/shop" element={<Shop />} /> */}
       <Route path="/SingleProduct/:id" element={<SingleProduct />} />
-      {/* <Route path="/blog" element={<Blog />} /> */}
       <Route path="/contact" element={<Contact />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />

@@ -148,7 +148,7 @@ export default function Header() {
             className="flex items-center justify-center pl-5 md:justify-start"
           >
             <div className="text-2xl font-bold text-center text-black">
-              <h1>Store1</h1>
+              <h1>Store01</h1>
             </div>
           </NavLink>
           <IconButton
