@@ -2,10 +2,8 @@ import { Button, IconButton, Badge } from "@mui/material";
 import Shoes from "../../../../assets/images/products/image.png";
 import { IoCartOutline,IoEyeOutline } from "react-icons/io5";
 import { MdFavoriteBorder } from "react-icons/md";
-// import { useState } from "react";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 const ProductCard = () => {
-  // const [heart, isHeartUpdate] = useState("#DB4444");
 
   return (
     <>

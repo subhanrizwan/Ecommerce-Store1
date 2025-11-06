@@ -1,8 +1,9 @@
 import { useParams } from "react-router";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { AppContext } from "../../Context/context";
 import FormatePrice from "../../Helpers/FormatePrice";
 import BreadcrumbComponent from "../Breadcrumbs";
+import ImageGallery from "../ImageGallery/ImageGallery";
 
 const url = "https://api.pujakaitem.com/api/products";
 
@@ -11,9 +12,9 @@ function SingleProduct() {
   const { id } = useParams();
   const { GetSingleProduct, isSingleLoading, singleProduct } = useContext(AppContext);
 
-  const [mainImage, setMainImage] = useState(
-    singleProduct?.image?.[0]?.url || ""
-  );
+  // const [mainImage, setMainImage] = useState(
+  //   singleProduct?.image?.[0]?.url || ""
+  // );
   useEffect(() => {
     GetSingleProduct(`${url}/${id}`);
     console.log(singleProduct.image);
@@ -35,8 +36,8 @@ function SingleProduct() {
             <div className="product-images md:w-[60%] mb-5">
               <div className="flex gap-x-4 ">
                 <div class="flex-1 md:w-[40%] mb-5">
-                  {/* <div className="flex flex-col gap-4">
-                    <div className="w-full h-auto bg-slate-400">
+                  <div className="flex flex-col gap-4">
+                    {/* <div className="w-full h-auto bg-slate-400">
                       {singleProduct?.image?.slice(0,1).map((imgObj, ind) => (
                           <img
                             className="object-cover w-full h-full"
@@ -44,8 +45,8 @@ function SingleProduct() {
                             alt={`product-${ind}`}
                           />
                       ))}
-                    </div>
-                    <div className="flex flex-wrap justify-between gap-2">
+                    </div> */}
+                    {/* <div className="flex flex-wrap justify-between gap-2">
                       {singleProduct?.image?.slice(1,4).map((imgObj, ind) => (
                         <div key={ind} className="w-56 h-40 bg-slate-400">
                           <img
@@ -55,10 +56,11 @@ function SingleProduct() {
                           />
                         </div>
                       ))}
-                    </div>
-                  </div> */}
-                  <div className="flex flex-col gap-2">
-                    {/* Main Image */}
+                    </div> */}
+                    {/* Swiper Slider */}
+                    <ImageGallery Images={singleProduct.image} />
+                  </div>
+                  {/* <div className="flex flex-col gap-2">
                     <div className="w-full h-96 bg-slate-400">
                       {mainImage && (
                         <img
@@ -69,7 +71,6 @@ function SingleProduct() {
                       )}
                     </div>
 
-                    {/* Thumbnails */}
                     <div className="flex flex-wrap justify-between gap-3">
                       {singleProduct?.image?.map((imgObj, ind) => (
                         <div
@@ -85,35 +86,23 @@ function SingleProduct() {
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
             <div className="products-details md:w-[40%]">
-              <div className="flex items-center justify-between mb-5 header">
+              <div className="flex items-center justify-between mb-0 header">
                 <h1 className="mb-0 text-[2.125rem] capitalize ">{singleProduct.name}</h1>
                 <p className="py-6 capitalize" >{singleProduct.company}</p>
-
               </div>
               <p className="py-6" >{singleProduct.description}</p>
               <div className="price text-[1.125rem]">
                 <span className="font-semibold ">Price :</span> {" "}
                 <FormatePrice price={singleProduct.price} />
               </div>
+              {/* Color */}
               <div className="mt-5 colors">
-                {/* <div className="flex gap-3">
-                  {singleProduct.colors.map((currentColor, index) => {
-                    return (
-                      <button
-                        key={index}
-                        className="w-8 h-8 rounded-full"
-                        style={{
-                          backgroundColor: currentColor,
-                        }}
-                      ></button>
-                    )
-                  })}
-                </div> */}
+                
               </div>
               <div className="mt-5">
                 <button className="px-6 py-2 text-white transition-all duration-500 rounded bg-secondary hover:bg-black">

@@ -5,15 +5,15 @@ import FeatureHighlight from "../Sections/HomeSection/FetaureHighlight/FeatureHi
 import CustomerLove from "../Sections/HomeSection/Customerloveus/custloveus.jsx";
 import ProductGrid from "../Sections/HomeSection/Toptrending/index.jsx";
 import Products from "./shop.jsx";
+
 const Home = () => {
   return (
     <>
       <Herosection />
       <Category2 />
       <FeatureProducts />
-      <CustomerLove />\
+      <CustomerLove />
       <Products />
-      {/* <ProductGrid /> */}
       <FeatureHighlight />
     </>
   );

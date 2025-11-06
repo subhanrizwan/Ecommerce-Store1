@@ -17,7 +17,7 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_2wq35vg", "template_ulq772e", form.current, {
+      .sendForm("service_w7c41x3", "template_i5ch6v6", form.current, {
         publicKey: "Bym6hQFgTyWWzhc95",
       })
       .then(
@@ -45,22 +45,22 @@ const Contact = () => {
         <BreadcrumbComponent ContactPage="Contact" />
       </div>
       <section className="w-full">
-        <div className="title-contact text-center p-5 pt-0 mb-0">
-                <Heading Contact={"Say Hello To Us!"} />
+        <div className="p-5 pt-0 mb-0 text-center title-contact">
+          <Heading Contact={"Say Hello To Us!"} />
         </div>
         <div className="form-wrap">
           <div className="form-tagline bg-gray">
-            <p className="text-center p-3 mb-3">
+            <p className="p-3 mb-3 text-center">
               We're happy to answer questions or help you with returns. Please
               fill out the form below if you need assistance
             </p>
           </div>
-          <div className="w-ful flex justify-center">
+          <div className="flex justify-center w-ful">
             <form
               ref={form}
-              className="md:w-11/12 sm:w-full lg:w-4/5 rounded pt-6 pb-8 mb-4 p-5"
+              className="p-5 pt-6 pb-8 mb-4 rounded md:w-11/12 sm:w-full lg:w-4/5"
             >
-              <div className="cont-row flex justify-between md:flex-wrap sm:flex-wrap flex-wrap mb-0">
+              <div className="flex flex-wrap justify-between mb-0 cont-row md:flex-wrap sm:flex-wrap">
                 <TextField
                   name="user_name"
                   id="outlined-basic"
@@ -71,10 +71,8 @@ const Contact = () => {
                   value={name}
                   onChange={(e) => {
                     setName(e.target.value);
-                    console.clear();
-                    console.log(e.target.value);
                   }}
-                  className="bg-Fieldbg rounded"
+                  className="rounded bg-Fieldbg"
                   style={{ marginBottom: "1rem" }}
                   fullWidth
                   sx={{
@@ -102,7 +100,7 @@ const Contact = () => {
                     console.clear();
                     console.log(e.target.value);
                   }}
-                  className=" bg-Fieldbg rounded"
+                  className="rounded bg-Fieldbg"
                   style={{ marginBottom: "1rem" }}
                   fullWidth
                   sx={{
@@ -130,7 +128,7 @@ const Contact = () => {
                     console.clear();
                     console.log(e.target.value);
                   }}
-                  className="bg-Fieldbg rounded"
+                  className="rounded bg-Fieldbg"
                   style={{ marginBottom: "1rem" }}
                   fullWidth
                   sx={{
@@ -146,7 +144,7 @@ const Contact = () => {
                   }}
                 />
               </div>
-              <div className="cont-row2 flex justify-around pb-3">
+              <div className="flex justify-around pb-3 cont-row2">
                 <TextField
                   name="user_message"
                   id="outlined-multiline-static"
@@ -166,10 +164,10 @@ const Contact = () => {
                   }}
                   multiline
                   rows={12}
-                  className="w-full bg-Fieldbg rounded"
+                  className="w-full rounded bg-Fieldbg"
                 />{" "}
               </div>
-              <div className="submit-btn mt-2 flex justify-end ">
+              <div className="flex justify-end mt-2 submit-btn ">
                 <Button
                   onClick={sendEmail}
                   className="w-40 h-12 !bg-secondary"
@@ -182,7 +180,7 @@ const Contact = () => {
           </div>
         </div>
         {/* map */}
-        <div className="map mt-8 mb-8 pb-5">
+        <div className="pb-5 mt-8 mb-8 map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14162599.94279923!2d58.357870060541636!3d29.931516261132906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1751119262182!5m2!1sen!2s"
             width={"100%"}
@@ -195,7 +193,7 @@ const Contact = () => {
         </div>
         {/* map */}
       </section>
-      <section className="map-section w-full"></section>
+      <section className="w-full map-section"></section>
     </>
   );
 };

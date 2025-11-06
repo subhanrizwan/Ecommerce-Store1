@@ -41,6 +41,7 @@ export default function Header() {
 
   // toggle signup page
   const navigate = useNavigate();
+  
   const HandleSignup = () => {
     return navigate("/signup");
   };
