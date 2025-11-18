@@ -16,8 +16,10 @@ const AppProvider = ({ children }) => {
     isSingleLoading: false,
     singleProduct: {},
   };
+
   const [state, dispatch] = useReducer(productReducer, initialState);
   const Api = "https://api.pujakaitem.com/api/products";
+  // my first api call for all products data
   const GetApiData = async (Api) => {
     dispatch({ type: "IsLoading" });
     try {

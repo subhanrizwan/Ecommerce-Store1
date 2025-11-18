@@ -5,19 +5,20 @@ import FormatePrice from "../../Helpers/FormatePrice";
 import BreadcrumbComponent from "../Breadcrumbs";
 import ImageGallery from "../ImageGallery/ImageGallery";
 
-const url = "https://api.pujakaitem.com/api/products";
 
+const url = "https://api.pujakaitem.com/api/products";
 function SingleProduct() {
 
   const { id } = useParams();
   const { GetSingleProduct, isSingleLoading, singleProduct } = useContext(AppContext);
 
-  // const [mainImage, setMainImage] = useState(
-  //   singleProduct?.image?.[0]?.url || ""
-  // );
   useEffect(() => {
-    GetSingleProduct(`${url}/${id}`);
-    console.log(singleProduct.image);
+    try{
+      GetSingleProduct(`${url}/${id}`);
+      console.log(singleProduct.id);
+    }catch(error){
+      console.log("Error fetching single product:", error);
+    }
   }, [id]);
 
   if (isSingleLoading) {
@@ -58,7 +59,9 @@ function SingleProduct() {
                       ))}
                     </div> */}
                     {/* Swiper Slider */}
-                    <ImageGallery Images={singleProduct.image} />
+                    {Array.isArray(singleProduct.image) &&(
+                      <ImageGallery Images={singleProduct.image} />
+                    )}
                   </div>
                   {/* <div className="flex flex-col gap-2">
                     <div className="w-full h-96 bg-slate-400">

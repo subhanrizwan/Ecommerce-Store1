@@ -56,9 +56,9 @@ export default function Slider() {
         "--swiper-pagination-color": "#fff",
         background: 'transparent'
       }}
-      speed={600}
+      speed={1000}
       autoplay={{
-        delay: 1500,
+        delay: 2000,
         disableOnInteraction: true,
       }}
 
@@ -126,3 +126,4 @@ export default function Slider() {
     </Swiper>
   );
 }
+
