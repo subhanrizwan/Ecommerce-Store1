@@ -104,9 +104,9 @@ function SingleProduct() {
                 <FormatePrice price={singleProduct.price} />
               </div>
               {/* Color */}
-              <div className="mt-5 colors">
+              {/* <div className="mt-5 colors">
                 
-              </div>
+              </div> */}
               <div className="mt-5">
                 <button className="px-6 py-2 text-white transition-all duration-500 rounded bg-secondary hover:bg-black">
                   Add to Cart

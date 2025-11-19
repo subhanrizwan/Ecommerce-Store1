@@ -4,7 +4,7 @@ export default function CategoryCards({ icon: Icon, title }) {
   return (
     <>
       <div className="">
-        <div className="group text-center text-[18px] flex justify-center items-center text-black border border-gray-300 rounded-full h-[200px] w-[200px] transition duration-300 cursor-pointer flex-col text-sm">
+        <div className="group text-center text-[18px] flex justify-center items-center text-black border border-gray-300 rounded-full h-[200px] w-[200px] transition duration-300 cursor-pointer flex-col text-sm ">
           <Tooltip
             title={title}
             placement="bottom"
