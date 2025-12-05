@@ -8,7 +8,7 @@ const productReducer = (state, action) => {
 
     case "API_DATA": {
       const featureData = action.payload.filter((currElement) => {
-        return currElement.featured === true;
+        return currElement.category === "jewelery";
       });
 
       return {

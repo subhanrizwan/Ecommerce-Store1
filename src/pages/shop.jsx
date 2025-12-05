@@ -40,14 +40,15 @@ const Shop = () => {
   return (
     <>
       <Heading Product={"Products"} />{" "}
-      <div className="py-6 mb-10 bg-white">
+      <div className="py-6 mb-10 bg-white" >
         <div className="container mx-auto">
           <div className="flex px-4 mx-auto max-w-7xl">
-            <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 w-[100%] -z-99">
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-10 w-[100%] -z-99" >
               {products.slice(0, 6).map((Product) => (
                 <div
                   key={Product.id}
                   className="relative group cursor-pointer w-[300px]"
+                  // style={{background:'rgb(243 244 246)'}}
                 >
                   {/* Image */}
                   <div
@@ -67,7 +68,6 @@ const Shop = () => {
                       </Tooltip>
                       {/* visit */}
                       <div
-
                         onClick={() => goToSingleProduct(Product.id)}>
                         <Tooltip
                           title="Visit" arrow placement="left">
@@ -89,7 +89,7 @@ const Shop = () => {
                   {/* Name & Price (Stable, Always Visible) */}
                   <div className="flex items-center justify-between gap-1 py-3">
                     <p className="text-base font-semibold text-gray-800 capitalize">
-                      {Product.name}
+                      {Product.title}
                     </p>
                     <p className="text-sm font-medium text-secondary">
                       <FormatePrice price={Product.price} />

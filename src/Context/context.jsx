@@ -18,7 +18,8 @@ const AppProvider = ({ children }) => {
   };
 
   const [state, dispatch] = useReducer(productReducer, initialState);
-  const Api = "https://api.pujakaitem.com/api/products";
+  // const Api = "https://api.pujakaitem.com/api/products";
+  const Api = "https://fakestoreapi.com/products";
   // my first api call for all products data
   const GetApiData = async (Api) => {
     dispatch({ type: "IsLoading" });
@@ -27,6 +28,7 @@ const AppProvider = ({ children }) => {
       let products = await res.data;
       dispatch({ type: "API_DATA", payload: products });
       console.log(products);
+      console.log(products[0].image);
     } catch (error) {
       dispatch({ type: "IsError" });
       console.log(error.message);

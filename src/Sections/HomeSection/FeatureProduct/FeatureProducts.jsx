@@ -65,7 +65,7 @@ const FeatureProducts = () => {
                   {/* Name & Price (Stable, Always Visible) */}
                   <div className="flex items-center justify-between gap-1 py-3">
                     <p className="text-base font-semibold text-gray-800">
-                      {Product.name}
+                      {Product.title}
                     </p>
                     <p className="text-sm font-medium text-secondary">
                       <FormatePrice price={Product.price} />

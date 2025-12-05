@@ -9,7 +9,7 @@ export default function CartDrawer() {
   // navigate shop page
   const navigate = useNavigate();
   const GoShoppingPage = () => {
-    navigate("/product");
+    navigate("/shop");
     setOpen(false)
   };
   const [open, setOpen] = useState(false);

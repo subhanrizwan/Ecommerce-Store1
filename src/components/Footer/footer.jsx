@@ -46,10 +46,10 @@ function Footer() {
               <h2 className="text-2xl">Pages</h2>
               <ul className="pt-5 text-1xl">
                 <li className="mb-5 duration-500 hover:translate-x-4">
-                  <Link>Home</Link>
+                  <Link to='/home'>Home</Link>
                 </li>
                 <li className="mb-5 duration-500 hover:translate-x-4">
-                  <Link>About Us</Link>
+                  <Link to=''>About Us</Link>
                 </li>
                 <li className="mb-5 duration-500 hover:translate-x-4">
                   <Link>Integrations</Link>

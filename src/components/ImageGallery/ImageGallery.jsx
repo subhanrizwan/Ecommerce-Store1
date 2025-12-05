@@ -5,7 +5,7 @@ import './productSlide.css';
 import { Mousewheel, Pagination } from 'swiper/modules';
 
 export default function ImageGallery({ Images }) {
-  console.log(Images);
+  
 
   return (
     <>
@@ -19,10 +19,11 @@ export default function ImageGallery({ Images }) {
         }}
         modules={[Mousewheel, Pagination]}
         className="mySwiper"
+      
       >
-        {Images.map((imgObj, ind) => (
+       {Images.map((imgs, ind) => (
           <SwiperSlide key={ind.key}>
-            <img src={imgObj.url} alt={`slide-${ind + 1}`} className="object-cover w-full h-full" />
+            <img src={imgs} alt={`slide-${ind + 1}`} className="object-cover w-full h-full" />
           </SwiperSlide>
         ))
         }
