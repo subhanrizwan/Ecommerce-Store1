@@ -44,7 +44,7 @@ const slides = [
 export default function Slider() {
   
   const navigate = useNavigate();
-  
+
   const gotoShop=()=>{
     navigate('/shop');
   }

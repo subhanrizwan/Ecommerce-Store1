@@ -107,7 +107,7 @@ function Footer() {
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cardbg text-secondary">
                     <MdOutlineMarkEmailUnread className="text-2xl text-secondary" />
                   </div>
-                  <Link className="">
+                  <Link to='mailto:example@gmail.com' className="">
                     example@gmail.com <br /> info@gmail.com
                   </Link>
                 </li>
@@ -116,7 +116,7 @@ function Footer() {
                                     <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cardbg text-secondary">
                   <FaPhoneVolume className="text-xl text-secondary" />
                 </div>
-                  <Link>
+                  <Link to="tel:+92 111 0000000">
                     +92 111 0000000 <br /> +92 111 0000000{" "}
                   </Link>
                 </li>

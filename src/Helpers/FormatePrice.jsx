@@ -5,6 +5,5 @@ const FormatePrice = ({ price }) => {
     currency: "USD",
   }).format(price)
 }
-
 export default FormatePrice
 
