@@ -13,7 +13,7 @@ function Footer() {
       <CtaFooter />
       <section className="">
         <div className="container">
-          <footer className="relative flex flex-wrap px-5 py-16 pb-3 pb-10 mx-auto mt-5 bg-gray-100 border-b border-gray-200 sm:flex-wrap md:w-screen sm:w-screen md:justify-center">
+          <footer className="relative flex flex-wrap px-5 py-16 pb-3 mx-auto mt-5 bg-gray-100 border-b border-gray-200 sm:flex-wrap md:w-screen sm:w-screen md:justify-center">
             <span className="absolute w-32 h-32 bg-teal-400 rounded-full opacity-15 -bottom-8 right-1/3 animate-[float_4s_ease-in-out_infinite_2s]"></span>
             <span className="absolute w-20 h-20 bg-teal-400 rounded-full opacity-15 top-1/3 -right-8 animate-[float_4s_ease-in-out_infinite_1s]"></span>
             <div className="step1 md:w-[30%] sm:h-68 p-5 text-textFooter">

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { IconButton, Badge, Link } from "@mui/material";
-import { NavLink,useNavigate } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { GoPerson } from "react-icons/go";
 import { IoMdHeartEmpty } from "react-icons/io";
 import CartDrawer from "../CartDrawer/drawer.jsx";
@@ -17,6 +17,7 @@ import {
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
 
+// Navigation Menu Items
 const NavigationMenu = [
   {
     label: "Home",
@@ -41,7 +42,7 @@ export default function Header() {
 
   // toggle signup page
   const navigate = useNavigate();
-  
+
   const HandleSignup = () => {
     return navigate("/signup");
   };
@@ -60,8 +61,7 @@ export default function Header() {
               <IconButton
                 onClick={toggleMobileMenu}
                 className="!text-black hover:!text-secondary"
-                size="large"
-              >
+                size="large">
                 <MenuIcon />
               </IconButton>
             </div>
@@ -69,6 +69,7 @@ export default function Header() {
             {/* Logo - Left on desktop, center on mobile */}
             <div className="flex-shrink-0 md:flex-1 w-[72%]">
               <Link
+                to="/home"
                 underline="none"
                 className="flex items-center justify-center pl-5 md:justify-start"
               >
