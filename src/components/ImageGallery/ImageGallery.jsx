@@ -6,7 +6,6 @@ import { Mousewheel, Pagination } from 'swiper/modules';
 
 export default function ImageGallery({ Images }) {
   
-
   return (
     <>
       <Swiper
@@ -23,7 +22,7 @@ export default function ImageGallery({ Images }) {
       >
        {Images.map((imgs, ind) => (
           <SwiperSlide key={ind.key}>
-            <img src={imgs} alt={`slide-${ind + 1}`} className="object-cover w-full h-full" />
+            <img src={imgs} alt={`slide-${ind + 1}`} className="object-cover w-full h-full bg-no-repeat" />
           </SwiperSlide>
         ))
         }

@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect,useState } from "react";
 import { AppContext } from "../../Context/context";
 import FormatePrice from "../../Helpers/FormatePrice";
 import BreadcrumbComponent from "../Breadcrumbs";
@@ -7,7 +7,17 @@ import ImageGallery from "../ImageGallery/ImageGallery";
 
 const url = "https://fakestoreapi.com/products";
 function SingleProduct() {
-
+  const [count ,setCount] = useState(1);
+  
+  const CartInc=()=>{
+    setCount(count +1);
+    }
+  const CartDec=()=>{
+    if(count >= 1){
+      setCount(count -1);
+    }
+    }
+  
   const { id } = useParams();
   const { GetSingleProduct, isSingleLoading, singleProduct } = useContext(AppContext);
 
@@ -32,12 +42,9 @@ function SingleProduct() {
       </div>
       <section className="py-0 SingleProduct-page">
         <div className="container mx-auto ">
-          <div className="flex flex-col-reverse p-5 pt-0 pb-0 md:flex-row md:flex md:gap-x-0 lg:justify-center gap-x-6 max-w-7xl">
+          <div className="flex flex-col-reverse p-5 pt-0 pb-0 gap-y-5 md:flex-row md:flex md:gap-x-0 lg:gap-x-10 lg:justify-center max-w-7xl">
             <div className="product-images md:w-[60%] mb-0">
-              {/* <div className="flex gap-x-4 ">
-                <div className="flex-1 md:w-[40%] mb-5"> */}
                   <div className="flex flex-col justify-center gap-4">
-                    
                     {/* Swiper Slider */}
                     {singleProduct.image &&(
                       <ImageGallery Images={[singleProduct.image]} />
@@ -59,7 +66,14 @@ function SingleProduct() {
               </div>
               {/* add to cart */}
               <div className="mt-5">
-                <button className="px-6 py-2 text-white transition-all duration-500 rounded bg-secondary hover:bg-black">
+                <div className="mb-3 count">
+                  <button onClick={CartDec} className="text-[1.125rem] font-semibold">-</button>
+                  <span className="px-3 text-[1.125rem] font-semibold">{count}</span>
+                  <button onClick={CartInc} className="text-[1.125rem] font-semibold">+</button>
+                </div>
+                <button
+                //  onClick={AddtoCart(singleProduct.id, count)}
+                 className="px-6 py-2 text-white transition-all duration-500 rounded bg-secondary hover:bg-black">
                   Add to Cart
                 </button>
               </div>
