@@ -8,7 +8,12 @@ import ImageGallery from "../ImageGallery/ImageGallery";
 const url = "https://fakestoreapi.com/products";
 function SingleProduct() {
   const [count ,setCount] = useState(1);
-  
+  const AddtoCart = (id, count) => {
+    let cart =  JSON.stringify({id,count});
+    localStorage.setItem("cart",cart)
+    console.log(cart);
+    
+  }
   const CartInc=()=>{
     setCount(count +1);
     }
@@ -72,7 +77,7 @@ function SingleProduct() {
                   <button onClick={CartInc} className="text-[1.125rem] font-semibold">+</button>
                 </div>
                 <button
-                //  onClick={AddtoCart(singleProduct.id, count)}
+                 onClick={() => AddtoCart(singleProduct.id, count)}
                  className="px-6 py-2 text-white transition-all duration-500 rounded bg-secondary hover:bg-black">
                   Add to Cart
                 </button>
