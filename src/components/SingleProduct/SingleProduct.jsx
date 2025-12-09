@@ -14,9 +14,11 @@ function SingleProduct() {
     localStorage.setItem("cart",saveCart)
     console.log(saveCart);
   }
+  
   const CartInc = () => {
     setCount(count + 1);
   }
+  
   const CartDec = () => {
     count >= 1 ? setCount(count - 1) : setCount(0);
   }
