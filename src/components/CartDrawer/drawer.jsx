@@ -6,12 +6,15 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import { useNavigate } from "react-router";
 export default function CartDrawer() {
+  const [cartItems, setCartItems] = useState([]);
   // navigate shop page
   const navigate = useNavigate();
+
   const GoShoppingPage = () => {
     navigate("/shop");
     setOpen(false)
   };
+
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (open) => (event) => {
@@ -21,6 +24,10 @@ export default function CartDrawer() {
     ) {
       return;
     }
+    const value = JSON.parse(localStorage.getItem("cart"));
+    setCartItems(value || []);
+    console.log(value);
+
     setOpen(open);
   };
 
@@ -30,8 +37,7 @@ export default function CartDrawer() {
         onClick={toggleDrawer(true)}
         className="relative !text-black hover:!text-secondary -translate-x-1 "
       >
-        <Badge badgeContent={1} color="error">
-          {/* <ShoppingCartIcon /> */}
+        <Badge badgeContent={cartItems.length} color="error">
           <svg
             className="icon"
             stroke="currentColor"
@@ -82,10 +88,16 @@ export default function CartDrawer() {
           </Box>
           {/* Drawer Content */}
           <Box sx={{ flex: 1, p: 2 }} className="flex flex-col items-center">
+            {cartItems.length === 0 ? (
+              <div className="py-4 text-[1.1rem] title">
+                <h1>Your cart is empty</h1>
+              </div>
+            ) : (
+              <div className="py-4 text-[1.1rem] title">
+                <h1>Items Found: {cartItems.length}</h1>
+              </div>
+            )}
 
-            <div className="py-4 text-[1.1rem] title">
-              <h1>Your cart is empty</h1>
-            </div>
             <div className="mt-2 submit-btn">
               <Button
                 onClick={GoShoppingPage}

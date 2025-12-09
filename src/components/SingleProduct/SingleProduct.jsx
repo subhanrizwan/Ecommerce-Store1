@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import { useContext, useEffect,useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../Context/context";
 import FormatePrice from "../../Helpers/FormatePrice";
 import BreadcrumbComponent from "../Breadcrumbs";
@@ -7,30 +7,27 @@ import ImageGallery from "../ImageGallery/ImageGallery";
 
 const url = "https://fakestoreapi.com/products";
 function SingleProduct() {
-  const [count ,setCount] = useState(1);
+  const [count, setCount] = useState(1);
+
   const AddtoCart = (id, count) => {
-    let cart =  JSON.stringify({id,count});
-    localStorage.setItem("cart",cart)
-    console.log(cart);
-    
+    let saveCart = JSON.stringify({ id, count });
+    localStorage.setItem("cart",saveCart)
+    console.log(saveCart);
   }
-  const CartInc=()=>{
-    setCount(count +1);
-    }
-  const CartDec=()=>{
-    if(count >= 1){
-      setCount(count -1);
-    }
-    }
-  
+  const CartInc = () => {
+    setCount(count + 1);
+  }
+  const CartDec = () => {
+    count >= 1 ? setCount(count - 1) : setCount(0);
+  }
+
   const { id } = useParams();
   const { GetSingleProduct, isSingleLoading, singleProduct } = useContext(AppContext);
 
   useEffect(() => {
-    try{
+    try {
       GetSingleProduct(`${url}/${id}`);
-      console.log(singleProduct.id);
-    }catch(error){
+    } catch (error) {
       console.log("Error fetching single product:", error);
     }
   }, [id]);
@@ -49,15 +46,12 @@ function SingleProduct() {
         <div className="container mx-auto ">
           <div className="flex flex-col-reverse p-5 pt-0 pb-0 gap-y-5 md:flex-row md:flex md:gap-x-0 lg:gap-x-10 lg:justify-center max-w-7xl">
             <div className="product-images md:w-[60%] mb-0">
-                  <div className="flex flex-col justify-center gap-4">
-                    {/* Swiper Slider */}
-                    {singleProduct.image &&(
-                      <ImageGallery Images={[singleProduct.image]} />
-                     )}
-                  </div>
-                 
-                {/* </div> */}
-              {/* </div> */}
+              <div className="flex flex-col justify-center gap-4">
+                {/* Swiper Slider */}
+                {singleProduct.image && (
+                  <ImageGallery Images={[singleProduct.image]} />
+                )}
+              </div>
             </div>
             <div className="products-details md:w-[50%]">
               <div className="flex items-center justify-between gap-x-6 header">
@@ -77,8 +71,8 @@ function SingleProduct() {
                   <button onClick={CartInc} className="text-[1.125rem] font-semibold">+</button>
                 </div>
                 <button
-                 onClick={() => AddtoCart(singleProduct.id, count)}
-                 className="px-6 py-2 text-white transition-all duration-500 rounded bg-secondary hover:bg-black">
+                  onClick={() => AddtoCart(singleProduct.id, count)}
+                  className="px-6 py-2 text-white transition-all duration-500 rounded bg-secondary hover:bg-black">
                   Add to Cart
                 </button>
               </div>
