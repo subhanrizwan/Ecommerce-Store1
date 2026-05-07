@@ -5,10 +5,9 @@ const Category = () => {
   return (
     <>
       <Heading Category={"Our Category"} />
-      <section className="py-10 category-section">
+      <section className="py-0 category-section">
         <div className="container mx-auto lg:flex lg:justify-center">
-          <div className="max-w-7xl h-[90vh] md:h-[100vh]">
-            {/* <section className="category-section w-full max-w-7xl mx-auto px-2 !p-6 sm:px-4 py-0 mt-0 mb-0">        */}
+          <div className="max-w-7xl h-[90vh] md:h-[350px]">
             <CategorySlider />
           </div>
         </div>
