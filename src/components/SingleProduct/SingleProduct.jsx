@@ -11,14 +11,14 @@ function SingleProduct() {
 
   const AddtoCart = (id, count) => {
     let saveCart = JSON.stringify({ id, count });
-    localStorage.setItem("cart",saveCart)
+    localStorage.setItem("cart", saveCart)
     console.log(saveCart);
   }
-  
+
   const CartInc = () => {
     setCount(count + 1);
   }
-  
+
   const CartDec = () => {
     count >= 1 ? setCount(count - 1) : setCount(0);
   }
@@ -40,11 +40,8 @@ function SingleProduct() {
 
   return (
     <>
-      <div className="py-5">
-        {" "}
-        <BreadcrumbComponent ContactPage={singleProduct.id} />
-      </div>
-      <section className="py-0 SingleProduct-page">
+
+      <section className="py-20 SingleProduct-page">
         <div className="container mx-auto ">
           <div className="flex flex-col-reverse p-5 pt-0 pb-0 gap-y-5 md:flex-row md:flex md:gap-x-0 lg:gap-x-10 lg:justify-center max-w-7xl">
             <div className="product-images md:w-[60%] mb-0">
@@ -56,12 +53,16 @@ function SingleProduct() {
               </div>
             </div>
             <div className="products-details md:w-[50%]">
-              <div className="flex items-center justify-between gap-x-6 header">
-                <h1 className="mb-0 text-[1.2rem] md:text-[1.3rem] capitalize w-[70%] ">{singleProduct.title}</h1>
-                <p className="py-6 capitalize text-[0.9rem] w-[30%]" >{singleProduct.category}</p>
+              <div>
+                {" "}
+                <BreadcrumbComponent ContactPage={singleProduct.title} />
+              </div>
+              <div className="detail-header">
+                <h1 className="text-[1.2rem] md:text-[1.3rem] capitalize w-[70%] ">{singleProduct.title}</h1>
+                <p className="py-3 capitalize text-[0.9rem] w-[30%]" >{singleProduct.category}</p>
               </div>
               <p className="py-2 text-sm" >{singleProduct.description}</p>
-              <div className="price text-[1.125rem] md:text-[1rem]">
+              <div className="price text-[1.125rem] md:text-[1rem] py-2">
                 <span className="font-semibold ">Price :</span> {" "}
                 <FormatePrice price={singleProduct.price} />
               </div>
