@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import CtaFooter from "../ctaSection";
+// import CtaFooter from "../ctaSection";
 import FooterBottom from "./footerBottom";
 import Logo from "../../../assets/images/logo/logo.png";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
@@ -10,7 +10,7 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 function Footer() {
   return (
     <>
-      <CtaFooter />
+      {/* <CtaFooter /> */}
       <section className="">
         <div className="container">
           <footer className="relative flex flex-wrap px-5 py-16 pb-3 mx-auto mt-5 bg-gray-100 border-b border-gray-200 sm:flex-wrap md:w-screen sm:w-screen md:justify-center">
@@ -25,22 +25,6 @@ function Footer() {
                   shopping simple, safe, and fun.
                 </p>
               </div>
-              <div className="flex gap-x-2 gap-y-4 md:gap-x-4">
-                <Button
-                  className="w-28 md:w-36 h-10 md:h-12 !bg-[#00C7B1] hover:!bg-[#00A08C] !text-white gap-1 !rounded-md !shadow-lg !transition-all !duration-300" // Teal color from screenshot
-                  variant="contained"
-                >
-                  Shop
-                  <ArrowOutwardIcon fontSize="small" />
-                </Button>
-                <Button
-                  className="w-28 md:w-36 h-10 md:h-12 !bg-[#00C7B1] hover:!bg-[#00A08C] !text-white gap-1 !rounded-md !shadow-lg !transition-all !duration-300" // Teal color from screenshot
-                  variant="contained"
-                >
-                  Shop
-                  <ArrowOutwardIcon fontSize="small" />
-                </Button>
-              </div>
             </div>
             <div className="step3 menus md:w-[18%] sm:w-[40%] w-[100%] md:h-92 p-5 text-textFooter mb-5">
               <h2 className="text-2xl">Pages</h2>
@@ -49,19 +33,13 @@ function Footer() {
                   <Link to='/home'>Home</Link>
                 </li>
                 <li className="mb-5 duration-500 hover:translate-x-4">
-                  <Link to=''>About Us</Link>
+                  <Link to='/about'>About Us</Link>
                 </li>
                 <li className="mb-5 duration-500 hover:translate-x-4">
-                  <Link>Integrations</Link>
-                </li>
-                <li className="mb-5 duration-500 hover:translate-x-4">
-                  <Link>Features</Link>
-                </li>
-                <li className="mb-5 duration-500 hover:translate-x-4">
-                  <Link>Pricing</Link>
+                  <Link to='/shop'>Shop</Link>
                 </li>
                 <li className="duration-500 hover:translate-x-4">
-                  <Link>Contact Us</Link>
+                  <Link to='/contact'>Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -107,17 +85,17 @@ function Footer() {
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cardbg text-secondary">
                     <MdOutlineMarkEmailUnread className="text-2xl text-secondary" />
                   </div>
-                  <Link to='mailto:example@gmail.com' className="">
-                    example@gmail.com <br /> info@gmail.com
+                  <Link to='mailto:example@gmail.com'>
+                    example@gmail.com 
                   </Link>
                 </li>
 
                 <li className="flex items-center gap-4 py-3">
-                                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cardbg text-secondary">
-                  <FaPhoneVolume className="text-xl text-secondary" />
-                </div>
-                  <Link to="tel:+92 111 0000000">
-                    +92 111 0000000 <br /> +92 111 0000000{" "}
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cardbg text-secondary">
+                    <FaPhoneVolume className="text-xl text-secondary" />
+                  </div>
+                  <Link to="tel:+921110000000">
+                    +92 111 0000000 
                   </Link>
                 </li>
               </ul>

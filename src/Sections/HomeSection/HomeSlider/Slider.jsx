@@ -78,13 +78,13 @@ export default function Slider() {
             backgroundImage: `url(${slide.bg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            padding: '2rem 0rem 3rem 0rem',
+            padding: '2rem 1rem 3rem 1rem',
           }}
         >
           <span className="absolute top-0 z-10 rounded-full w-72 h-72 bg-secondary opacity-15 left-72 animate-float"></span>
           <span className="absolute w-32 h-32 z-10 bg-teal-400 rounded-full opacity-15 -bottom-8 right-1/3 animate-float [animation-delay:2s]"></span>
           <span className="absolute w-20 h-20 z-10 bg-teal-400 rounded-full opacity-15 top-1/3 -right-8 animate-float [animation-delay:1s]"></span>
-          <div className="flex flex-col items-center justify-between w-full h-full p-6 mx-auto content md:flex-row max-w-7xl md:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between w-full h-full p-6 mx-auto content md:flex-row md:px-6 lg:px-8">
             {/* Left Content Section */}
             <div className="flex flex-col justify-center flex-1 p-0 py-6 text-center text-black left md:text-left md:p-12">
               {/* Subtitle with Apple Icon */}

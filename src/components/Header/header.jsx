@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { IconButton, Badge, Link } from "@mui/material";
+import { IconButton, Badge } from "@mui/material";
 import { NavLink, useNavigate } from "react-router";
 import { GoPerson } from "react-icons/go";
 import { IoMdHeartEmpty } from "react-icons/io";
@@ -28,7 +28,7 @@ const NavigationMenu = [
     path: "/about",
   },
   {
-    label: "Products",
+    label: "Shop",
     path: "/shop",
   },
   {
@@ -68,15 +68,14 @@ export default function Header() {
 
             {/* Logo - Left on desktop, center on mobile */}
             <div className="flex-shrink-0 md:flex-1 w-[72%]">
-              <Link
-                to="/home"
-                underline="none"
+              <NavLink
+                to="/"
                 className="flex items-center justify-center pl-5 md:justify-start"
               >
                 <div className="text-2xl font-bold text-center text-black">
-                  <img className="w-10" src={Logo} alt="" />
+                  <img className="w-10" src={Logo} alt="Store logo" />
                 </div>
-              </Link>
+              </NavLink>
             </div>
 
             <nav className="items-center justify-center flex-1 hidden space-x-8 md:flex">
@@ -121,9 +120,9 @@ export default function Header() {
                     <IoMdHeartEmpty fontSize={"1.5rem"} />
                   </Badge>
                 </IconButton>
-                <IconButton className="!text-black hover:!text-secondary">
+                {/* <IconButton className="!text-black hover:!text-secondary"> */}
                   <CartDrawer />
-                </IconButton>
+                {/* </IconButton> */}
               </div>
             </div>
           </div>
